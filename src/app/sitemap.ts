@@ -7,6 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ciste-prostory',
     '/vzduchotechnika',
     '/mereni-a-validace',
+    '/integrita-hepa-filtru',
+    '/pocet-castic-iso-14644',
     '/servis',
     '/ochrana-udaju',
   ];

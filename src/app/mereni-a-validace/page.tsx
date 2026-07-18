@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Gauge, CheckCircle, ClipboardCheck, Award } from 'lucide-react';
@@ -35,8 +36,22 @@ const MereniValidace = () => {
               a zdravotnická technika splňují nejvyšší standardy kvality, čistoty a bezpečnosti.
             </p>
 
-            <h2 className="text-3xl font-bold mt-12 mb-8">Typy kvalifikací</h2>
-            
+            <div className="flex flex-wrap gap-4 mb-12">
+              <Link
+                href="/integrita-hepa-filtru"
+                className="inline-flex items-center gap-2 bg-accent/40 hover:bg-accent/60 transition-colors px-5 py-3 rounded-lg font-medium text-foreground"
+              >
+                → Test integrity HEPA filtrů
+              </Link>
+              <Link
+                href="/pocet-castic-iso-14644"
+                className="inline-flex items-center gap-2 bg-accent/40 hover:bg-accent/60 transition-colors px-5 py-3 rounded-lg font-medium text-foreground"
+              >
+                → Měření počtu částic ISO 14644-1
+              </Link>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-8">Typy kvalifikací</h2>            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
               <div className="bg-accent/30 p-8 rounded-lg">
                 <ClipboardCheck className="h-12 w-12 text-primary mb-4" />

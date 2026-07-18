@@ -47,6 +47,16 @@ const Footer = () => {
                 </a>
               </li>
               <li>
+                <a href="/integrita-hepa-filtru" className="text-white/80 hover:text-primary transition-colors duration-200">
+                  Test integrity HEPA filtrů
+                </a>
+              </li>
+              <li>
+                <a href="/pocet-castic-iso-14644" className="text-white/80 hover:text-primary transition-colors duration-200">
+                  Měření počtu částic ISO 14644-1
+                </a>
+              </li>
+              <li>
                 <a href="/servis" className="text-white/80 hover:text-primary transition-colors duration-200">
                   Servis a údržba
                 </a>

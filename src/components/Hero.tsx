@@ -16,9 +16,23 @@ const Hero = () => {
             Čisté prostory, laboratorní boxy a validace vzduchotechniky
           </h1>
 
-          <p className="text-xl md:text-2xl mb-16 text-white/90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
             Realizujeme <strong>čisté prostory</strong>, dodáváme <strong>laboratorní boxy</strong> a provádíme <strong>validace dle ISO 14644</strong> a <strong>EU GMP Annex 1</strong>. Servis HEPA filtrů H13/H14 po celé ČR.
           </p>
+
+          {/* Trust badges */}
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
+            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white/95 border border-white/20">
+              <span className="h-2 w-2 rounded-full bg-emerald-300 animate-pulse"></span>
+              Dostupní online 24/7
+            </span>
+            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white/95 border border-white/20">
+              Odpovídáme do 24 hodin
+            </span>
+            <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-white/95 border border-white/20">
+              Servis po celé ČR
+            </span>
+          </div>
 
           {/* Services Icons */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">

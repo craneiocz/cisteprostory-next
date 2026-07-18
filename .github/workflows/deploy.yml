@@ -1,0 +1,29 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [master, main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repozitáře
+        uses: actions/checkout@v4
+
+      - name: Nastavení Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalace Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Stažení nastavení prostředí z Vercelu
+        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build projektu na Vercelu
+        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy na Vercel (produkce)
+        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
