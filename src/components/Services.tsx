@@ -52,7 +52,7 @@ const Services = () => {
                   <service.icon className="h-7 w-7 text-primary" />
                 </div>
                 <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-                  <h3>{service.title}</h3>
+                  {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
