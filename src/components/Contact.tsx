@@ -23,7 +23,7 @@ const Contact = () => {
     };
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://api.cisteprostory.eu/email.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
