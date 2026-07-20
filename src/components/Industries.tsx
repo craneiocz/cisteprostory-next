@@ -46,22 +46,32 @@ const Industries = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {industries.map((industry, index) => (
-            <div 
+            <article 
               key={index}
-              className="bg-background rounded-2xl p-8 shadow-sm hover:shadow-card transition-all duration-300 hover:-translate-y-2 group"
+              className="group relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 overflow-hidden"
             >
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
-                <industry.icon className="h-7 w-7 text-primary" aria-label={industry.alt} />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+              
+              <div className="relative z-10">
+                <div className="relative inline-block mb-5">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300" aria-hidden="true"></div>
+                  <div className="relative w-14 h-14 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl flex items-center justify-center border border-blue-100">
+                    <industry.icon className="h-7 w-7 text-blue-600" aria-hidden="true" />
+                  </div>
+                </div>
+                
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  {industry.title}
+                </h3>
+                
+                <p className="text-gray-600 leading-relaxed text-sm group-hover:text-gray-700 transition-colors">
+                  {industry.description}
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                {industry.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {industry.description}
-              </p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

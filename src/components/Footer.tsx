@@ -63,13 +63,13 @@ const Footer = () => {
               </li>
             </ul>
             
-            {/* Additional links */}
-            <h3 className="text-lg font-semibold text-white mb-4 mt-6">Odvětví</h3>
-            <ul className="space-y-2">
-              <li><span className="text-white/60">Farmacie</span></li>
-              <li><span className="text-white/60">Zdravotnictví</span></li>
-              <li><span className="text-white/60">Elektronika</span></li>
-              <li><span className="text-white/60">Potravinářství</span></li>
+            {/* Standards reference */}
+            <h3 className="text-lg font-semibold text-white mb-4 mt-6">Normy</h3>
+            <ul className="space-y-2 text-sm">
+              <li><span className="text-white/60">ISO 14644-1 / 14644-2</span></li>
+              <li><span className="text-white/60">EU GMP Annex 1</span></li>
+              <li><span className="text-white/60">EN 1822 / ISO 29463</span></li>
+              <li><span className="text-white/60">ČSN EN 1822</span></li>
             </ul>
           </div>
 
@@ -88,13 +88,7 @@ const Footer = () => {
               </li>
             </ul>
             
-            {/* Standards reference */}
-            <div className="mt-6">
-              <h3 className="text-lg font-semibold text-white mb-3">Normy</h3>
-              <p className="text-white/60 text-sm">
-                ISO 14644-1 • ISO 14644-2 • EU GMP Annex 1 • EN 1822
-              </p>
-            </div>
+
           </div>
         </div>
 

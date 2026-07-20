@@ -53,19 +53,19 @@ const Faq = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-secondary/30" id="faq">
+    <section className="py-16 lg:py-24 bg-white" id="faq">
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Časté <span className="text-primary">dotazy</span>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+            Často <span className="text-blue-600">kladené otázky</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Odpovědi na nejčastější otázky ohledně validace čistých prostorů a vzduchotechniky.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Odpovědi na nejčastější otázky ohledně realizace čistých prostorů, validace dle ISO 14644 a EU GMP, vzduchotechniky a HEPA filtrů.
           </p>
         </div>
 
@@ -75,23 +75,24 @@ const Faq = () => {
             return (
               <div
                 key={faq.question}
-                className="border border-border rounded-lg bg-background overflow-hidden"
+                className="border border-gray-200 rounded-xl bg-white overflow-hidden hover:shadow-md transition-shadow duration-200"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
+                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left hover:bg-blue-50/50 transition-colors"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-semibold text-foreground">{faq.question}</span>
+                  <span className="font-semibold text-gray-900 group-hover:text-blue-600">{faq.question}</span>
                   <ChevronDown
-                    className={`h-5 w-5 text-primary flex-shrink-0 transition-transform duration-200 ${
+                    className={`h-5 w-5 text-blue-600 flex-shrink-0 transition-transform duration-200 ${
                       isOpen ? 'rotate-180' : ''
                     }`}
+                    aria-hidden="true"
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-5 text-muted-foreground leading-relaxed">
+                  <div className="px-6 pb-5 text-gray-600 leading-relaxed bg-gradient-to-br from-blue-50/30 to-transparent border-t border-gray-100">
                     {faq.answer}
                   </div>
                 )}

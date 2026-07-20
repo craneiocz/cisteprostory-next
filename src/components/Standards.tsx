@@ -34,25 +34,36 @@ const Standards = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {standards.map((standard, index) => (
-            <div 
+            <article 
               key={index}
-              className="bg-muted/30 rounded-2xl p-8 hover:shadow-card transition-all duration-300 group border border-border/50"
+              className="group relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
-                <standard.icon className="h-7 w-7 text-primary" />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+              
+              <div className="relative z-10">
+                <div className="relative inline-block mb-5">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-300" aria-hidden="true"></div>
+                  <div className="relative w-14 h-14 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl flex items-center justify-center border border-blue-100">
+                    <standard.icon className="h-7 w-7 text-blue-600" aria-hidden="true" />
+                  </div>
+                </div>
+                
+                <span className="inline-block px-3 py-1 bg-gradient-to-r from-blue-100 to-cyan-100 text-blue-700 text-xs font-bold rounded-full mb-4">
+                  {standard.code}
+                </span>
+                
+                <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                  {standard.title}
+                </h3>
+                
+                <p className="text-gray-600 leading-relaxed text-sm group-hover:text-gray-700 transition-colors">
+                  {standard.description}
+                </p>
               </div>
-              <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-3">
-                {standard.code}
-              </span>
-              <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                {standard.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {standard.description}
-              </p>
-            </div>
+            </article>
           ))}
         </div>
       </div>

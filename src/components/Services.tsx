@@ -1,5 +1,4 @@
 import { Shield, Wind, Gauge, Settings } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Services = () => {
   const services = [
@@ -43,32 +42,42 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
-            <Card 
+            <article 
               key={index} 
-              className="group hover:shadow-card transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-0"
+              className="group relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 overflow-hidden"
             >
-              <CardHeader className="pb-4">
-                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-                  <service.icon className="h-7 w-7 text-primary" />
+              {/* Gradient background on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300" aria-hidden="true"></div>
+                    <div className="relative w-16 h-16 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl flex items-center justify-center border border-blue-100">
+                      <service.icon className="h-8 w-8 text-blue-600" aria-hidden="true" />
+                    </div>
+                  </div>
+                  <span className="text-4xl font-light text-gray-100 group-hover:text-blue-100 transition-colors">{String(index + 1).padStart(2, '0')}</span>
                 </div>
-                <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300 mb-4">
                   {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                </h3>
+                
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
-                <ul className="space-y-2">
+                
+                <ul className="space-y-3 border-t border-gray-100 pt-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
-                      {feature}
+                    <li key={featureIndex} className="flex items-start text-sm text-gray-600">
+                      <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold mr-3 flex-shrink-0">✓</span>
+                      <span className="group-hover:text-gray-900 transition-colors">{feature}</span>
                     </li>
                   ))}
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </article>
           ))}
         </div>
       </div>
