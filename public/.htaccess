@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+
+# Prefer the generated HTML page for pretty URLs, even when a same-named
+# directory exists in the Next export output.
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L,QSA]
+
+# Preserve exported files and folders such as /_next/, /robots.txt, and /assets/.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
