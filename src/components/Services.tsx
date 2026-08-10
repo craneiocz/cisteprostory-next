@@ -44,35 +44,38 @@ const Services = () => {
           {services.map((service, index) => (
             <article 
               key={index} 
-              className="group relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 overflow-hidden"
+              className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant"
             >
-              {/* Gradient background on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true" />
               
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-6">
                   <div className="relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300" aria-hidden="true"></div>
-                    <div className="relative w-16 h-16 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl flex items-center justify-center border border-blue-100">
-                      <service.icon className="h-8 w-8 text-blue-600" aria-hidden="true" />
+                    <div className="absolute inset-0 rounded-2xl bg-primary/15 blur opacity-20 transition-opacity duration-300 group-hover:opacity-35" aria-hidden="true" />
+                    <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/10 bg-primary/5">
+                      <service.icon className="h-8 w-8 text-primary" aria-hidden="true" />
                     </div>
                   </div>
-                  <span className="text-4xl font-light text-gray-100 group-hover:text-blue-100 transition-colors">{String(index + 1).padStart(2, '0')}</span>
+                  <span className="text-4xl font-light text-muted-foreground/20 transition-colors group-hover:text-primary/15">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300 mb-4">
+                <h3 className="mb-4 text-xl font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="mb-6 leading-relaxed text-muted-foreground">
                   {service.description}
                 </p>
                 
-                <ul className="space-y-3 border-t border-gray-100 pt-6">
+                <ul className="space-y-3 border-t border-border/60 pt-6">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start text-sm text-gray-600">
-                      <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-bold mr-3 flex-shrink-0">✓</span>
-                      <span className="group-hover:text-gray-900 transition-colors">{feature}</span>
+                    <li key={featureIndex} className="flex items-start text-sm text-muted-foreground">
+                      <span className="mr-3 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+                        ✓
+                      </span>
+                      <span className="transition-colors group-hover:text-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>

@@ -36,6 +36,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = "error";
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -65,11 +67,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs">
+    <html lang="cs" data-scroll-behavior="smooth">
       <body>
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <TooltipProvider>
@@ -81,4 +82,3 @@ export default function RootLayout({
     </html>
   );
 }
-
