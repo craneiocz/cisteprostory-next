@@ -70,7 +70,12 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg font-medium text-foreground">info@cisteprostory.eu</p>
+                <a
+                  href="mailto:info@cisteprostory.eu"
+                  className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+                >
+                  info@cisteprostory.eu
+                </a>
                 <p className="text-muted-foreground">Odpovídáme do 24 hodin</p>
               </CardContent>
             </Card>

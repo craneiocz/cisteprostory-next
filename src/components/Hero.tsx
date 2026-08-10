@@ -3,7 +3,7 @@ import { Shield, Wind, Gauge, Settings, CheckCircle } from 'lucide-react';
 const Hero = () => {
   return (
     <section
-      className="relative isolate overflow-hidden border-b border-white/10 bg-gradient-hero py-24 text-white lg:py-40"
+      className="relative isolate overflow-hidden border-b border-white/10 bg-gradient-hero py-20 text-white lg:py-28"
       aria-label="Úvodní sekce - Čisté prostory a laboratorní boxy"
     >
       <div className="absolute inset-0 opacity-10" aria-hidden="true">
@@ -16,18 +16,18 @@ const Hero = () => {
         <div className="text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm mb-8">
             <CheckCircle className="h-4 w-4" aria-hidden="true" />
-            Certifikované řešení ISO 14644 a EU GMP
+            Čisté prostory, vzduchotechnika a validace ISO 14644
           </div>
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight text-balance tracking-tight">
-            Čisté prostory,<br />laboratorní boxy<br />a validace vzduchotechniky
+          <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-balance tracking-tight">
+            Čisté prostory,<br />vzduchotechnika<br />a validace ISO 14644
           </h1>
 
           <p className="text-lg md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-balance font-light text-white/88">
-            Kompletní řešení pro farmacii, nemocnice a laboratoře. Realizujeme <span className="text-white font-semibold">čisté prostory třídy A–D</span> dle EU GMP Annex 1 a ISO 14644, s <span className="text-white font-semibold">HEPA filtrací H13/H14</span>, měřením, validací a <span className="text-white font-semibold">24/7 servisem po ČR</span>.
+            Realizujeme <span className="text-white font-semibold">čisté prostory třídy A–D</span>, <span className="text-white font-semibold">vzduchotechniku s HEPA filtrací H13/H14</span> a <span className="text-white font-semibold">validaci dle ISO 14644 a EU GMP Annex 1</span>. Servis, měření a údržba po celé ČR.
           </p>
 
-          <nav aria-label="Trust signals" className="flex flex-wrap items-center justify-center gap-4 mb-16">
+          <nav aria-label="Trust signals" className="flex flex-wrap items-center justify-center gap-4 mb-12">
             <span className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-5 py-3 text-sm font-medium text-white/95 backdrop-blur-sm transition-colors hover:bg-white/15">
               <span className="h-2 w-2 rounded-full bg-white animate-pulse" aria-hidden="true"></span>
               <span>Dostupní 24/7</span>

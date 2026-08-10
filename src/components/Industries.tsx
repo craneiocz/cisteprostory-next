@@ -22,15 +22,15 @@ const Industries = () => {
     },
     {
       icon: Cpu,
-      title: 'Elektronika a optika',
-      description: 'Čisté prostory ISO 3–ISO 6 s HEPA/ULPA filtrací pro výrobu polovodičů a optických prvků.',
-      alt: 'čisté prostory pro elektroniku'
+      title: 'Technologie a přesná výroba',
+      description: 'Čisté prostory ISO 3–ISO 6 s HEPA/ULPA filtrací pro technologické provozy, citlivou montáž a přesnou výrobu.',
+      alt: 'čisté prostory pro technologické provozy'
     },
     {
       icon: Rocket,
-      title: 'Automotive a aerospace',
-      description: 'Kontrolované prostory pro montáž citlivých komponent a výrobu kompozitních materiálů dle AS9100.',
-      alt: 'čisté prostory pro automotive a aerospace'
+      title: 'Montáž a průmyslové provozy',
+      description: 'Kontrolované prostory pro montáž citlivých komponent, přesnou výrobu a procesy s vyššími nároky na čistotu vzduchu.',
+      alt: 'čisté prostory pro montáž a průmyslové provozy'
     }
   ];
 

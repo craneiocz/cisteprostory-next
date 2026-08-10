@@ -4,20 +4,20 @@ import Footer from '@/components/Footer';
 import { Shield, Filter, Settings, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Čisté prostory a laboratorní boxy – validace ISO 14644 a EU GMP | cisteprostory.eu',
+  title: 'Čisté prostory a laboratorní boxy – realizace ISO 14644 a EU GMP | cisteprostory.eu',
   description:
-    'Realizace čistých prostorů tříd A–D dle EU GMP Annex 1, laboratorní boxy, laminární boxy, vzduchotechnika s HEPA H13/H14 filtry, měření, validace a servis po celé ČR.',
-  keywords: 'čisté prostory, laboratorní boxy, laminární boxy, ISO 14644, EU GMP Annex 1, HEPA filtry, validace čistých prostorů, vzduchotechnika, měření částic',
+    'Realizace čistých prostorů tříd A–D dle EU GMP Annex 1 a ISO 14644, laboratorní boxy, laminární boxy, vzduchotechnika s HEPA H13/H14 filtry, měření, validace a servis po celé ČR.',
+  keywords: 'čisté prostory, laboratorní boxy, laminární boxy, ISO 14644, EU GMP Annex 1, HEPA filtry H13 H14, validace čistých prostorů, vzduchotechnika, měření částic',
   openGraph: {
-    title: 'Čisté prostory a laboratorní boxy – validace ISO 14644 a EU GMP',
-    description: 'Kompletní dodávky čistých prostorů, laboratorních boxů, HEPA filtrů a validace dle ISO 14644 a EU GMP.',
+    title: 'Čisté prostory a laboratorní boxy – realizace ISO 14644 a EU GMP',
+    description: 'Kompletní dodávky čistých prostorů, laboratorních boxů, HEPA filtrů a validace dle ISO 14644 a EU GMP Annex 1.',
     type: 'website',
     url: 'https://cisteprostory.eu/ciste-prostory',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Čisté prostory a laboratorní boxy – ISO 14644',
-    description: 'Realizace čistých prostorů, laboratorních boxů, HEPA filtrů a validace dle ISO 14644 a EU GMP.',
+    description: 'Realizace čistých prostorů, laboratorních boxů, HEPA filtrů H13/H14 a validace dle ISO 14644 a EU GMP Annex 1.',
   },
 };
 
@@ -91,7 +91,7 @@ const CisteProstory = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-balance">Čisté prostory – kompletní řešení pro farmacie, laboratoře a operační sály</h1>
           <p className="text-xl text-white/90 max-w-3xl text-balance">
-            Realizace čistých prostorů tříd A–D dle EU GMP Annex 1 a ISO 14644. Laboratorní boxy, laminární boxy, vzduchotechnika a kompletní validace pro laboratoře, operační sály, farmacie a technologický průmysl.
+            Realizace čistých prostorů tříd A–D dle EU GMP Annex 1 a ISO 14644. Laboratorní boxy, laminární boxy, vzduchotechnika s HEPA H13/H14 filtry a kompletní validace pro laboratoře, operační sály, farmacie a technologický průmysl.
           </p>
         </div>
       </section>
@@ -100,9 +100,9 @@ const CisteProstory = () => {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
-            <h2 className="text-2xl font-bold mt-0 mb-6">Co jsou čisté prostory?</h2>
+              <h2 className="text-2xl font-bold mt-0 mb-6">Co jsou čisté prostory a kde se používají?</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              <strong>Čisté prostory</strong> zahrnují laboratoře, operační sály, mikrobiologické pracovny, ale i sterilní zóny, které vyžadují řízenou čistotu vzduchu. Příkladem mohou být <strong>laminární boxy, laboratorní boxy, digestoře, izolátory pro cytostatika, RABS systémy, sterilizátory, termostaty, inkubátory</strong> a řada dalších zařízení s přesnými požadavky na čistotu.
+              <strong>Čisté prostory</strong> zahrnují laboratoře, operační sály, mikrobiologické pracovny i sterilní zóny, které vyžadují řízenou čistotu vzduchu. Příkladem mohou být <strong>laminární boxy, laboratorní boxy, digestoře, izolátory pro cytostatika, RABS systémy, sterilizátory, termostaty, inkubátory</strong> a další zařízení s přesnými požadavky na čistotu.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">

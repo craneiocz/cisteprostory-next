@@ -17,9 +17,9 @@ const Servis = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-primary text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Servis</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Servis vzduchotechniky a HEPA filtrů</h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            Profesionální servis a údržba vzduchotechnických systémů a čistých prostorů
+            Profesionální servis a údržba vzduchotechnických systémů, čistých prostorů a filtrací H13/H14
           </p>
         </div>
       </section>
@@ -31,7 +31,7 @@ const Servis = () => {
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Spolupracujeme výhradně se specialisty, kteří mají s instalací daného typu systému rozsáhlé zkušenosti 
               a jsou pro montáž patřičně proškoleni a vybaveni. Vše probíhá dle dohodnutého harmonogramu prací 
-              s maximálním ohledem na stanovený termín dokončení díla a majetek investora.
+              s maximálním ohledem na termín dokončení díla a majetek investora.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-12">

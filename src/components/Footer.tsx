@@ -81,7 +81,7 @@ const Footer = () => {
               <li className="text-slate-300">IČO: 07367066</li>
               <li className="text-slate-300">DIČ: CZ07367066</li>
               <li>
-                <a href="mailto:info@cisteprostory.eu" className="text-slate-300 transition-colors duration-200 hover:text-primary">
+                <a href="mailto:info@cisteprostory.eu" className="text-primary-light transition-colors duration-200 hover:text-primary">
                   info@cisteprostory.eu
                 </a>
               </li>

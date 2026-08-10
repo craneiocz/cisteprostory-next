@@ -18,9 +18,9 @@ const MereniValidace = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-primary text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Validace a měření</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Validace a měření čistých prostorů</h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            Přesné měřící a validační služby pro čisté prostory a laboratorní přístroje
+            Přesné měřicí a validační služby pro čisté prostory, laboratorní boxy a HEPA filtrace
           </p>
         </div>
       </section>
@@ -30,10 +30,9 @@ const MereniValidace = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Jsme odbornou společností s bohatými zkušenostmi s poskytování přesných měřících a validačních služeb 
-              v oblasti čistých prostor a laboratorních přístrojů. S naším vysoce kvalifikovaným týmem a moderními 
-              technologiemi jsme schopni provádět rozsáhlé testy, měření a kontroly, které zajistí, že čisté prostory 
-              a zdravotnická technika splňují nejvyšší standardy kvality, čistoty a bezpečnosti.
+              Jsme odbornou společností s bohatými zkušenostmi s poskytováním přesných měřicích a validačních služeb 
+              v oblasti čistých prostorů, laboratorních boxů a zdravotnické techniky. S naším vysoce kvalifikovaným týmem 
+              a moderními technologiemi provádíme testy, měření a kontroly, které zajistí shodu s ISO 14644 a EU GMP Annex 1.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12">
@@ -51,7 +50,7 @@ const MereniValidace = () => {
               </Link>
             </div>
 
-            <h2 className="text-3xl font-bold mt-12 mb-8">Typy kvalifikací</h2>            
+            <h2 className="text-3xl font-bold mt-12 mb-8">Typy kvalifikací při validaci čistých prostorů</h2>            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
               <div className="bg-accent/30 p-8 rounded-lg">
                 <ClipboardCheck className="h-12 w-12 text-primary mb-4" />
@@ -81,7 +80,7 @@ const MereniValidace = () => {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6">Co validujeme</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6">Co validujeme a měříme</h2>
             <ul className="space-y-3 text-lg text-muted-foreground mb-12">
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
@@ -113,7 +112,7 @@ const MereniValidace = () => {
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Farmaci</span>
+                <span>Farmacie</span>
               </li>
             </ul>
 

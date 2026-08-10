@@ -10,12 +10,12 @@ const faqs = [
       'Doba měření závisí na velikosti a počtu zón, obvykle jde o jeden až tři pracovní dny přímo na místě. Protokol s výsledky a certifikátem obvykle dodáváme do několika pracovních dnů po měření.',
   },
   {
-    question: 'Jak často je potřeba čisté prostory revalidovat?',
+    question: 'Jak často je potřeba čisté prostory revalidovat podle ISO 14644?',
     answer:
       'Dle EU GMP Annex 1 a ISO 14644-2 se doporučuje periodická validace jednou ročně u tříd čistoty ISO 5–8, u kritičtějších tříd (ISO 5 a přísnější, např. GMP třída A/B) je interval kratší. Konkrétní frekvenci přizpůsobíme typu provozu a interním předpisům klienta.',
   },
   {
-    question: 'Co je součástí testu integrity HEPA filtrů?',
+    question: 'Co je součástí testu integrity HEPA filtrů H13/H14?',
     answer:
       'Testujeme těsnost filtru i jeho uložení pomocí aerosolového skenování dle EN 1822/ISO 14644-3, abychom vyloučili obtok (bypass) kontaminovaného vzduchu kolem filtrační vložky.',
   },
@@ -61,10 +61,10 @@ const Faq = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Často <span className="text-primary">kladené otázky</span>
+            Často <span className="text-primary">kladené otázky o čistých prostorech a validaci ISO 14644</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Odpovědi na nejčastější otázky ohledně realizace čistých prostorů, validace dle ISO 14644 a EU GMP, vzduchotechniky a HEPA filtrů.
+            Odpovědi na nejčastější otázky ohledně realizace čistých prostorů, validace ISO 14644 a EU GMP Annex 1, vzduchotechniky a HEPA filtrů H13/H14.
           </p>
         </div>
 

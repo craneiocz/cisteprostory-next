@@ -5,7 +5,7 @@ const Services = () => {
     {
       icon: Shield,
       title: 'Čisté prostory a laboratorní boxy',
-      description: 'Realizujeme čisté prostory třídy A–D dle EU GMP a ISO 14644. Dodáváme a instalujeme laboratorní boxy, laminární boxy, izolátory pro cytostatika a bariérové systémy. Každý projekt zahrnuje návrh, montáž a kompletní kvalifikaci DQ, IQ, OQ, PQ.',
+      description: 'Realizujeme čisté prostory třídy A–D dle EU GMP Annex 1 a ISO 14644. Dodáváme a instalujeme laboratorní boxy, laminární boxy, izolátory pro cytostatika a bariérové systémy. Každý projekt zahrnuje návrh, montáž a kompletní kvalifikaci DQ, IQ, OQ, PQ.',
       features: ['Čisté prostory ISO 5–ISO 8', 'Laboratorní a laminární boxy', 'Izolátory a RABS systémy', 'Kompletní kvalifikace DQ–PQ']
     },
     {
@@ -22,7 +22,7 @@ const Services = () => {
     },
     {
       icon: Settings,
-      title: 'Servis a údržba',
+      title: 'Servis HEPA filtrů a vzduchotechniky',
       description: 'Pravidelný servis čistých prostorů, výměna HEPA filtrů, údržba laminárních boxů a izolátorů. Vedeme servisní dokumentaci pro audity. Pohotovostní servis po celé ČR.',
       features: ['Výměna HEPA a ULPA filtrů', 'Servis laminárních boxů', 'Servisní dokumentace', 'Pohotovostní servis']
     }
@@ -33,10 +33,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Služby pro <span className="text-primary">čisté prostory</span>
+            Služby pro <span className="text-primary">čisté prostory, vzduchotechniku a validaci ISO 14644</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Kompletní řešení od návrhu a realizace čistých prostorů přes <a href="/mereni-a-validace" className="text-primary hover:underline">validace dle ISO 14644</a> až po <a href="/servis" className="text-primary hover:underline">servis a údržbu</a>.
+            Kompletní řešení od návrhu a realizace čistých prostorů přes <a href="/mereni-a-validace" className="text-primary hover:underline">validace ISO 14644 a EU GMP Annex 1</a> až po <a href="/servis" className="text-primary hover:underline">servis HEPA filtrů a vzduchotechniky</a>.
           </p>
         </div>
 
