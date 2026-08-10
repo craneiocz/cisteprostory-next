@@ -5,7 +5,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cisteprostory.eu"),
+  metadataBase: new URL("https://www.cisteprostory.eu"),
   title: "Čisté prostory, vzduchotechnika a validace ISO 14644 | cisteprostory.eu",
   description:
     "Realizace čistých prostorů, vzduchotechniky, HEPA filtrů H13/H14, validace dle ISO 14644 a EU GMP Annex 1. Servis a měření po celé ČR.",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description:
       "Realizace čistých prostorů, vzduchotechniky, HEPA filtrů H13/H14, validace ISO 14644 a EU GMP Annex 1. Servis a měření po celé ČR.",
     type: "website",
-    url: "https://cisteprostory.eu",
+    url: "https://www.cisteprostory.eu",
     siteName: "Čisté prostory",
     locale: "cs_CZ",
   },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "Realizace čistých prostorů, vzduchotechniky, HEPA filtrů H13/H14, validace ISO 14644 a EU GMP Annex 1.",
   },
   alternates: {
-    canonical: "https://cisteprostory.eu",
+    canonical: "https://www.cisteprostory.eu",
   },
 };
 
@@ -41,12 +41,12 @@ export const dynamic = "error";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://cisteprostory.eu/#organization",
+  "@id": "https://www.cisteprostory.eu/#organization",
   name: "Čisté Prostory (BRNO CREATIVE s.r.o.)",
   alternateName: "cisteprostory.eu",
-  url: "https://cisteprostory.eu",
-  logo: "https://cisteprostory.eu/icon.png",
-  image: "https://cisteprostory.eu/opengraph-image.png",
+  url: "https://www.cisteprostory.eu",
+  logo: "https://www.cisteprostory.eu/icon.png",
+  image: "https://www.cisteprostory.eu/opengraph-image.png",
   description:
     "Realizace čistých prostorů, laboratorní boxy, validace dle ISO 14644 a EU GMP, HEPA filtry, vzduchotechnika a servis po celé ČR.",
   email: "info@cisteprostory.eu",
