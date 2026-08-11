@@ -6,30 +6,36 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.cisteprostory.eu"),
-  title: "Čisté prostory, vzduchotechnika a validace ISO 14644 | cisteprostory.eu",
+  title: "Čisté prostory a validace čistých prostor | cisteprostory.eu",
   description:
-    "Realizace čistých prostorů, vzduchotechniky, HEPA filtrů H13/H14, validace dle ISO 14644 a EU GMP Annex 1. Servis a měření po celé ČR.",
+    "Realizace čistých prostorů, validace čistých prostor, vzduchotechniky, HEPA filtrů H13/H14 a měření dle ISO 14644 a EU GMP Annex 1.",
   keywords:
-    "čisté prostory, vzduchotechnika, validace ISO 14644, EU GMP Annex 1, HEPA filtry H13 H14, laboratorní boxy, laminární boxy, servis HEPA filtrů, měření částic, izolátory cytostatika",
+    "čisté prostory, validace čistých prostor, vzduchotechnika, validace ISO 14644, EU GMP Annex 1, HEPA filtry H13 H14, laboratorní boxy, laminární boxy, servis HEPA filtrů, měření částic, izolátory cytostatika",
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",
     shortcut: "/favicon.ico",
   },
   openGraph: {
-    title: "Čisté prostory, vzduchotechnika a validace ISO 14644 | cisteprostory.eu",
+    title: "Čisté prostory a validace čistých prostor | cisteprostory.eu",
     description:
-      "Realizace čistých prostorů, vzduchotechniky, HEPA filtrů H13/H14, validace ISO 14644 a EU GMP Annex 1. Servis a měření po celé ČR.",
+      "Realizace čistých prostorů, validace čistých prostor, vzduchotechniky, HEPA filtrů H13/H14 a měření dle ISO 14644 a EU GMP Annex 1.",
     type: "website",
     url: "https://www.cisteprostory.eu",
     siteName: "Čisté prostory",
     locale: "cs_CZ",
+    images: [
+      {
+        url: "https://www.cisteprostory.eu/opengraph-image.png",
+        alt: "Čisté prostory a validace čistých prostor",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Čisté prostory, vzduchotechnika a validace ISO 14644",
+    title: "Čisté prostory a validace čistých prostor",
     description:
-      "Realizace čistých prostorů, vzduchotechniky, HEPA filtrů H13/H14, validace ISO 14644 a EU GMP Annex 1.",
+      "Realizace čistých prostorů, validace čistých prostor, vzduchotechniky a HEPA filtrů H13/H14.",
   },
   alternates: {
     canonical: "https://www.cisteprostory.eu",
@@ -48,7 +54,7 @@ const jsonLd = {
   logo: "https://www.cisteprostory.eu/icon.png",
   image: "https://www.cisteprostory.eu/opengraph-image.png",
   description:
-    "Realizace čistých prostorů, laboratorní boxy, validace dle ISO 14644 a EU GMP, HEPA filtry, vzduchotechnika a servis po celé ČR.",
+    "Realizace čistých prostorů, laboratorní boxy, validace čistých prostor dle ISO 14644 a EU GMP, HEPA filtry, vzduchotechnika a servis po celé ČR.",
   email: "info@cisteprostory.eu",
   address: {
     "@type": "PostalAddress",

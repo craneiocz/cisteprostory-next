@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import VisualShowcase from '@/components/VisualShowcase';
 import { Shield, Filter, Settings, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Čisté prostory a laboratorní boxy – realizace ISO 14644 a EU GMP | cisteprostory.eu',
+  title: 'Čisté prostory – realizace ISO 14644 a EU GMP | cisteprostory.eu',
   description:
     'Realizace čistých prostorů tříd A–D dle EU GMP Annex 1 a ISO 14644, laboratorní boxy, laminární boxy, vzduchotechnika s HEPA H13/H14 filtry, měření, validace a servis po celé ČR.',
-  keywords: 'čisté prostory, laboratorní boxy, laminární boxy, ISO 14644, EU GMP Annex 1, HEPA filtry H13 H14, validace čistých prostorů, vzduchotechnika, měření částic',
+  keywords: 'čisté prostory, validace čistých prostor, laboratorní boxy, laminární boxy, ISO 14644, EU GMP Annex 1, HEPA filtry H13 H14, vzduchotechnika, měření částic',
   openGraph: {
-    title: 'Čisté prostory a laboratorní boxy – realizace ISO 14644 a EU GMP',
+    title: 'Čisté prostory – realizace ISO 14644 a EU GMP',
     description: 'Kompletní dodávky čistých prostorů, laboratorních boxů, HEPA filtrů a validace dle ISO 14644 a EU GMP Annex 1.',
     type: 'website',
     url: 'https://cisteprostory.eu/ciste-prostory',
@@ -176,6 +177,8 @@ const CisteProstory = () => {
           </div>
         </div>
       </section>
+
+      <VisualShowcase />
 
       <Footer />
     </div>
