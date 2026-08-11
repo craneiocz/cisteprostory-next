@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
+import HomepageGallery from '@/components/HomepageGallery';
 import Industries from '@/components/Industries';
 import Standards from '@/components/Standards';
 import Faq from '@/components/Faq';
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
+      <HomepageGallery />
       <Industries />
       <Standards />
       <Faq />

@@ -1,4 +1,4 @@
-import { Shield, Wind, Gauge, Settings, CheckCircle } from 'lucide-react';
+import { Shield, Wind, Gauge, Settings } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -14,11 +14,6 @@ const Hero = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm mb-8">
-            <CheckCircle className="h-4 w-4" aria-hidden="true" />
-            Čisté prostory, vzduchotechnika a validace ISO 14644
-          </div>
-
           <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-balance tracking-tight">
             Čisté prostory,<br />vzduchotechnika<br />a validace ISO 14644
           </h1>

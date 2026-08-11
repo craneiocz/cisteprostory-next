@@ -174,6 +174,58 @@ const CisteProstory = () => {
                 <span><strong>Projektování a poradenství</strong> – návrh, tlakové kaskády, klimatizace s přesnou regulací teploty a vlhkosti</span>
               </li>
             </ul>
+
+            <section className="mt-20 border-t border-border pt-12" aria-labelledby="tridy-cistoty">
+              <h2 id="tridy-cistoty" className="text-3xl font-bold mb-6">
+                Jak se navrhují čisté prostory
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Návrh čistého prostoru začíná určením procesu, požadované třídy čistoty a kritických
+                míst. Teprve podle těchto parametrů se volí dispozice, tlakové kaskády, materiály
+                povrchů, filtrace a způsob řízení vzduchu. Správné řešení musí být provozně
+                udržitelné a současně připravené na měření a validaci čistých prostor.
+              </p>
+
+              <div className="grid gap-8 md:grid-cols-3">
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Třídy čistoty ISO 14644</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Klasifikace ISO 1 až ISO 9 stanovuje limity koncentrace částic ve vzduchu.
+                    V praxi se vybírá třída podle citlivosti výroby, výzkumu nebo zdravotnického
+                    provozu.
+                  </p>
+                </div>
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Vzduchotechnika a filtrace</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Stabilní prostředí vyžaduje vhodný přívod a odvod vzduchu, regulaci tlaků a
+                    účinnou HEPA nebo ULPA filtraci. Součástí návrhu je také přístup k filtrům
+                    a servisním místům.
+                  </p>
+                </div>
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Provoz a kontrola</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Čistota prostoru závisí také na režimu vstupu, úklidu, oděvu pracovníků a
+                    pravidelném měření. Provozní pravidla proto navrhujeme společně s technickým
+                    řešením.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mt-20 border-t border-border pt-12" aria-labelledby="vyuziti-cistych-prostor">
+              <h2 id="vyuziti-cistych-prostor" className="text-3xl font-bold mb-6">
+                Kde se čisté prostory používají
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Řízené prostředí se uplatňuje všude tam, kde částice, mikroorganismy nebo kolísání
+                podmínek mohou ovlivnit bezpečnost a kvalitu. Dodáváme řešení pro farmaceutickou
+                výrobu, nemocnice, laboratorní a mikrobiologická pracoviště, výrobu zdravotnických
+                prostředků i přesnou průmyslovou výrobu. Rozsah dodávky může zahrnovat samotný
+                prostor, laboratorní box, vzduchotechniku, HEPA filtry, měření i následný servis.
+              </p>
+            </section>
           </div>
         </div>
       </section>
