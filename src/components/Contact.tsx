@@ -36,7 +36,7 @@ const Contact = () => {
         description: "Děkujeme za váš zájem. V brzké době vás budeme kontaktovat.",
       });
       (e.target as HTMLFormElement).reset();
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('Error sending contact form:', error);
       toast({
         title: "Chyba při odesílání",
@@ -49,7 +49,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="kontakt" className="py-20 lg:py-32 bg-accent/30">
+    <section id="kontakt" className="py-20 lg:py-32 bg-accent/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
@@ -62,7 +62,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <Card className="bg-gradient-card border-0 shadow-card">
+            <Card className="border-border/70 bg-card shadow-card">
               <CardHeader>
                 <CardTitle className="flex items-center text-foreground">
                   <Mail className="h-6 w-6 text-primary mr-3" />
@@ -70,12 +70,17 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg font-medium text-foreground">info@cisteprostory.eu</p>
+                <a
+                  href="mailto:info@cisteprostory.eu"
+                  className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+                >
+                  info@cisteprostory.eu
+                </a>
                 <p className="text-muted-foreground">Odpovídáme do 24 hodin</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-card border-0 shadow-card">
+            <Card className="border-border/70 bg-card shadow-card">
               <CardHeader>
                 <CardTitle className="flex items-center text-foreground">
                   <MapPin className="h-6 w-6 text-primary mr-3" />
@@ -90,7 +95,7 @@ const Contact = () => {
           </div>
 
           <div className="flex flex-col justify-center">
-            <Card className="bg-gradient-card border-0 shadow-card">
+            <Card className="border-border/70 bg-card shadow-card">
               <CardHeader>
                 <h3 className="text-2xl font-bold text-foreground">Kontaktní formulář</h3>
               </CardHeader>
@@ -99,25 +104,25 @@ const Contact = () => {
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Jméno a příjmení *</label>
-                    <input type="text" id="name" name="name" required disabled={isSubmitting} className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="Jan Novák" />
+                    <input type="text" id="name" name="name" required disabled={isSubmitting} className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="Jan Novák" />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">E-mail *</label>
-                    <input type="email" id="email" name="email" required disabled={isSubmitting} className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="jan.novak@example.com" />
+                    <input type="email" id="email" name="email" required disabled={isSubmitting} className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="jan.novak@example.com" />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">Telefon</label>
-                    <input type="tel" id="phone" name="phone" disabled={isSubmitting} className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="+420 123 456 789" />
+                    <input type="tel" id="phone" name="phone" disabled={isSubmitting} className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="+420 123 456 789" />
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Zpráva *</label>
-                    <textarea id="message" name="message" required disabled={isSubmitting} rows={4} className="w-full px-4 py-3 rounded-md border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none disabled:opacity-50" placeholder="Napište nám váš dotaz..." />
+                    <textarea id="message" name="message" required disabled={isSubmitting} rows={4} className="w-full resize-none rounded-md border border-input bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="Napište nám váš dotaz..." />
                   </div>
                   <p className="text-xs text-muted-foreground leading-relaxed">
                     Odesláním formuláře beru na vědomí, že společnost BRNO CREATIVE s.r.o. zpracovává mé osobní údaje za účelem vyřízení dotazu/poptávky v souladu s GDPR. Více informací naleznete v{' '}
                     <a href="/ochrana-udaju" className="text-primary underline hover:text-primary/80">Ochrana osobních údajů</a>.
                   </p>
-                  <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-primary hover:bg-primary-dark text-white text-lg py-6">
+                  <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-primary text-primary-foreground text-lg py-6 hover:bg-primary-dark">
                     {isSubmitting ? (<><Loader2 className="mr-2 h-5 w-5 animate-spin" />Odesílám...</>) : ('Odeslat')}
                   </Button>
                 </form>

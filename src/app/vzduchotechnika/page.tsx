@@ -4,9 +4,9 @@ import Footer from '@/components/Footer';
 import { Wind, Thermometer, Droplets, Shield } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Vzduchotechnika a servis | cisteprostory.eu',
+  title: 'Vzduchotechnika a HEPA filtrace H13/H14 | cisteprostory.eu',
   description:
-    'Komplexní systémy vzduchotechniky s HEPA filtrací H13/H14 dle EN 1822 pro zajištění optimální kvality vzduchu ve vašich prostorech.',
+    'Komplexní systémy vzduchotechniky s HEPA filtrací H13/H14 dle EN 1822 pro čisté prostory, laboratoře a technologické provozy.',
 };
 
 const Vzduchotechnika = () => {
@@ -17,9 +17,9 @@ const Vzduchotechnika = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-primary text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Vzduchotechnika a servis</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Vzduchotechnika a HEPA filtrace</h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            Komplexní systémy pro zajištění optimální kvality vzduchu ve vašich prostorech
+            Komplexní systémy vzduchotechniky pro čisté prostory, laboratoře a technologické provozy
           </p>
         </div>
       </section>
@@ -30,15 +30,15 @@ const Vzduchotechnika = () => {
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               Vzduchotechnika se využívá všude, kde jsou kladeny nároky na zabezpečení výměny vzduchu a potřeba 
-              zvýšit tak jeho kvalitu v daném prostředí. Jedná se o dopravování čerstvého vzduchu z vnějšího 
-              prostředí do místnosti a odvod odpadního vzduchu do okolí.
+              zvýšit jeho kvalitu v daném prostředí. V čistých prostorech řešíme návrh, montáž a servis systémů 
+              s HEPA filtrací H13/H14, tlakové kaskády, regulaci teploty, vlhkosti i proudění vzduchu.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              To je ovšem pouhý základ toho, co vzduchotechnika zabezpečuje. Instalací moderních technologií 
-              jako je klimatizace, čističek vzduchu, zvlhčovačů, či vodní pračky se ze vzduchotechnické jednotky 
+              To je ovšem pouze základ toho, co vzduchotechnika zabezpečuje. Instalací moderních technologií 
+              jako je klimatizace, čističek vzduchu, zvlhčovačů či vodní pračky se ze vzduchotechnické jednotky 
               stává kompletní systém. Takto nastavený systém dokáže upravit všechny požadované parametry vzduchu 
-              na ideální hodnoty a zkvalitnit pobyt lidí nebo jakýkoliv proces, který se v daném prostoru odehrává.
+              na ideální hodnoty a podpořit provoz čistých prostorů i laboratorních pracovišť.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">

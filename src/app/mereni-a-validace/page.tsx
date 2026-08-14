@@ -2,12 +2,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ValidationVisual from '@/components/ValidationVisual';
 import { Gauge, CheckCircle, ClipboardCheck, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Validace a měření čistých prostorů ISO 14644 | cisteprostory.eu',
+  title: 'Validace čistých prostor ISO 14644 | cisteprostory.eu',
   description:
-    'Přesné měřící a validační služby pro čisté prostory dle ISO 14644-1, ISO 14644-2 a EU GMP Annex 1. Měření částic, integrity HEPA filtrů a kvalifikace IQ, OQ, PQ.',
+    'Validace čistých prostor podle ISO 14644-1, ISO 14644-2 a EU GMP Annex 1. Měření částic, test integrity HEPA filtrů a kvalifikace IQ, OQ a PQ.',
+  keywords:
+    'validace čistých prostor, měření čistých prostor, ISO 14644-1, ISO 14644-2, EU GMP Annex 1, měření částic, test integrity HEPA filtrů, kvalifikace IQ OQ PQ',
 };
 
 const MereniValidace = () => {
@@ -18,9 +21,9 @@ const MereniValidace = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary via-primary-dark to-primary text-white py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Validace a měření</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Validace čistých prostor a měření dle ISO 14644</h1>
           <p className="text-xl text-white/90 max-w-3xl">
-            Přesné měřící a validační služby pro čisté prostory a laboratorní přístroje
+            Přesné měřicí a validační služby pro čisté prostory, laboratorní boxy a HEPA filtrace
           </p>
         </div>
       </section>
@@ -30,10 +33,9 @@ const MereniValidace = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Jsme odbornou společností s bohatými zkušenostmi s poskytování přesných měřících a validačních služeb 
-              v oblasti čistých prostor a laboratorních přístrojů. S naším vysoce kvalifikovaným týmem a moderními 
-              technologiemi jsme schopni provádět rozsáhlé testy, měření a kontroly, které zajistí, že čisté prostory 
-              a zdravotnická technika splňují nejvyšší standardy kvality, čistoty a bezpečnosti.
+              Jsme odbornou společností s bohatými zkušenostmi s poskytováním přesných měřicích a validačních služeb 
+              v oblasti čistých prostorů, laboratorních boxů a zdravotnické techniky. S naším vysoce kvalifikovaným týmem 
+              a moderními technologiemi provádíme testy, měření a kontroly, které zajistí shodu s ISO 14644 a EU GMP Annex 1.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12">
@@ -51,7 +53,9 @@ const MereniValidace = () => {
               </Link>
             </div>
 
-            <h2 className="text-3xl font-bold mt-12 mb-8">Typy kvalifikací</h2>            
+            <ValidationVisual />
+
+            <h2 className="text-3xl font-bold mt-12 mb-8">Typy kvalifikací při validaci čistých prostorů</h2>            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
               <div className="bg-accent/30 p-8 rounded-lg">
                 <ClipboardCheck className="h-12 w-12 text-primary mb-4" />
@@ -81,7 +85,7 @@ const MereniValidace = () => {
               </div>
             </div>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6">Co validujeme</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6">Co validujeme a měříme</h2>
             <ul className="space-y-3 text-lg text-muted-foreground mb-12">
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
@@ -113,7 +117,7 @@ const MereniValidace = () => {
               </li>
               <li className="flex items-start">
                 <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Farmaci</span>
+                <span>Farmacie</span>
               </li>
             </ul>
 
@@ -139,6 +143,65 @@ const MereniValidace = () => {
                 <p className="font-semibold">Výzkum</p>
               </div>
             </div>
+
+            <section className="mt-20 border-t border-border pt-12" aria-labelledby="prubeh-validace">
+              <h2 id="prubeh-validace" className="text-3xl font-bold mb-6">
+                Jak probíhá validace čistých prostor
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Validace čistých prostor ověřuje, zda prostor a jeho technické zařízení dlouhodobě
+                splňují stanovené limity. Rozsah měření se určuje podle projektu, třídy čistoty,
+                způsobu použití a požadavků ISO 14644 nebo EU GMP Annex 1.
+              </p>
+
+              <ol className="space-y-5 border-l border-border pl-6">
+                <li>
+                  <h3 className="text-xl font-semibold mb-2">1. Příprava měření</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Projdeme dokumentaci, provozní režim a požadované parametry. Společně stanovíme
+                    měřicí plán, místa odběru a podmínky, za kterých bude výsledek platný.
+                  </p>
+                </li>
+                <li>
+                  <h3 className="text-xl font-semibold mb-2">2. Měření a funkční testy</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Podle rozsahu provádíme měření částic, tlakových rozdílů, teploty, vlhkosti,
+                    rychlosti proudění, výměny vzduchu a integrity HEPA filtrů.
+                  </p>
+                </li>
+                <li>
+                  <h3 className="text-xl font-semibold mb-2">3. Vyhodnocení a protokol</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Naměřené hodnoty porovnáme s limity a připravíme přehledný validační protokol
+                    včetně výsledku, odchylek a doporučení pro další provoz nebo nápravná opatření.
+                  </p>
+                </li>
+              </ol>
+            </section>
+
+            <section className="mt-20 border-t border-border pt-12" aria-labelledby="otazky-validace">
+              <h2 id="otazky-validace" className="text-3xl font-bold mb-6">
+                Časté otázky k validaci čistých prostor
+              </h2>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Co je výsledkem validace?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Výsledkem je dokumentovaný protokol s použitými metodami, naměřenými hodnotami,
+                    vyhodnocením limitů a případnými doporučeními. Dokumentace slouží jako podklad
+                    pro interní kontrolu, audit i další kvalifikaci zařízení.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Kdy je potřeba měření zopakovat?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Interval se řídí třídou čistoty, rizikovostí provozu, změnami zařízení a
+                    interním plánem kontrol. Opakované měření je vhodné také po zásahu do filtrace,
+                    vzduchotechniky nebo dispozice prostoru.
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </section>

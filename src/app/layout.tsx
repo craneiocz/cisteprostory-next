@@ -5,48 +5,56 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cisteprostory.eu"),
-  title: "Čisté prostory a laboratorní boxy – validace, vzduchotechnika | cisteprostory.eu",
+  metadataBase: new URL("https://www.cisteprostory.eu"),
+  title: "Čisté prostory a validace čistých prostor | cisteprostory.eu",
   description:
-    "Realizace čistých prostorů, laboratorní boxy, validace dle ISO 14644 a EU GMP. HEPA filtry H13/H14, laminární boxy, servis vzduchotechniky po celé ČR.",
+    "Realizace čistých prostorů, validace čistých prostor, vzduchotechniky, HEPA filtrů H13/H14 a měření dle ISO 14644 a EU GMP Annex 1.",
   keywords:
-    "čisté prostory, laboratorní boxy, validace čistých prostorů, ISO 14644, EU GMP, HEPA filtry H13 H14, laminární boxy, vzduchotechnika, servis HEPA filtrů, měření čistoty vzduchu, izolátory cytostatika",
+    "čisté prostory, validace čistých prostor, vzduchotechnika, validace ISO 14644, EU GMP Annex 1, HEPA filtry H13 H14, laboratorní boxy, laminární boxy, servis HEPA filtrů, měření částic, izolátory cytostatika",
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",
     shortcut: "/favicon.ico",
   },
   openGraph: {
-    title: "Čisté prostory a laboratorní boxy – validace, vzduchotechnika | cisteprostory.eu",
+    title: "Čisté prostory a validace čistých prostor | cisteprostory.eu",
     description:
-      "Realizace čistých prostorů, laboratorní boxy, validace dle ISO 14644 a EU GMP. HEPA filtry, laminární boxy a servis po celé ČR.",
+      "Realizace čistých prostorů, validace čistých prostor, vzduchotechniky, HEPA filtrů H13/H14 a měření dle ISO 14644 a EU GMP Annex 1.",
     type: "website",
-    url: "https://cisteprostory.eu",
+    url: "https://www.cisteprostory.eu",
     siteName: "Čisté prostory",
     locale: "cs_CZ",
+    images: [
+      {
+        url: "https://www.cisteprostory.eu/opengraph-image.png",
+        alt: "Čisté prostory a validace čistých prostor",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Čisté prostory a laboratorní boxy – validace, vzduchotechnika",
+    title: "Čisté prostory a validace čistých prostor",
     description:
-      "Realizace čistých prostorů, laboratorní boxy, validace dle ISO 14644 a EU GMP. HEPA filtry, laminární boxy a servis po celé ČR.",
+      "Realizace čistých prostorů, validace čistých prostor, vzduchotechniky a HEPA filtrů H13/H14.",
   },
   alternates: {
-    canonical: "https://cisteprostory.eu",
+    canonical: "https://www.cisteprostory.eu",
   },
 };
+
+export const dynamic = "error";
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://cisteprostory.eu/#organization",
+  "@id": "https://www.cisteprostory.eu/#organization",
   name: "Čisté Prostory (BRNO CREATIVE s.r.o.)",
   alternateName: "cisteprostory.eu",
-  url: "https://cisteprostory.eu",
-  logo: "https://cisteprostory.eu/icon.png",
-  image: "https://cisteprostory.eu/opengraph-image.png",
+  url: "https://www.cisteprostory.eu",
+  logo: "https://www.cisteprostory.eu/icon.png",
+  image: "https://www.cisteprostory.eu/opengraph-image.png",
   description:
-    "Realizace čistých prostorů, laboratorní boxy, validace dle ISO 14644 a EU GMP, HEPA filtry, vzduchotechnika a servis po celé ČR.",
+    "Realizace čistých prostorů, laboratorní boxy, validace čistých prostor dle ISO 14644 a EU GMP, HEPA filtry, vzduchotechnika a servis po celé ČR.",
   email: "info@cisteprostory.eu",
   address: {
     "@type": "PostalAddress",
@@ -65,11 +73,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs">
+    <html lang="cs" data-scroll-behavior="smooth">
       <body>
         <script
           type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <TooltipProvider>
@@ -81,4 +88,3 @@ export default function RootLayout({
     </html>
   );
 }
-

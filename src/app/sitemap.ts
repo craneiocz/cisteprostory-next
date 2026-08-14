@@ -1,7 +1,9 @@
 import type { MetadataRoute } from 'next';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cisteprostory.eu';
+  const baseUrl = 'https://www.cisteprostory.eu';
   const routes = [
     '',
     '/ciste-prostory',

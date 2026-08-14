@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
+import HomepageGallery from '@/components/HomepageGallery';
 import Industries from '@/components/Industries';
 import Standards from '@/components/Standards';
 import Faq from '@/components/Faq';
@@ -9,15 +10,16 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background">
       <Header />
       <Hero />
       <Services />
+      <HomepageGallery />
       <Industries />
       <Standards />
       <Faq />
       <Contact />
       <Footer />
-    </div>
+    </main>
   );
 }

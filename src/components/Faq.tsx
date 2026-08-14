@@ -10,12 +10,12 @@ const faqs = [
       'Doba měření závisí na velikosti a počtu zón, obvykle jde o jeden až tři pracovní dny přímo na místě. Protokol s výsledky a certifikátem obvykle dodáváme do několika pracovních dnů po měření.',
   },
   {
-    question: 'Jak často je potřeba čisté prostory revalidovat?',
+    question: 'Jak často je potřeba čisté prostory revalidovat podle ISO 14644?',
     answer:
       'Dle EU GMP Annex 1 a ISO 14644-2 se doporučuje periodická validace jednou ročně u tříd čistoty ISO 5–8, u kritičtějších tříd (ISO 5 a přísnější, např. GMP třída A/B) je interval kratší. Konkrétní frekvenci přizpůsobíme typu provozu a interním předpisům klienta.',
   },
   {
-    question: 'Co je součástí testu integrity HEPA filtrů?',
+    question: 'Co je součástí testu integrity HEPA filtrů H13/H14?',
     answer:
       'Testujeme těsnost filtru i jeho uložení pomocí aerosolového skenování dle EN 1822/ISO 14644-3, abychom vyloučili obtok (bypass) kontaminovaného vzduchu kolem filtrační vložky.',
   },
@@ -53,19 +53,18 @@ const Faq = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-secondary/30" id="faq">
+    <section className="py-16 lg:py-24 bg-muted/10" id="faq">
       <script
         type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Časté <span className="text-primary">dotazy</span>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+            Často <span className="text-primary">kladené otázky o čistých prostorech a validaci ISO 14644</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Odpovědi na nejčastější otázky ohledně validace čistých prostorů a vzduchotechniky.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Odpovědi na nejčastější otázky ohledně realizace čistých prostorů, validace ISO 14644 a EU GMP Annex 1, vzduchotechniky a HEPA filtrů H13/H14.
           </p>
         </div>
 
@@ -75,23 +74,24 @@ const Faq = () => {
             return (
               <div
                 key={faq.question}
-                className="border border-border rounded-lg bg-background overflow-hidden"
+                className="overflow-hidden rounded-xl border border-border/70 bg-card transition-shadow duration-200 hover:shadow-card"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
+                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-primary/4"
                   aria-expanded={isOpen}
                 >
                   <span className="font-semibold text-foreground">{faq.question}</span>
                   <ChevronDown
-                    className={`h-5 w-5 text-primary flex-shrink-0 transition-transform duration-200 ${
+                    className={`h-5 w-5 flex-shrink-0 text-primary transition-transform duration-200 ${
                       isOpen ? 'rotate-180' : ''
                     }`}
+                    aria-hidden="true"
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-5 text-muted-foreground leading-relaxed">
+                  <div className="border-t border-border/60 bg-gradient-to-br from-primary/4 to-transparent px-6 pb-5 leading-relaxed text-muted-foreground">
                     {faq.answer}
                   </div>
                 )}

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://cisteprostory.eu/sitemap.xml
+Sitemap: https://www.cisteprostory.eu/sitemap.xml

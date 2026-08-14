@@ -22,15 +22,15 @@ const Industries = () => {
     },
     {
       icon: Cpu,
-      title: 'Elektronika a optika',
-      description: 'Čisté prostory ISO 3–ISO 6 s HEPA/ULPA filtrací pro výrobu polovodičů a optických prvků.',
-      alt: 'čisté prostory pro elektroniku'
+      title: 'Technologie a přesná výroba',
+      description: 'Čisté prostory ISO 3–ISO 6 s HEPA/ULPA filtrací pro technologické provozy, citlivou montáž a přesnou výrobu.',
+      alt: 'čisté prostory pro technologické provozy'
     },
     {
       icon: Rocket,
-      title: 'Automotive a aerospace',
-      description: 'Kontrolované prostory pro montáž citlivých komponent a výrobu kompozitních materiálů dle AS9100.',
-      alt: 'čisté prostory pro automotive a aerospace'
+      title: 'Montáž a průmyslové provozy',
+      description: 'Kontrolované prostory pro montáž citlivých komponent, přesnou výrobu a procesy s vyššími nároky na čistotu vzduchu.',
+      alt: 'čisté prostory pro montáž a průmyslové provozy'
     }
   ];
 
@@ -46,22 +46,31 @@ const Industries = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {industries.map((industry, index) => (
-            <div 
+            <article 
               key={index}
-              className="bg-background rounded-2xl p-8 shadow-sm hover:shadow-card transition-all duration-300 hover:-translate-y-2 group"
+              className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant"
             >
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors duration-300">
-                <industry.icon className="h-7 w-7 text-primary" aria-label={industry.alt} />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true" />
+              
+              <div className="relative z-10">
+                <div className="relative inline-block mb-5">
+                  <div className="absolute inset-0 rounded-xl bg-primary/15 blur opacity-25 transition-opacity duration-300 group-hover:opacity-45" aria-hidden="true" />
+                  <div className="relative flex h-14 w-14 items-center justify-center rounded-xl border border-primary/10 bg-primary/5">
+                    <industry.icon className="h-7 w-7 text-primary" aria-hidden="true" />
+                  </div>
+                </div>
+                
+                <h3 className="mb-3 text-lg font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
+                  {industry.title}
+                </h3>
+                
+                <p className="text-sm leading-relaxed text-muted-foreground transition-colors group-hover:text-foreground">
+                  {industry.description}
+                </p>
               </div>
-              <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                {industry.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                {industry.description}
-              </p>
-            </div>
+            </article>
           ))}
         </div>
       </div>
