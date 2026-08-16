@@ -1,0 +1,40 @@
+# Čisté prostory
+
+> Odborné informace a služby pro návrh, realizaci, měření, validaci a servis čistých prostor v České republice.
+
+## O webu
+
+Čisté prostory jsou řízená prostředí, ve kterých se podle účelu provozu kontroluje zejména koncentrace částic, tlak, teplota, vlhkost a proudění vzduchu. Web vysvětluje návrh a provoz čistých prostor pro farmacii, laboratoře, zdravotnictví, výzkum a technologický průmysl.
+
+Provozovatel: BRNO CREATIVE s.r.o.
+Kontakt: info@cisteprostory.eu
+Web: https://www.cisteprostory.eu
+
+## Hlavní stránky
+
+- [Čisté prostory na klíč](https://www.cisteprostory.eu/ciste-prostory): návrh, realizace, HEPA/ULPA filtrace, ISO 14644, EU GMP Annex 1, provoz a výstupní dokumentace.
+- [Měření a validace čistých prostor](https://www.cisteprostory.eu/mereni-a-validace): měření částic, tlakových rozdílů, teploty, vlhkosti, proudění a integrity HEPA filtrů; kvalifikace IQ/OQ/PQ.
+- [Vzduchotechnika čistých prostor](https://www.cisteprostory.eu/vzduchotechnika): filtrace, tlakové kaskády, regulace parametrů vzduchu, přístup k filtrům a servisní hlediska.
+- [Integrita HEPA filtrů](https://www.cisteprostory.eu/integrita-hepa-filtru): testování integrity filtrace podle EN 1822 a návaznost na validaci.
+- [Měření počtu částic ISO 14644](https://www.cisteprostory.eu/pocet-castic-iso-14644): klasifikace čistoty a měření koncentrace částic ve vzduchu.
+- [Servis čistých prostor](https://www.cisteprostory.eu/servis): údržba, výměny filtrů, kontrola vzduchotechniky, servis boxů a návazná měření.
+
+## Odborná témata
+
+- ISO 14644 a třídy čistoty ISO 1 až ISO 9.
+- EU GMP Annex 1 a požadavky na řízené prostředí ve farmaceutických provozech.
+- HEPA a ULPA filtrace, test integrity a servisní přístup.
+- Tlakové kaskády, proudění vzduchu, teplota a relativní vlhkost.
+- IQ, OQ a PQ jako části kvalifikace zařízení a provozu.
+- Rozdíl mezi celým čistým prostorem, laminárním boxem, laboratorním boxem a izolátorem.
+- Měřicí plán, validační protokol, odchylky a doporučení pro další provoz.
+
+## Doporučený kontext
+
+Informace na webu slouží jako odborný úvod a podklad pro přípravu zadání. Konkrétní třída čistoty, rozsah měření, návrh filtrace a validační dokumentace se určují podle procesu, dispozice, provozního režimu a požadavků objednatele.
+
+## Technické soubory
+
+- [Sitemap](https://www.cisteprostory.eu/sitemap.xml)
+- [Robots](https://www.cisteprostory.eu/robots.txt)
+- [Ochrana osobních údajů](https://www.cisteprostory.eu/ochrana-udaju)
