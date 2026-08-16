@@ -119,6 +119,41 @@ const Vzduchotechnika = () => {
                 <span>Atypické filtry na míru dle specifických požadavků</span>
               </li>
             </ul>
+
+            <section className="mt-20 border-t border-border pt-12" aria-labelledby="vzt-cisty-prostor">
+              <h2 id="vzt-cisty-prostor" className="text-3xl font-bold mb-6">
+                Vzduchotechnika čistého prostoru není jen výměna vzduchu
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                U čistých prostor rozhoduje vztah mezi průtokem, filtrací, tlakem, teplotou,
+                vlhkostí a skutečným provozem. Při návrhu proto řešíme také umístění koncových
+                prvků, dostupnost filtrů, měření výkonu a možnost budoucího servisu bez zbytečných
+                odstávek.
+              </p>
+              <div className="grid gap-8 md:grid-cols-3">
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Tlakové kaskády</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Správně navržené tlakové rozdíly pomáhají řídit směr proudění mezi místnostmi.
+                    Nastavení musí odpovídat dispozici, dveřím, prostupům a provoznímu režimu.
+                  </p>
+                </div>
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Filtrace a přístup</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    HEPA nebo ULPA filtr není samostatné řešení. Důležitá je také těsnost uložení,
+                    přístup pro výměnu a následný test integrity po zásahu.
+                  </p>
+                </div>
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Provozní náklady</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Při volbě systému zohledňujeme regulaci, provozní režim, zanášení filtrů,
+                    údržbu a měřitelné parametry. Cílem je stabilní prostředí s předvídatelným servisem.
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </section>

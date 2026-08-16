@@ -211,6 +211,40 @@ const MereniValidace = () => {
                 </div>
               </div>
             </section>
+
+            <section className="mt-20 border-t border-border pt-12" aria-labelledby="merici-plan-vystupy">
+              <h2 id="merici-plan-vystupy" className="text-3xl font-bold mb-6">
+                Měřicí plán a výstupy, kterým rozumí provoz i audit
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Samotné číslo z měření nestačí. Výsledek musí být přiřaditelný ke konkrétnímu místu,
+                podmínkám a limitu, aby z něj provozní tým dokázal rozhodnout o dalším postupu.
+                Před měřením proto vyjasníme stav prostoru, režim provozu a požadované parametry.
+              </p>
+              <div className="grid gap-8 md:grid-cols-3">
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Před měřením</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Upřesníme klasifikaci, stav zařízení, měřicí režim, počet míst a dokumentaci,
+                    která má být výsledkem kontroly.
+                  </p>
+                </div>
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Během měření</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Zaznamenáme identifikaci místa, podmínky měření a relevantní parametry, například
+                    částice, tlakové rozdíly, teplotu, vlhkost nebo integritu HEPA filtrace.
+                  </p>
+                </div>
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Po měření</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Předáme vyhodnocení, zjištěné odchylky a praktické doporučení. Pokud je nutný
+                    zásah do filtrace nebo vzduchotechniky, lze na měření navázat servisem a kontrolou.
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </section>

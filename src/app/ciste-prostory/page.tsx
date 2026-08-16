@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import VisualShowcase from '@/components/VisualShowcase';
@@ -163,6 +164,66 @@ const CisteProstory = () => {
                 prostředků i přesnou průmyslovou výrobu. Rozsah dodávky může zahrnovat samotný
                 prostor, laboratorní box, vzduchotechniku, HEPA filtry, měření i následný servis.
               </p>
+            </section>
+
+            <section className="mt-20 border-t border-border pt-12" aria-labelledby="jak-vybrat-reseni">
+              <h2 id="jak-vybrat-reseni" className="text-3xl font-bold mb-6">
+                Jak vybrat řešení pro čistý prostor
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Stejná plocha může vyžadovat úplně jiné technické řešení podle toho, zda chráníte
+                výrobek, pracovníka, pacienta nebo okolní prostředí. Před návrhem proto společně
+                upřesníme proces, materiálový tok, počet pracovníků, požadovanou třídu čistoty,
+                teplotu, vlhkost a tlakové poměry.
+              </p>
+              <div className="grid gap-8 md:grid-cols-3">
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Celý prostor</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Vhodné pro provozy s řízeným vstupem, definovaným materiálovým tokem a více
+                    pracovními místy. Řešíme dispozici, povrchy, tlakové kaskády i vzduchotechniku.
+                  </p>
+                </div>
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Lokální ochrana</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Laminární nebo laboratorní box může být efektivní tam, kde je kritická pouze
+                    konkrétní operace. Rozsah se volí podle pracovního postupu a požadavků na ochranu.
+                  </p>
+                </div>
+                <div className="border-t-2 border-primary pt-4">
+                  <h3 className="text-xl font-semibold mb-3">Kombinované řešení</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    U náročnějších procesů propojujeme čistý prostor, box, izolátor, filtrace a
+                    měření tak, aby výsledkem nebyly izolované technologie bez návaznosti na provoz.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mt-20 border-t border-border pt-12" aria-labelledby="co-dostanete">
+              <h2 id="co-dostanete" className="text-3xl font-bold mb-6">
+                Co má být součástí dobře připravené dodávky
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Nabídku nestavíme pouze na ploše místnosti. Důležité je, aby technické řešení,
+                uvedení do provozu a následná kontrola tvořily jeden čitelný celek. Podle zadání
+                proto připravíme rozsah dodávky, rozhraní mezi profesemi a seznam výstupní dokumentace.
+              </p>
+              <div className="grid gap-4 md:grid-cols-2">
+                <ul className="space-y-3 text-muted-foreground">
+                  <li>• technický návrh dispozice a proudění vzduchu</li>
+                  <li>• specifikace povrchů, dveří, stropů a prostupů</li>
+                  <li>• návrh filtrace, regulace a tlakových kaskád</li>
+                  <li>• koordinace montáže a uvedení zařízení do provozu</li>
+                </ul>
+                <ul className="space-y-3 text-muted-foreground">
+                  <li>• měřicí plán podle účelu a třídy čistoty</li>
+                  <li>• záznamy o měření a vyhodnocení limitů</li>
+                  <li>• doporučení pro provoz, údržbu a opakované kontroly</li>
+                  <li>• návaznost na <Link href="/mereni-a-validace" className="font-semibold text-primary underline underline-offset-4">validaci čistých prostor</Link> a servis</li>
+                </ul>
+              </div>
             </section>
 
             <section className="mt-20 border-t border-border pt-12" aria-labelledby="otazky-ciste-prostory">
