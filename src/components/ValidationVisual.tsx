@@ -14,11 +14,13 @@ export default function ValidationVisual() {
         <figure className="group">
           <div className="relative aspect-[16/10] overflow-hidden border border-foreground/15 bg-muted">
             <Image
-              src="/images/isolator-lab-service-pro.png"
+              src="/images/isolator-lab-service-pro.webp"
+              width={1448}
+              height={1086}
               alt="Laboratorní prostředí pro měření a validaci čistých prostor"
-              fill
+              loading="lazy"
               sizes="(min-width: 1024px) 52vw, 100vw"
-              className="object-cover grayscale-[15%] transition duration-700 group-hover:scale-[1.02] group-hover:grayscale-0"
+              className="h-full w-full object-cover grayscale-[15%] transition duration-700 group-hover:scale-[1.02] group-hover:grayscale-0"
             />
             <div className="absolute left-4 top-4 border border-white/60 bg-foreground/75 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm">
               Měření / ISO 14644

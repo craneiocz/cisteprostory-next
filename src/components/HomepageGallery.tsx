@@ -24,11 +24,13 @@ export default function HomepageGallery() {
           <figure className="group">
             <div className="relative h-64 overflow-hidden border border-foreground/15 bg-muted md:h-[360px]">
               <Image
-                src="/images/laminar-box-service-pro.png"
+                src="/images/laminar-box-service-pro.webp"
+                width={1448}
+                height={1086}
                 alt="Laminární a bezpečnostní box v čistém provozu"
-                fill
+                loading="lazy"
                 sizes="(min-width: 768px) 65vw, 100vw"
-                className="object-cover grayscale-[15%] transition duration-700 group-hover:scale-[1.02] group-hover:grayscale-0"
+                className="h-full w-full object-cover grayscale-[15%] transition duration-700 group-hover:scale-[1.02] group-hover:grayscale-0"
               />
             </div>
             <figcaption className="mt-3 flex justify-between gap-4 text-xs text-muted-foreground">
@@ -40,11 +42,13 @@ export default function HomepageGallery() {
           <figure className="group">
             <div className="relative h-64 overflow-hidden border border-foreground/15 bg-muted md:h-[360px]">
               <Image
-                src="/images/isolator-lab-service-pro.png"
+                src="/images/isolator-lab-service-pro.webp"
+                width={1448}
+                height={1086}
                 alt="Pracovník při práci v izolátoru v laboratorním provozu"
-                fill
+                loading="lazy"
                 sizes="(min-width: 768px) 32vw, 100vw"
-                className="object-cover grayscale-[15%] transition duration-700 group-hover:scale-[1.02] group-hover:grayscale-0"
+                className="h-full w-full object-cover grayscale-[15%] transition duration-700 group-hover:scale-[1.02] group-hover:grayscale-0"
               />
             </div>
             <figcaption className="mt-3 flex justify-between gap-4 text-xs text-muted-foreground">

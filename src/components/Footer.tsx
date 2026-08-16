@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import logoImage from '@/assets/cisteprostory-logo.png';
+import logoImage from '@/assets/cisteprostory-logo.webp';
 
 const Footer = () => {
   return (
@@ -12,8 +12,11 @@ const Footer = () => {
               <Link href="/" className="inline-flex">
                 <Image
                   src={logoImage}
+                  width={813}
+                  height={294}
                   alt="Čisté Prostory - realizace vzduchotechniky a validace čistých prostorů"
                   className="h-12 w-auto brightness-0 invert"
+                  loading="lazy"
                 />
               </Link>
             </div>

@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
-import logoImage from '@/assets/cisteprostory-logo.png';
+import logoImage from '@/assets/cisteprostory-logo.webp';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,6 +24,8 @@ const Header = () => {
           <Link href="/" className="flex items-center">
             <Image
               src={logoImage}
+              width={813}
+              height={294}
               alt="Čisté Prostory - Vzduchotechnika, HEPA filtry, validace"
               className="h-10 w-auto"
               priority
@@ -52,6 +54,7 @@ const Header = () => {
             <Button
               variant="ghost"
               size="sm"
+              aria-label={isMenuOpen ? 'Zavřít navigaci' : 'Otevřít navigaci'}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

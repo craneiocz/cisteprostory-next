@@ -59,11 +59,13 @@ export default function VisualShowcase() {
             <figure className="group">
               <div className="relative aspect-[4/5] overflow-hidden border border-foreground/15 bg-muted">
                 <Image
-                  src="/images/cleanroom-hero.png"
+                  src="/images/cleanroom-hero.webp"
+                  width={1536}
+                  height={1024}
                   alt="Čisté prostory s HEPA filtrací pro validaci čistých prostor"
-                  fill
+                  loading="lazy"
                   sizes="(min-width: 1024px) 42vw, 100vw"
-                  className="object-cover grayscale-[15%] transition duration-700 group-hover:scale-[1.02] group-hover:grayscale-0"
+                  className="h-full w-full object-cover grayscale-[15%] transition duration-700 group-hover:scale-[1.02] group-hover:grayscale-0"
                 />
               </div>
               <figcaption className="mt-3 flex gap-3 border-t border-border pt-3">
@@ -78,11 +80,13 @@ export default function VisualShowcase() {
               <figure className="group">
                 <div className="relative aspect-[16/10] overflow-hidden border border-foreground/15 bg-muted">
                 <Image
-                  src="/images/laboratory-hero.png"
+                  src="/images/laboratory-hero.webp"
+                  width={1666}
+                  height={944}
                   alt="Laboratorní prostor pro validaci a měření čistých prostor"
-                  fill
+                  loading="lazy"
                   sizes="(min-width: 1024px) 28vw, 100vw"
-                  className="object-cover grayscale-[15%] transition duration-700 group-hover:scale-[1.02] group-hover:grayscale-0"
+                  className="h-full w-full object-cover grayscale-[15%] transition duration-700 group-hover:scale-[1.02] group-hover:grayscale-0"
                 />
                 </div>
                 <figcaption className="mt-3 flex gap-3 border-t border-border pt-3">

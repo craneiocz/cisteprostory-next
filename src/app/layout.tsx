@@ -77,10 +77,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <a
+          href="#main-content"
+          className="sr-only fixed left-4 top-4 z-[100] rounded-md bg-primary px-4 py-3 font-semibold text-primary-foreground shadow-lg focus:not-sr-only focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+        >
+          Přeskočit na hlavní obsah
+        </a>
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          {children}
+          <div id="main-content" tabIndex={-1} className="scroll-mt-20 outline-none">
+            {children}
+          </div>
         </TooltipProvider>
       </body>
     </html>
