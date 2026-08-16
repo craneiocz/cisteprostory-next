@@ -2,13 +2,17 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageSchema from '@/components/PageSchema';
+import ServiceCrossLink from '@/components/ServiceCrossLink';
+import { createPageMetadata } from '@/lib/seo';
 import { Gauge, CheckCircle, ListChecks } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Měření počtu částic ISO 14644-1 – klasifikace čistoty vzduchu | cisteprostory.eu',
+export const metadata: Metadata = createPageMetadata({
+  path: '/pocet-castic-iso-14644',
+  title: 'Měření počtu částic ISO 14644-1 | cisteprostory.eu',
   description:
-    'Měření koncentrace částic ve vzduchu a klasifikace tříd čistoty ISO 1 až ISO 9 dle ČSN EN ISO 14644-1. Validace čistých prostorů, laminárních boxů a izolátorů.',
-};
+    'Měření koncentrace částic a klasifikace čistoty vzduchu ISO 1 až ISO 9 podle ČSN EN ISO 14644-1 pro čisté prostory, laminární boxy a izolátory.',
+});
 
 const classes = [
   { name: 'ISO 5', use: 'Kritické operace, plnění sterilních přípravků, laminární boxy třídy A' },
@@ -19,6 +23,13 @@ const classes = [
 export default function PocetCasticIso14644() {
   return (
     <div className="min-h-screen bg-background">
+      <PageSchema
+        path="/pocet-castic-iso-14644"
+        title="Měření počtu částic ISO 14644-1"
+        description="Klasifikace čistoty vzduchu podle koncentrace částic ve vzduchu pro čisté prostory, laminární boxy a izolátory."
+        serviceName="Měření počtu částic"
+        serviceDescription="Měření koncentrace částic a klasifikace čistoty vzduchu podle ČSN EN ISO 14644-1."
+      />
       <Header />
 
       <section className="bg-gradient-hero text-white py-16 lg:py-24">
@@ -94,6 +105,7 @@ export default function PocetCasticIso14644() {
         </div>
       </section>
 
+      <ServiceCrossLink />
       <Footer />
     </div>
   );

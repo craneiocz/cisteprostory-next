@@ -1,17 +1,28 @@
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageSchema from '@/components/PageSchema';
+import ServiceCrossLink from '@/components/ServiceCrossLink';
+import { createPageMetadata } from '@/lib/seo';
 import { Wind, Thermometer, Droplets, Shield } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Vzduchotechnika a HEPA filtrace H13/H14 | cisteprostory.eu',
+export const metadata: Metadata = createPageMetadata({
+  path: '/vzduchotechnika',
+  title: 'Vzduchotechnika čistých prostor a HEPA filtrace | cisteprostory.eu',
   description:
-    'Komplexní systémy vzduchotechniky s HEPA filtrací H13/H14 dle EN 1822 pro čisté prostory, laboratoře a technologické provozy.',
-};
+    'Návrh, montáž a servis vzduchotechniky čistých prostor s HEPA filtrací H13/H14, tlakovými kaskádami a regulací teploty a vlhkosti dle EN 1822.',
+});
 
 const Vzduchotechnika = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSchema
+        path="/vzduchotechnika"
+        title="Vzduchotechnika čistých prostor a HEPA filtrace"
+        description="Návrh a servis vzduchotechniky s HEPA a ULPA filtrací, tlakovými kaskádami a regulací parametrů vzduchu."
+        serviceName="Vzduchotechnika čistých prostor"
+        serviceDescription="Komplexní vzduchotechnika, HEPA filtrace, tlakové kaskády a regulace pro čisté prostory a laboratoře."
+      />
       <Header />
       
       {/* Hero Section */}
@@ -112,6 +123,7 @@ const Vzduchotechnika = () => {
         </div>
       </section>
 
+      <ServiceCrossLink />
       <Footer />
     </div>
   );

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
+  path: '/ochrana-udaju',
   title: 'Ochrana osobních údajů | cisteprostory.eu',
   description: 'Informace o zpracování osobních údajů společností BRNO CREATIVE s.r.o. v souladu s GDPR.',
-};
+});
 
 const OchranaUdaju = () => {
   return (

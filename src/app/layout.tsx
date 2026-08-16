@@ -9,8 +9,6 @@ export const metadata: Metadata = {
   title: "Čisté prostory a validace čistých prostor | cisteprostory.eu",
   description:
     "Realizace čistých prostorů, validace čistých prostor, vzduchotechniky, HEPA filtrů H13/H14 a měření dle ISO 14644 a EU GMP Annex 1.",
-  keywords:
-    "čisté prostory, validace čistých prostor, vzduchotechnika, validace ISO 14644, EU GMP Annex 1, HEPA filtry H13 H14, laboratorní boxy, laminární boxy, servis HEPA filtrů, měření částic, izolátory cytostatika",
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",

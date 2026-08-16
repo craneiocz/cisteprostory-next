@@ -2,17 +2,28 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageSchema from '@/components/PageSchema';
+import ServiceCrossLink from '@/components/ServiceCrossLink';
+import { createPageMetadata } from '@/lib/seo';
 import { ShieldCheck, CheckCircle, Wind, ClipboardCheck } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Integrita HEPA filtrů – test těsnosti dle EN 1822 | cisteprostory.eu',
+export const metadata: Metadata = createPageMetadata({
+  path: '/integrita-hepa-filtru',
+  title: 'Test integrity HEPA filtrů dle EN 1822 | cisteprostory.eu',
   description:
-    'Test integrity HEPA a ULPA filtrů (aerosolové skenování dle EN 1822 / ISO 14644-3) pro čisté prostory, laminární boxy a izolátory. Objednejte měření po celé ČR.',
-};
+    'Test těsnosti HEPA a ULPA filtrů aerosolovým skenováním dle EN 1822 a ISO 14644-3 pro čisté prostory, laminární boxy a izolátory po celé ČR.',
+});
 
 export default function IntegritaHepaFiltru() {
   return (
     <div className="min-h-screen bg-background">
+      <PageSchema
+        path="/integrita-hepa-filtru"
+        title="Test integrity HEPA filtrů dle EN 1822"
+        description="Aerosolové skenování těsnosti HEPA a ULPA filtrů pro čisté prostory, laminární boxy a izolátory."
+        serviceName="Test integrity HEPA filtrů"
+        serviceDescription="Ověření těsnosti filtračního média, rámu a uložení HEPA filtrů podle EN 1822 a ISO 14644-3."
+      />
       <Header />
 
       <section className="bg-gradient-hero text-white py-16 lg:py-24">
@@ -97,6 +108,7 @@ export default function IntegritaHepaFiltru() {
         </div>
       </section>
 
+      <ServiceCrossLink />
       <Footer />
     </div>
   );

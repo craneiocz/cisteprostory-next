@@ -1,17 +1,28 @@
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PageSchema from '@/components/PageSchema';
+import ServiceCrossLink from '@/components/ServiceCrossLink';
+import { createPageMetadata } from '@/lib/seo';
 import { Wrench, Users, Calendar, Award, ShieldCheck } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Servis vzduchotechniky a čistých prostorů | cisteprostory.eu',
+export const metadata: Metadata = createPageMetadata({
+  path: '/servis',
+  title: 'Servis čistých prostor a HEPA filtrů | cisteprostory.eu',
   description:
-    'Profesionální servis a údržba vzduchotechnických systémů a čistých prostorů, výměna HEPA filtrů a pohotovostní servis po celé ČR.',
-};
+    'Servis a údržba čistých prostor, vzduchotechniky a HEPA filtrů včetně výměn, zaregulování, dokumentace a pohotovostního servisu po celé ČR.',
+});
 
 const Servis = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSchema
+        path="/servis"
+        title="Servis čistých prostor a HEPA filtrů"
+        description="Pravidelný i pohotovostní servis čistých prostor, vzduchotechniky, laminárních boxů, izolátorů a HEPA filtrace."
+        serviceName="Servis čistých prostor"
+        serviceDescription="Servis, údržba, výměna HEPA filtrů a kontrola vzduchotechniky pro čisté prostory po celé ČR."
+      />
       <Header />
       
       {/* Hero Section */}
@@ -201,6 +212,7 @@ const Servis = () => {
         </div>
       </section>
 
+      <ServiceCrossLink />
       <Footer />
     </div>
   );

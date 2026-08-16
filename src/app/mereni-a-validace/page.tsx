@@ -3,19 +3,28 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ValidationVisual from '@/components/ValidationVisual';
+import PageSchema from '@/components/PageSchema';
+import ServiceCrossLink from '@/components/ServiceCrossLink';
+import { createPageMetadata } from '@/lib/seo';
 import { Gauge, CheckCircle, ClipboardCheck, Award } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Validace čistých prostor ISO 14644 | cisteprostory.eu',
+export const metadata: Metadata = createPageMetadata({
+  path: '/mereni-a-validace',
+  title: 'Validace čistých prostor a měření ISO 14644 | cisteprostory.eu',
   description:
-    'Validace čistých prostor podle ISO 14644-1, ISO 14644-2 a EU GMP Annex 1. Měření částic, test integrity HEPA filtrů a kvalifikace IQ, OQ a PQ.',
-  keywords:
-    'validace čistých prostor, měření čistých prostor, ISO 14644-1, ISO 14644-2, EU GMP Annex 1, měření částic, test integrity HEPA filtrů, kvalifikace IQ OQ PQ',
-};
+    'Validace a měření čistých prostor podle ISO 14644-1, ISO 14644-2 a EU GMP Annex 1. Částice, tlak, teplota, vlhkost, HEPA filtry a protokol IQ/OQ/PQ.',
+});
 
 const MereniValidace = () => {
   return (
     <div className="min-h-screen bg-background">
+      <PageSchema
+        path="/mereni-a-validace"
+        title="Validace čistých prostor a měření ISO 14644"
+        description="Měření a validace čistých prostor včetně částic, tlakových rozdílů, parametrů vzduchu, integrity HEPA filtrů a validačního protokolu."
+        serviceName="Validace čistých prostor"
+        serviceDescription="Měření, kvalifikace a validace čistých prostor podle ISO 14644 a EU GMP Annex 1."
+      />
       <Header />
       
       {/* Hero Section */}
@@ -206,6 +215,7 @@ const MereniValidace = () => {
         </div>
       </section>
 
+      <ServiceCrossLink />
       <Footer />
     </div>
   );

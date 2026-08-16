@@ -2,88 +2,26 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import VisualShowcase from '@/components/VisualShowcase';
+import PageSchema from '@/components/PageSchema';
+import { createPageMetadata } from '@/lib/seo';
 import { Shield, Filter, Settings, CheckCircle } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Čisté prostory – realizace ISO 14644 a EU GMP | cisteprostory.eu',
+export const metadata: Metadata = createPageMetadata({
+  path: '/ciste-prostory',
+  title: 'Čisté prostory na klíč – ISO 14644 a EU GMP | cisteprostory.eu',
   description:
-    'Realizace čistých prostorů tříd A–D dle EU GMP Annex 1 a ISO 14644, laboratorní boxy, laminární boxy, vzduchotechnika s HEPA H13/H14 filtry, měření, validace a servis po celé ČR.',
-  keywords: 'čisté prostory, validace čistých prostor, laboratorní boxy, laminární boxy, ISO 14644, EU GMP Annex 1, HEPA filtry H13 H14, vzduchotechnika, měření částic',
-  openGraph: {
-    title: 'Čisté prostory – realizace ISO 14644 a EU GMP',
-    description: 'Kompletní dodávky čistých prostorů, laboratorních boxů, HEPA filtrů a validace dle ISO 14644 a EU GMP Annex 1.',
-    type: 'website',
-    url: 'https://cisteprostory.eu/ciste-prostory',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Čisté prostory a laboratorní boxy – ISO 14644',
-    description: 'Realizace čistých prostorů, laboratorních boxů, HEPA filtrů H13/H14 a validace dle ISO 14644 a EU GMP Annex 1.',
-  },
-};
+    'Návrh a realizace čistých prostorů na klíč pro farmacii, laboratoře, nemocnice a průmysl. ISO 14644, EU GMP Annex 1, HEPA filtrace a validace po celé ČR.',
+});
 
 const CisteProstory = () => {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://cisteprostory.eu/ciste-prostory#webpage",
-    "name": "Čisté prostory a laboratorní boxy",
-    "url": "https://cisteprostory.eu/ciste-prostory",
-    "description": "Realizace čistých prostorů tříd A–D dle EU GMP Annex 1, laboratorní boxy, laminární boxy, vzduchotechnika s HEPA H13/H14 filtry, měření, validace a servis.",
-    "isPartOf": {
-      "@id": "https://cisteprostory.eu#website"
-    },
-    "breadcrumb": {
-      "@id": "https://cisteprostory.eu/ciste-prostory#breadcrumb"
-    },
-    "mainEntity": {
-      "@type": "Service",
-      "@id": "https://cisteprostory.eu/ciste-prostory#service",
-      "name": "Čisté prostory a laboratorní boxy",
-      "description": "Kompletní realizace čistých prostorů, laboratorních boxů, laminárních boxů s HEPA filtrací, validace dle ISO 14644 a EU GMP Annex 1.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Čisté Prostory (BRNO CREATIVE s.r.o.)",
-        "url": "https://cisteprostory.eu",
-        "areaServed": "CZ"
-      },
-      "hasOfferingType": "https://schema.org/Service",
-      "potentialAction": {
-        "@type": "ContactAction",
-        "target": "https://cisteprostory.eu/#contact"
-      }
-    }
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://cisteprostory.eu/ciste-prostory#breadcrumb",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Domů",
-        "item": "https://cisteprostory.eu"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Čisté prostory",
-        "item": "https://cisteprostory.eu/ciste-prostory"
-      }
-    ]
-  };
-
   return (
     <div className="min-h-screen bg-background">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      <PageSchema
+        path="/ciste-prostory"
+        title="Čisté prostory na klíč – ISO 14644 a EU GMP"
+        description="Návrh a realizace čistých prostorů, laboratorních boxů a HEPA filtrace s validací dle ISO 14644 a EU GMP Annex 1."
+        serviceName="Čisté prostory na klíč"
+        serviceDescription="Návrh, realizace a validace čistých prostorů pro farmacii, laboratoře, nemocnice a průmysl."
       />
       <Header />
       
@@ -225,6 +163,38 @@ const CisteProstory = () => {
                 prostředků i přesnou průmyslovou výrobu. Rozsah dodávky může zahrnovat samotný
                 prostor, laboratorní box, vzduchotechniku, HEPA filtry, měření i následný servis.
               </p>
+            </section>
+
+            <section className="mt-20 border-t border-border pt-12" aria-labelledby="otazky-ciste-prostory">
+              <h2 id="otazky-ciste-prostory" className="text-3xl font-bold mb-6">
+                Časté otázky o čistých prostorech
+              </h2>
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Kolik stojí čistý prostor?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Cena závisí na požadované třídě čistoty, ploše, technologii, tlakových kaskádách,
+                    filtraci a rozsahu kvalifikace. Nabídku připravujeme podle procesu, dispozice a
+                    požadovaných validačních výstupů.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Jaké dokumenty jsou součástí dodávky?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Podle rozsahu projektu dodávka zahrnuje technický návrh, dokumentaci skutečného
+                    provedení, provozní podklady, záznamy o měření a validační protokol. Konkrétní
+                    seznam dokumentů stanovíme před zahájením realizace.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Jak často se validace opakuje?</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Interval se řídí třídou čistoty, rizikovostí provozu a interním plánem kontrol.
+                    Opakované měření je vhodné také po zásahu do filtrace, vzduchotechniky nebo
+                    dispozice čistého prostoru.
+                  </p>
+                </div>
+              </div>
             </section>
           </div>
         </div>
