@@ -31,3 +31,29 @@ ExpiresByType image/webp "access plus 1 year"
 ExpiresByType image/avif "access plus 1 year"
 ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
+
+# Compress text assets before they are sent to the browser. Brotli is preferred
+# by modern browsers; Gzip remains available as a fallback on older servers.
+<IfModule mod_brotli.c>
+AddOutputFilterByType BROTLI_COMPRESS text/css
+AddOutputFilterByType BROTLI_COMPRESS text/html
+AddOutputFilterByType BROTLI_COMPRESS text/javascript
+AddOutputFilterByType BROTLI_COMPRESS text/plain
+AddOutputFilterByType BROTLI_COMPRESS application/javascript
+AddOutputFilterByType BROTLI_COMPRESS application/json
+AddOutputFilterByType BROTLI_COMPRESS application/xml
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE application/xml
+</IfModule>
+
+<IfModule mod_headers.c>
+Header append Vary Accept-Encoding
+</IfModule>
