@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "vanilla-cookieconsent/dist/cookieconsent.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import CookieConsentProvider from "@/components/CookieConsentProvider";
+import GoogleAnalyticsPageView from "@/components/GoogleAnalyticsPageView";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.cisteprostory.eu"),
@@ -73,6 +76,33 @@ export default function RootLayout({
   return (
     <html lang="cs" data-scroll-behavior="smooth">
       <body>
+        <CookieConsentProvider />
+        <GoogleAnalyticsPageView />
+        <script
+          type="text/plain"
+          data-category="analytics"
+          data-service="google-analytics"
+        >{`window.dataLayer = window.dataLayer || [];
+window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+window.gtag('js', new Date());
+window.gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied'
+});
+window.gtag('consent', 'update', {
+  analytics_storage: 'granted',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied'
+});
+window.gtag('config', 'G-R4PM30709Q', { send_page_view: false });
+var ga4Script = document.createElement('script');
+ga4Script.async = true;
+ga4Script.src = 'https://www.googletagmanager.com/gtag/js?id=G-R4PM30709Q';
+ga4Script.onload = function(){ window.dispatchEvent(new Event('cisteprostory-ga4-ready')); };
+document.head.appendChild(ga4Script);`}</script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

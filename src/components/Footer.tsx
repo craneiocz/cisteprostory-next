@@ -101,6 +101,14 @@ const Footer = () => {
               Ochrana osobních údajů
             </a>
             <span className="text-slate-700">|</span>
+            <button
+              type="button"
+              data-cc="show-preferencesModal"
+              className="text-sm text-slate-500 transition-colors duration-200 hover:text-primary"
+            >
+              Nastavení cookies
+            </button>
+            <span className="text-slate-700">|</span>
             <Link href="/#kontakt" className="text-sm text-slate-500 transition-colors duration-200 hover:text-primary">
               Kontaktujte nás
             </Link>

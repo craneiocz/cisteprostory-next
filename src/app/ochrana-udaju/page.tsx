@@ -55,14 +55,34 @@ const OchranaUdaju = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">4. Předáváme údaje třetím stranám?</h2>
               <p>
-                Ne, vaše osobní údaje nikomu neprodáváme ani nepředáváme třetím stranám. 
-                Údaje mohou být zpracovávány pouze prostřednictvím technických nástrojů nezbytných 
-                pro provoz webu (hosting, e-mailový server), a to vždy v souladu s GDPR.
+                Vaše osobní údaje neprodáváme. Údaje z kontaktního formuláře mohou být zpracovávány
+                prostřednictvím technických nástrojů nezbytných pro provoz webu, zejména hostingem a
+                e-mailovým serverem. Pokud udělíte souhlas s analytickými cookies, údaje o používání
+                webu zpracovává také Google Analytics podle popisu níže.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">5. Doba uchovávání údajů</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">5. Cookies a měření návštěvnosti</h2>
+              <p>
+                Web používá nezbytné technologie potřebné pro jeho fungování a zapamatování volby cookies.
+                Analytické cookies Google Analytics 4 používáme pouze na základě vašeho předchozího souhlasu.
+                Pomáhají nám vyhodnocovat návštěvnost a používání jednotlivých částí webu.
+              </p>
+              <p>
+                Google Analytics může zpracovávat údaje o návštěvě, používaném zařízení, prohlížeči,
+                přibližné lokalitě a interakcích s webem. Poskytovatelem služby je Google Ireland Limited;
+                údaje mohou být v rámci služby zpracovávány také mimo Evropský hospodářský prostor podle
+                aktuálních podmínek a záruk společnosti Google.
+              </p>
+              <p>
+                Volbu analytických cookies můžete odmítnout nebo později změnit pomocí odkazu
+                „Nastavení cookies“ v patičce webu. Odmítnutí nemá vliv na používání webu.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">6. Doba uchovávání údajů</h2>
               <p>
                 Osobní údaje uchováváme po dobu nezbytně nutnou k naplnění účelu jejich zpracování, 
                 maximálně však po dobu 3 let od posledního kontaktu, pokud zákon nestanoví jinak.
@@ -70,7 +90,7 @@ const OchranaUdaju = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-foreground mb-4">6. Vaše práva</h2>
+              <h2 className="text-2xl font-semibold text-foreground mb-4">7. Vaše práva</h2>
               <p>V souvislosti se zpracováním vašich osobních údajů máte právo:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Na přístup</strong> – zjistit, jaké údaje o vás evidujeme</li>
