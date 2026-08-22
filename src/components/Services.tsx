@@ -5,26 +5,30 @@ const Services = () => {
     {
       icon: Shield,
       title: 'Čisté prostory a laboratorní boxy',
-      description: 'Realizujeme čisté prostory třídy A–D dle EU GMP Annex 1 a ISO 14644. Dodáváme a instalujeme laboratorní boxy, laminární boxy, izolátory pro cytostatika a bariérové systémy. Každý projekt zahrnuje návrh, montáž a kompletní kvalifikaci DQ, IQ, OQ, PQ.',
-      features: ['Čisté prostory ISO 5–ISO 8', 'Laboratorní a laminární boxy', 'Izolátory a RABS systémy', 'Kompletní kvalifikace DQ–PQ']
+      description: 'Začínáme účelem prostoru, procesem a požadovanou třídou čistoty. Podle zadání navážeme dispozici, povrchy, filtraci, tlakové poměry a dokumentaci skutečného provedení.',
+      features: ['Třídy čistoty ISO 5–ISO 8', 'Laboratorní a laminární boxy', 'Izolátory a bariérové systémy', 'Návrh a uvedení do provozu'],
+      href: '/ciste-prostory',
     },
     {
       icon: Gauge,
       title: 'Validace a měření čistých prostorů',
-      description: 'Provádíme validace čistých prostorů dle ISO 14644-1, ISO 14644-2 a EU GMP Annex 1. Měříme počet částic, integritu HEPA filtrů, tlakové rozdíly, teplotu a vlhkost. Výstupem je kompletní validační protokol pro kontrolní orgány.',
-      features: ['Měření počtu částic', 'Testy integrity HEPA filtrů', 'Kvalifikace IQ, OQ, PQ', 'Validační protokoly']
+      description: 'Měříme parametry důležité pro klasifikaci a provoz: částice, tlakové rozdíly, proudění, teplotu, vlhkost a integritu HEPA filtrů. Výstupem je protokol s limity, hodnotami a odchylkami.',
+      features: ['Počet částic', 'Integrita HEPA filtrů', 'IQ, OQ a PQ', 'Měřicí plán a protokol'],
+      href: '/mereni-a-validace'
     },
     {
       icon: Wind,
       title: 'Vzduchotechnika a HEPA filtrace',
-      description: 'Projektujeme a montujeme vzduchotechniku čistých prostorů s HEPA filtrací H13/H14 dle EN 1822. Zajišťujeme správné tlakové kaskády, výměnu vzduchu a distribuci pro dosažení požadované třídy čistoty.',
-      features: ['HEPA filtry H13/H14', 'Tlakové kaskády', 'Klimatizace s přesnou regulací', 'Projektová dokumentace']
+      description: 'Řešíme přívod a odvod vzduchu, regulaci, tlakové kaskády, dostupnost filtrů a návaznost na měření. HEPA a ULPA filtrace se volí podle procesu a požadovaného rizikového profilu.',
+      features: ['HEPA H13/H14 a ULPA', 'Tlakové kaskády', 'Regulace teploty a vlhkosti', 'Servisní přístup'],
+      href: '/vzduchotechnika'
     },
     {
       icon: Settings,
       title: 'Servis HEPA filtrů a vzduchotechniky',
-      description: 'Pravidelný servis čistých prostorů, výměna HEPA filtrů, údržba laminárních boxů a izolátorů. Vedeme servisní dokumentaci pro audity. Pohotovostní servis po celé ČR.',
-      features: ['Výměna HEPA a ULPA filtrů', 'Servis laminárních boxů', 'Servisní dokumentace', 'Pohotovostní servis']
+      description: 'Údržba navazuje na skutečný provoz a plán kontrol. Provádíme výměny filtrů, kontrolu zařízení, servis boxů a přípravu podkladů pro další měření nebo audit.',
+      features: ['Výměna HEPA a ULPA filtrů', 'Servis boxů a izolátorů', 'Servisní záznamy', 'Návazná kontrolní měření'],
+      href: '/servis'
     }
   ];
 
@@ -33,10 +37,10 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Služby pro <span className="text-primary">čisté prostory, vzduchotechniku a validaci ISO 14644</span>
+            Od zadání k <span className="text-primary">ověřitelnému provozu</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Kompletní řešení od návrhu a realizace čistých prostorů přes <a href="/mereni-a-validace" className="text-primary hover:underline">validace ISO 14644 a EU GMP Annex 1</a> až po <a href="/servis" className="text-primary hover:underline">servis HEPA filtrů a vzduchotechniky</a>.
+            Jednotlivé části dodávky propojujeme tak, aby návrh, technické zařízení, měření a servis pracovaly se stejným zadáním. Podrobnosti k <a href="/mereni-a-validace" className="text-primary hover:underline">měření a validaci</a> i <a href="/servis" className="text-primary hover:underline">servisu</a> najdete na samostatných stránkách.
           </p>
         </div>
 
@@ -79,6 +83,9 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
+                <a href={service.href} className="mt-6 inline-flex font-semibold text-primary underline underline-offset-4 hover:text-primary-dark">
+                  Více o službě
+                </a>
               </div>
             </article>
           ))}

@@ -21,14 +21,14 @@ const Footer = () => {
               </Link>
             </div>
             <p className="mb-4 max-w-md leading-relaxed text-slate-300">
-              Specializujeme se na <strong>vzduchotechniku čistých prostorů</strong>, měření, 
+              Propojujeme <strong>technické řešení čistých prostorů</strong>, měření,
               <a href="/mereni-a-validace" className="text-primary-light hover:text-primary"> validaci dle ISO 14644</a> a 
-              komplexní servis pro farmaceutický, zdravotnický a technologický průmysl.
+              dokumentaci a servis podle potřeb konkrétního provozu.
             </p>
             <p className="text-sm leading-relaxed text-slate-400">
-              Dodáváme <a href="/vzduchotechnika" className="text-slate-200 hover:text-primary-light">HEPA filtry H13/H14</a>, 
+              Řešíme <a href="/vzduchotechnika" className="text-slate-200 hover:text-primary-light">HEPA a ULPA filtraci</a>,
               <a href="/ciste-prostory" className="text-slate-200 hover:text-primary-light"> laminární boxy</a>, izolátory a kompletní 
-              vzduchotechnické systémy v souladu s normami ISO 14644, EU GMP Annex 1 a EN 1822.
+              vzduchotechnické systémy a podklady pro ověření jejich provozu podle příslušných norem.
             </p>
           </div>
 

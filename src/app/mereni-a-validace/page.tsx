@@ -6,253 +6,116 @@ import ValidationVisual from '@/components/ValidationVisual';
 import PageSchema from '@/components/PageSchema';
 import ServiceCrossLink from '@/components/ServiceCrossLink';
 import { createPageMetadata } from '@/lib/seo';
-import { Gauge, CheckCircle, ClipboardCheck, Award } from 'lucide-react';
+import { ClipboardCheck, Gauge, Award } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
   path: '/mereni-a-validace',
-  title: 'Validace čistých prostor a měření ISO 14644 | cisteprostory.eu',
+  title: 'Měření a validace čistých prostor | cisteprostory.eu',
   description:
-    'Validace a měření čistých prostor podle ISO 14644-1, ISO 14644-2 a EU GMP Annex 1. Částice, tlak, teplota, vlhkost, HEPA filtry a protokol IQ/OQ/PQ.',
+    'Měření částic, tlakových rozdílů, proudění, teploty, vlhkosti a integrity HEPA filtrů podle ISO 14644, EU GMP Annex 1 a sjednaného měřicího plánu.',
 });
 
-const MereniValidace = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <PageSchema
-        path="/mereni-a-validace"
-        title="Validace čistých prostor a měření ISO 14644"
-        description="Měření a validace čistých prostor včetně částic, tlakových rozdílů, parametrů vzduchu, integrity HEPA filtrů a validačního protokolu."
-        serviceName="Validace čistých prostor"
-        serviceDescription="Měření, kvalifikace a validace čistých prostor podle ISO 14644 a EU GMP Annex 1."
-      />
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-primary text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Validace čistých prostor a měření dle ISO 14644</h1>
-          <p className="text-xl text-white/90 max-w-3xl">
-            Přesné měřicí a validační služby pro čisté prostory, laboratorní boxy a HEPA filtrace
+const MereniValidace = () => (
+  <div className="min-h-screen bg-background">
+    <PageSchema
+      path="/mereni-a-validace"
+      title="Měření a validace čistých prostor"
+      description="Měřicí plán, kvalifikace a protokol pro ověření parametrů čistého prostoru, boxu nebo filtračního systému."
+      serviceName="Validace čistých prostor"
+      serviceDescription="Měření a kvalifikace podle ISO 14644, EU GMP Annex 1 a konkrétního provozního zadání."
+    />
+    <Header />
+    <section className="bg-gradient-hero py-16 text-white lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h1 className="mb-6 text-4xl font-bold md:text-5xl">Měření a validace čistých prostor</h1>
+        <p className="max-w-3xl text-xl text-white/90">Přesné hodnoty mají význam až ve chvíli, kdy je jasné, co znamenají pro provoz, údržbu a audit.</p>
+      </div>
+    </section>
+    <main className="py-16 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="prose prose-lg max-w-none">
+          <h2>Měření zasazené do provozního kontextu</h2>
+          <p>
+            Měření čistých prostorů, laboratorních boxů, izolátorů a filtračních systémů připravujeme podle
+            účelu zařízení a požadované třídy čistoty. Před samotnou zkouškou je potřeba znát provozní stav,
+            měřené zóny, počet bodů, velikosti částic, limity a návaznost na další kvalifikační kroky.
           </p>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Jsme odbornou společností s bohatými zkušenostmi s poskytováním přesných měřicích a validačních služeb 
-              v oblasti čistých prostorů, laboratorních boxů a zdravotnické techniky. S naším vysoce kvalifikovaným týmem 
-              a moderními technologiemi provádíme testy, měření a kontroly, které zajistí shodu s ISO 14644 a EU GMP Annex 1.
-            </p>
-
-            <div className="flex flex-wrap gap-4 mb-12">
-              <Link
-                href="/integrita-hepa-filtru"
-                className="inline-flex items-center gap-2 bg-accent/40 hover:bg-accent/60 transition-colors px-5 py-3 rounded-lg font-medium text-foreground"
-              >
-                → Test integrity HEPA filtrů
-              </Link>
-              <Link
-                href="/pocet-castic-iso-14644"
-                className="inline-flex items-center gap-2 bg-accent/40 hover:bg-accent/60 transition-colors px-5 py-3 rounded-lg font-medium text-foreground"
-              >
-                → Měření počtu částic ISO 14644-1
-              </Link>
-            </div>
-
-            <ValidationVisual />
-
-            <h2 className="text-3xl font-bold mt-12 mb-8">Typy kvalifikací při validaci čistých prostorů</h2>            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
-              <div className="bg-accent/30 p-8 rounded-lg">
-                <ClipboardCheck className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-4">IQ – Installation Qualification</h3>
-                <p className="text-muted-foreground">
-                  Instalační kvalifikace ověřuje, že zařízení bylo správně nainstalováno 
-                  v souladu s technickou specifikací a požadavky výrobce.
-                </p>
-              </div>
-
-              <div className="bg-accent/30 p-8 rounded-lg">
-                <Gauge className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-4">OQ – Operational Qualification</h3>
-                <p className="text-muted-foreground">
-                  Operační kvalifikace prokazuje, že zařízení funguje v souladu 
-                  se specifikovanými provozními parametry.
-                </p>
-              </div>
-
-              <div className="bg-accent/30 p-8 rounded-lg">
-                <Award className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-4">PQ – Performance Qualification</h3>
-                <p className="text-muted-foreground">
-                  Procesní kvalifikace ověřuje, že zařízení konzistentně pracuje 
-                  v běžném provozu podle specifikovaných požadavků.
-                </p>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6">Co validujeme a měříme</h2>
-            <ul className="space-y-3 text-lg text-muted-foreground mb-12">
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Čisté prostory všech tříd čistoty</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Laminární boxy pro sterilní práci</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Podtlakové a přetlakové izolátory</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Mikrobiologické boxy</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Biohazard boxy</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Bariérová pracoviště pro přípravu cytostatik</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Automotive pracoviště</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Farmacie</span>
-              </li>
-            </ul>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6">Odvětví, se kterými spolupracujeme</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Naše služby jsou přizpůsobeny individuálním potřebám a předpisům každého klienta. 
-              S důrazem na profesionální přístup, spolehlivost a preciznost v naší práci se snažíme 
-              poskytnout našim klientům přesné informace a výsledky, které pomáhají zajišťovat 
-              bezpečnost a kvalitu jejich zařízení.
-            </p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-8">
-              <div className="bg-primary/10 p-4 rounded-lg text-center">
-                <p className="font-semibold">Farmacie</p>
-              </div>
-              <div className="bg-primary/10 p-4 rounded-lg text-center">
-                <p className="font-semibold">Biotechnologie</p>
-              </div>
-              <div className="bg-primary/10 p-4 rounded-lg text-center">
-                <p className="font-semibold">Zdravotnictví</p>
-              </div>
-              <div className="bg-primary/10 p-4 rounded-lg text-center">
-                <p className="font-semibold">Výzkum</p>
-              </div>
-            </div>
-
-            <section className="mt-20 border-t border-border pt-12" aria-labelledby="prubeh-validace">
-              <h2 id="prubeh-validace" className="text-3xl font-bold mb-6">
-                Jak probíhá validace čistých prostor
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Validace čistých prostor ověřuje, zda prostor a jeho technické zařízení dlouhodobě
-                splňují stanovené limity. Rozsah měření se určuje podle projektu, třídy čistoty,
-                způsobu použití a požadavků ISO 14644 nebo EU GMP Annex 1.
-              </p>
-
-              <ol className="space-y-5 border-l border-border pl-6">
-                <li>
-                  <h3 className="text-xl font-semibold mb-2">1. Příprava měření</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Projdeme dokumentaci, provozní režim a požadované parametry. Společně stanovíme
-                    měřicí plán, místa odběru a podmínky, za kterých bude výsledek platný.
-                  </p>
-                </li>
-                <li>
-                  <h3 className="text-xl font-semibold mb-2">2. Měření a funkční testy</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Podle rozsahu provádíme měření částic, tlakových rozdílů, teploty, vlhkosti,
-                    rychlosti proudění, výměny vzduchu a integrity HEPA filtrů.
-                  </p>
-                </li>
-                <li>
-                  <h3 className="text-xl font-semibold mb-2">3. Vyhodnocení a protokol</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Naměřené hodnoty porovnáme s limity a připravíme přehledný validační protokol
-                    včetně výsledku, odchylek a doporučení pro další provoz nebo nápravná opatření.
-                  </p>
-                </li>
-              </ol>
-            </section>
-
-            <section className="mt-20 border-t border-border pt-12" aria-labelledby="otazky-validace">
-              <h2 id="otazky-validace" className="text-3xl font-bold mb-6">
-                Časté otázky k validaci čistých prostor
-              </h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Co je výsledkem validace?</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Výsledkem je dokumentovaný protokol s použitými metodami, naměřenými hodnotami,
-                    vyhodnocením limitů a případnými doporučeními. Dokumentace slouží jako podklad
-                    pro interní kontrolu, audit i další kvalifikaci zařízení.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Kdy je potřeba měření zopakovat?</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Interval se řídí třídou čistoty, rizikovostí provozu, změnami zařízení a
-                    interním plánem kontrol. Opakované měření je vhodné také po zásahu do filtrace,
-                    vzduchotechniky nebo dispozice prostoru.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section className="mt-20 border-t border-border pt-12" aria-labelledby="merici-plan-vystupy">
-              <h2 id="merici-plan-vystupy" className="text-3xl font-bold mb-6">
-                Měřicí plán a výstupy, kterým rozumí provoz i audit
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Samotné číslo z měření nestačí. Výsledek musí být přiřaditelný ke konkrétnímu místu,
-                podmínkám a limitu, aby z něj provozní tým dokázal rozhodnout o dalším postupu.
-                Před měřením proto vyjasníme stav prostoru, režim provozu a požadované parametry.
-              </p>
-              <div className="grid gap-8 md:grid-cols-3">
-                <div className="border-t-2 border-primary pt-4">
-                  <h3 className="text-xl font-semibold mb-3">Před měřením</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Upřesníme klasifikaci, stav zařízení, měřicí režim, počet míst a dokumentaci,
-                    která má být výsledkem kontroly.
-                  </p>
-                </div>
-                <div className="border-t-2 border-primary pt-4">
-                  <h3 className="text-xl font-semibold mb-3">Během měření</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Zaznamenáme identifikaci místa, podmínky měření a relevantní parametry, například
-                    částice, tlakové rozdíly, teplotu, vlhkost nebo integritu HEPA filtrace.
-                  </p>
-                </div>
-                <div className="border-t-2 border-primary pt-4">
-                  <h3 className="text-xl font-semibold mb-3">Po měření</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Předáme vyhodnocení, zjištěné odchylky a praktické doporučení. Pokud je nutný
-                    zásah do filtrace nebo vzduchotechniky, lze na měření navázat servisem a kontrolou.
-                  </p>
-                </div>
-              </div>
-            </section>
+          <p>
+            Podle zadání se posuzují částice, tlakové rozdíly, rychlost a směr proudění, teplota, relativní
+            vlhkost, integrita HEPA filtrů a další parametry. Výsledkem není pouze tabulka čísel, ale protokol,
+            který popisuje podmínky měření, použitou metodiku, naměřené hodnoty, limity a vyhodnocení.
+          </p>
+          <h2>Prostory a zařízení, u kterých měření dává smysl</h2>
+          <p>
+            Měření se může týkat celých čistých prostor, výrobních a laboratorních zón, místností pro přípravu
+            materiálu i lokálních zařízení. Patří sem laminární a laboratorní boxy, izolátory, RABS, technologické
+            komory a části vzduchotechniky. Rozsah zkoušek se vždy přizpůsobuje tomu, zda je hlavním cílem ochrana
+            produktu, pracovníka, pacienta nebo okolního prostředí.
+          </p>
+          <p>
+            U nového zařízení se ověřuje shoda s technickým zadáním. U zavedeného provozu se sleduje trend,
+            opakovatelnost a dopad změn. Stejná naměřená hodnota proto může mít jiný význam při uvedení do provozu,
+            při periodické kontrole a po servisním zásahu.
+          </p>
+          <div className="my-10 flex flex-wrap gap-4 not-prose">
+            <Link href="/integrita-hepa-filtru" className="rounded-lg bg-accent/40 px-5 py-3 font-medium hover:bg-accent/60">Test integrity HEPA filtrů</Link>
+            <Link href="/pocet-castic-iso-14644" className="rounded-lg bg-accent/40 px-5 py-3 font-medium hover:bg-accent/60">Měření počtu částic</Link>
           </div>
-        </div>
-      </section>
+          <ValidationVisual />
 
-      <ServiceCrossLink />
-      <Footer />
-    </div>
-  );
-};
+          <h2>Jaké parametry se při validaci sledují</h2>
+          <ul>
+            <li><strong>Částice:</strong> klasifikace čistoty ve stanovených bodech a provozních stavech.</li>
+            <li><strong>Tlakové rozdíly:</strong> ověření směru proudění mezi zónami a funkce tlakové kaskády.</li>
+            <li><strong>Proudění vzduchu:</strong> kontrola rychlosti, směru nebo rovnoměrnosti podle zařízení.</li>
+            <li><strong>Teplota a vlhkost:</strong> parametry důležité pro proces, materiál, obsluhu a stabilitu prostředí.</li>
+            <li><strong>Integrita filtrace:</strong> ověření HEPA nebo ULPA média, rámu, těsnění a uložení.</li>
+          </ul>
+
+          <h2>IQ, OQ a PQ v praxi</h2>
+          <div className="my-10 grid grid-cols-1 gap-8 md:grid-cols-3 not-prose">
+            <div className="rounded-lg bg-accent/30 p-8"><ClipboardCheck className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h3 className="mb-3 text-xl font-semibold">IQ – Installation Qualification</h3><p className="text-muted-foreground">Instalační kvalifikace ověřuje, že zařízení, komponenty, připojení a dokumentace odpovídají schválenému technickému zadání a požadavkům výrobce.</p></div>
+            <div className="rounded-lg bg-accent/30 p-8"><Gauge className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h3 className="mb-3 text-xl font-semibold">OQ – Operational Qualification</h3><p className="text-muted-foreground">Operační kvalifikace ověřuje chování zařízení v definovaných provozních režimech a rozsazích, například při změně regulace nebo zatížení.</p></div>
+            <div className="rounded-lg bg-accent/30 p-8"><Award className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h3 className="mb-3 text-xl font-semibold">PQ – Performance Qualification</h3><p className="text-muted-foreground">Procesní kvalifikace sleduje, zda prostor nebo zařízení opakovaně dosahují požadovaných parametrů v běžném provozu.</p></div>
+          </div>
+
+          <h2>Počáteční měření, revalidace a kontrola po zásahu</h2>
+          <p>
+            Počáteční měření slouží k ověření nového nebo upraveného prostoru před předáním do běžného provozu.
+            Periodická kontrola vychází z interního plánu, třídy čistoty, rizikovosti procesu a požadavků provozu.
+            Po výměně HEPA filtru, zásahu do regulace, změně dispozice nebo opravě vzduchotechniky je vhodné
+            znovu posoudit parametry, které mohl zásah ovlivnit.
+          </p>
+          <h2>Co obsahuje měřicí plán a protokol</h2>
+          <ul>
+            <li>identifikaci prostoru, zóny, zařízení a provozního stavu;</li>
+            <li>měřicí body, referenční velikosti částic a požadované limity;</li>
+            <li>použité přístroje, kalibraci, podmínky a metodiku;</li>
+            <li>naměřené hodnoty, vyhodnocení shody a popis odchylek;</li>
+            <li>doporučení k nápravě, údržbě nebo opakované kontrole.</li>
+          </ul>
+          <h2>Praktický postup validace</h2>
+          <ol>
+            <li><strong>Vyjasnění zadání:</strong> účel prostoru, klasifikace, provozní stav a požadované parametry.</li>
+            <li><strong>Příprava měření:</strong> kontrola zařízení, přístupů, dokumentace a podmínek pro měření.</li>
+            <li><strong>Provedení zkoušek:</strong> měření v určených bodech podle schváleného plánu a metodiky.</li>
+            <li><strong>Vyhodnocení:</strong> porovnání výsledků s limity a posouzení případných odchylek.</li>
+            <li><strong>Předání:</strong> protokol, záznamy, závěr a doporučení pro provoz nebo další zásah.</li>
+          </ol>
+          <h2>Časté otázky k validaci</h2>
+          <h3>Je validace totéž co měření počtu částic?</h3>
+          <p>Ne. Počet částic je jedna z důležitých zkoušek. Validace může zahrnovat také tlak, proudění, teplotu, vlhkost, integritu filtrů a další parametry podle účelu prostoru.</p>
+          <h3>Jak se určuje počet měřicích bodů?</h3>
+          <p>Počet a rozmístění bodů se odvíjí od plochy, členění prostoru, klasifikace a použité metodiky. Konkrétní plán se stanovuje před měřením a zapisuje do protokolu.</p>
+          <h3>Co když výsledek nevyhoví?</h3>
+          <p>Odchylku je potřeba zasadit do kontextu: může souviset s filtrem, regulací, provozním stavem, pohybem osob nebo měřicí metodikou. Další postup se navrhne podle příčiny, ne pouze podle jedné hodnoty.</p>
+          <p>Na test integrity navazuje <Link href="/integrita-hepa-filtru" className="text-primary underline">samostatná stránka o HEPA filtrech</Link>; pro technické řešení systému pokračujte na <Link href="/vzduchotechnika" className="text-primary underline">vzduchotechniku čistých prostor</Link>.</p>
+        </div>
+        <ServiceCrossLink />
+      </div>
+    </main>
+    <Footer />
+  </div>
+);
 
 export default MereniValidace;

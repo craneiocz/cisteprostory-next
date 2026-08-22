@@ -76,7 +76,7 @@ const Contact = () => {
                 >
                   info@cisteprostory.eu
                 </a>
-                <p className="text-muted-foreground">Odpovídáme do 24 hodin</p>
+                <p className="text-muted-foreground">Popište účel prostoru, zařízení nebo měření, které řešíte.</p>
               </CardContent>
             </Card>
 
@@ -89,7 +89,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-medium text-foreground">Česká republika</p>
-                <p className="text-muted-foreground">Působíme po celé ČR</p>
+                <p className="text-muted-foreground">Rozsah a místo realizace upřesníme podle zadání.</p>
               </CardContent>
             </Card>
           </div>

@@ -10,158 +10,93 @@ export const metadata: Metadata = createPageMetadata({
   path: '/vzduchotechnika',
   title: 'Vzduchotechnika čistých prostor a HEPA filtrace | cisteprostory.eu',
   description:
-    'Návrh, montáž a servis vzduchotechniky čistých prostor s HEPA filtrací H13/H14, tlakovými kaskádami a regulací teploty a vlhkosti dle EN 1822.',
+    'Návrh, montáž a servis vzduchotechniky čistých prostor s HEPA a ULPA filtrací, tlakovými kaskádami, regulací teploty, vlhkosti a proudění.',
 });
 
-const Vzduchotechnika = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <PageSchema
-        path="/vzduchotechnika"
-        title="Vzduchotechnika čistých prostor a HEPA filtrace"
-        description="Návrh a servis vzduchotechniky s HEPA a ULPA filtrací, tlakovými kaskádami a regulací parametrů vzduchu."
-        serviceName="Vzduchotechnika čistých prostor"
-        serviceDescription="Komplexní vzduchotechnika, HEPA filtrace, tlakové kaskády a regulace pro čisté prostory a laboratoře."
-      />
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-primary text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Vzduchotechnika a HEPA filtrace</h1>
-          <p className="text-xl text-white/90 max-w-3xl">
-            Komplexní systémy vzduchotechniky pro čisté prostory, laboratoře a technologické provozy
+const Vzduchotechnika = () => (
+  <div className="min-h-screen bg-background">
+    <PageSchema
+      path="/vzduchotechnika"
+      title="Vzduchotechnika čistých prostor a HEPA filtrace"
+      description="Návrh, montáž a servis vzduchotechniky s filtrací, regulací a tlakovými kaskádami podle účelu čistého prostoru."
+      serviceName="Vzduchotechnika čistých prostor"
+      serviceDescription="Přívod, odvod, filtrace a regulace vzduchu pro kontrolované prostředí a návazné měření."
+    />
+    <Header />
+    <section className="bg-gradient-hero py-16 text-white lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h1 className="mb-6 text-4xl font-bold md:text-5xl">Vzduchotechnika čistých prostor a HEPA filtrace</h1>
+        <p className="max-w-3xl text-xl leading-relaxed text-white/90">Stabilní proudění, vhodná filtrace a regulace parametrů vzduchu podle konkrétního procesu.</p>
+      </div>
+    </section>
+    <main className="py-16 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="prose prose-lg max-w-none">
+          <h2>Vzduchotechnika není pouze výměna vzduchu</h2>
+          <p>
+            V čistém prostoru vzduchotechnika ovlivňuje koncentraci částic, tlak mezi zónami, teplotu,
+            relativní vlhkost i podmínky práce. Systém musí současně umožnit údržbu, kontrolu filtrů a stabilní
+            provoz v režimech, ve kterých se prostor klasifikuje nebo validuje.
           </p>
-        </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Vzduchotechnika se využívá všude, kde jsou kladeny nároky na zabezpečení výměny vzduchu a potřeba 
-              zvýšit jeho kvalitu v daném prostředí. V čistých prostorech řešíme návrh, montáž a servis systémů 
-              s HEPA filtrací H13/H14, tlakové kaskády, regulaci teploty, vlhkosti i proudění vzduchu.
-            </p>
-
-            <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              To je ovšem pouze základ toho, co vzduchotechnika zabezpečuje. Instalací moderních technologií 
-              jako je klimatizace, čističek vzduchu, zvlhčovačů či vodní pračky se ze vzduchotechnické jednotky 
-              stává kompletní systém. Takto nastavený systém dokáže upravit všechny požadované parametry vzduchu 
-              na ideální hodnoty a podpořit provoz čistých prostorů i laboratorních pracovišť.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
-              <div className="bg-accent/30 p-8 rounded-lg">
-                <Wind className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Ventilace a filtrace</h3>
-                <p className="text-muted-foreground">
-                  Zajišťujeme výměnu vzduchu a jeho filtraci pomocí různých typů filtrů - 
-                  od běžných prachových filtrů až po vysokoúčinné HEPA a ULPA filtry.
-                </p>
-              </div>
-
-              <div className="bg-accent/30 p-8 rounded-lg">
-                <Thermometer className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Regulace teploty</h3>
-                <p className="text-muted-foreground">
-                  Ventilací lze zajistit nejen ochlazování, ale také zahřívání vzduchu 
-                  na požadované parametry pro optimální pracovní podmínky.
-                </p>
-              </div>
-
-              <div className="bg-accent/30 p-8 rounded-lg">
-                <Droplets className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Úprava vlhkosti</h3>
-                <p className="text-muted-foreground">
-                  K úpravě vlhkosti vzduchu využíváme různé typy zvlhčovačů 
-                  a vodních praček dle specifických požadavků prostředí.
-                </p>
-              </div>
-
-              <div className="bg-accent/30 p-8 rounded-lg">
-                <Shield className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Odstranění škodlivin</h3>
-                <p className="text-muted-foreground">
-                  Moderní systémy dokáží odstranit nežádoucí škodliviny ve vzduchu 
-                  a zajistit tak bezpečné pracovní prostředí.
-                </p>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6">Spolehlivá instalace a servis</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Spolupracujeme výhradně se specialisty, kteří mají s instalací daného typu systému rozsáhlé zkušenosti 
-              a jsou pro montáž patřičně proškoleni a vybaveni. Díky tomu můžeme garantovat vysokou kvalitu 
-              provedení a dlouhodobou spolehlivost instalovaných systémů.
-            </p>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6">Typy filtrů</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Nabízíme kompletní škálu vzduchotechnických filtrů o požadované hodnotě účinnosti:
-            </p>
-            <ul className="space-y-3 text-lg text-muted-foreground">
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Běžné prachové filtry pro standardní aplikace</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Vysokoúčinné HEPA filtry pro čisté prostory</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>ULPA filtry pro nejnáročnější aplikace</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Atypické filtry na míru dle specifických požadavků</span>
-              </li>
-            </ul>
-
-            <section className="mt-20 border-t border-border pt-12" aria-labelledby="vzt-cisty-prostor">
-              <h2 id="vzt-cisty-prostor" className="text-3xl font-bold mb-6">
-                Vzduchotechnika čistého prostoru není jen výměna vzduchu
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                U čistých prostor rozhoduje vztah mezi průtokem, filtrací, tlakem, teplotou,
-                vlhkostí a skutečným provozem. Při návrhu proto řešíme také umístění koncových
-                prvků, dostupnost filtrů, měření výkonu a možnost budoucího servisu bez zbytečných
-                odstávek.
-              </p>
-              <div className="grid gap-8 md:grid-cols-3">
-                <div className="border-t-2 border-primary pt-4">
-                  <h3 className="text-xl font-semibold mb-3">Tlakové kaskády</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Správně navržené tlakové rozdíly pomáhají řídit směr proudění mezi místnostmi.
-                    Nastavení musí odpovídat dispozici, dveřím, prostupům a provoznímu režimu.
-                  </p>
-                </div>
-                <div className="border-t-2 border-primary pt-4">
-                  <h3 className="text-xl font-semibold mb-3">Filtrace a přístup</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    HEPA nebo ULPA filtr není samostatné řešení. Důležitá je také těsnost uložení,
-                    přístup pro výměnu a následný test integrity po zásahu.
-                  </p>
-                </div>
-                <div className="border-t-2 border-primary pt-4">
-                  <h3 className="text-xl font-semibold mb-3">Provozní náklady</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Při volbě systému zohledňujeme regulaci, provozní režim, zanášení filtrů,
-                    údržbu a měřitelné parametry. Cílem je stabilní prostředí s předvídatelným servisem.
-                  </p>
-                </div>
-              </div>
-            </section>
+          <p>
+            Návrh vychází z dispozice, materiálového toku, počtu pracovníků, zdrojů částic, požadované třídy
+            čistoty a charakteru procesu. Teprve podle těchto údajů se volí průtoky, distribuční prvky,
+            filtrační stupně, výkon regulace a způsob odvádění vzduchu.
+          </p>
+          <div className="my-12 grid grid-cols-1 gap-8 md:grid-cols-2 not-prose">
+            <div className="rounded-lg bg-accent/30 p-8"><Wind className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h2 className="mb-3 text-xl font-semibold">Přívod, odvod a filtrace</h2><p className="text-muted-foreground">Návrh proudění a filtračních stupňů od předfiltrace po HEPA nebo ULPA filtraci podle zatížení a požadované čistoty.</p></div>
+            <div className="rounded-lg bg-accent/30 p-8"><Thermometer className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h2 className="mb-3 text-xl font-semibold">Teplota a stabilita</h2><p className="text-muted-foreground">Regulace teploty s ohledem na proces, zařízení, materiál a podmínky, ve kterých se provádí měření.</p></div>
+            <div className="rounded-lg bg-accent/30 p-8"><Droplets className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h2 className="mb-3 text-xl font-semibold">Vlhkost</h2><p className="text-muted-foreground">Zvlhčování, odvlhčování a kontrola relativní vlhkosti tam, kde ovlivňuje proces, materiál nebo pracovní podmínky.</p></div>
+            <div className="rounded-lg bg-accent/30 p-8"><Shield className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h2 className="mb-3 text-xl font-semibold">Tlakové kaskády</h2><p className="text-muted-foreground">Nastavení směru proudění mezi zónami a podklad pro měření tlakových rozdílů v klidovém i provozním režimu.</p></div>
           </div>
-        </div>
-      </section>
 
-      <ServiceCrossLink />
-      <Footer />
-    </div>
-  );
-};
+          <h2>HEPA a ULPA filtrace</h2>
+          <p>
+            HEPA a ULPA filtry tvoří jeden článek celého systému, ne samostatné řešení. Jejich účinnost musí
+            odpovídat požadavku procesu a jejich uložení musí umožnit kontrolu těsnosti, výměnu a servis.
+            U návrhu je proto důležitá také dostupnost filtru, prostor pro manipulaci a návaznost na test integrity.
+          </p>
+          <p>
+            Klasifikace a zkoušení filtrů se vztahují k normám EN 1822 a ISO 29463. Konkrétní typ filtru,
+            průtok a výměnný interval je potřeba určit podle zařízení, zátěže, tlakové ztráty a servisního plánu.
+            Samotné označení H13 nebo H14 bez těchto souvislostí nepopisuje celé chování systému.
+          </p>
+
+          <h2>Návrh, montáž, regulace a servis</h2>
+          <ol>
+            <li><strong>Návrh:</strong> technické zadání, dispoziční řešení, průtoky, filtrace, regulace a tlakové poměry.</li>
+            <li><strong>Montáž:</strong> koordinace rozvodů, filtračních skříní, koncových prvků a návazných profesí.</li>
+            <li><strong>Zaregulování:</strong> nastavení průtoků, tlaků, teploty a vlhkosti podle provozního zadání.</li>
+            <li><strong>Ověření:</strong> měření částic, proudění, tlaků, parametrů vzduchu a integrity filtrace.</li>
+            <li><strong>Servis:</strong> plán údržby, výměny filtrů, kontrola zařízení a záznamy o provedených zásazích.</li>
+          </ol>
+
+          <h2>Provozní náklady a servisní přístup</h2>
+          <p>
+            Provozní náklady neovlivňuje pouze výkon ventilátoru. Roli hraje tlaková ztráta filtrů, počet
+            výměn vzduchu, režim provozu, regulace, dostupnost servisních míst a nastavení teploty a vlhkosti.
+            Návrh, který ignoruje výměnu filtru nebo měření po zásahu, může být obtížně udržovatelný.
+          </p>
+          <p>
+            Před výměnou HEPA filtru je vhodné ověřit typ, rozměr, těsnění, uložení a požadované parametry.
+            Po zásahu může následovat test integrity a kontrolní měření podle toho, co bylo změněno.
+            Více o servisních činnostech najdete na stránce <a href="/servis" className="text-primary underline">servis čistých prostor</a>.
+          </p>
+
+          <h2>Co má obsahovat technické zadání</h2>
+          <ul>
+            <li>účel prostoru, proces a zdroje částic;</li>
+            <li>požadovanou třídu čistoty a provozní stavy;</li>
+            <li>teplotu, vlhkost, tlakové rozdíly a materiálový tok;</li>
+            <li>požadovaný typ filtrace, způsob regulace a přístup pro výměnu;</li>
+            <li>rozsah měření při uvedení do provozu a při následných kontrolách.</li>
+          </ul>
+        </div>
+        <ServiceCrossLink />
+      </div>
+    </main>
+    <Footer />
+  </div>
+);
 
 export default Vzduchotechnika;

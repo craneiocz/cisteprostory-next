@@ -5,31 +5,31 @@ const Industries = () => {
     {
       icon: Pill,
       title: 'Farmacie',
-      description: 'Čisté prostory třídy A–D dle EU GMP Annex 1 pro výrobu sterilních léčiv. Validace a kvalifikace DQ–PQ pro schválení SÚKL.',
+      description: 'Řízené prostředí pro procesy, kde je potřeba sledovat částice, tlakové poměry a návaznost na kvalifikaci podle požadavků provozu.',
       alt: 'čisté prostory pro farmacii'
     },
     {
       icon: HeartPulse,
       title: 'Nemocnice a laboratoře',
-      description: 'Laboratorní boxy, izolátory pro cytostatika a čisté prostory pro operační sály, lékárny a sterilizace.',
+      description: 'Laboratorní a laminární boxy, izolátory a technická podpora pro pracoviště s požadavky na ochranu produktu, pracovníka nebo okolí.',
       alt: 'laboratorní boxy pro nemocnice'
     },
     {
       icon: FlaskConical,
       title: 'Výzkumné laboratoře',
-      description: 'Laminární boxy a čisté prostory pro analytické, mikrobiologické a výzkumné laboratoře.',
+      description: 'Návrh filtrace, dispozice a měření pro analytické, mikrobiologické a výzkumné provozy podle konkrétního pracovního postupu.',
       alt: 'laminární boxy pro laboratoře'
     },
     {
       icon: Cpu,
       title: 'Technologie a přesná výroba',
-      description: 'Čisté prostory ISO 3–ISO 6 s HEPA/ULPA filtrací pro technologické provozy, citlivou montáž a přesnou výrobu.',
+      description: 'Kontrolované prostředí pro citlivou montáž a přesnou výrobu. Třída čistoty, filtrace i režim provozu se určují podle procesu.',
       alt: 'čisté prostory pro technologické provozy'
     },
     {
       icon: Rocket,
       title: 'Montáž a průmyslové provozy',
-      description: 'Kontrolované prostory pro montáž citlivých komponent, přesnou výrobu a procesy s vyššími nároky na čistotu vzduchu.',
+      description: 'Technické řešení pro montáž citlivých komponent a procesy, kde je nutné řídit čistotu vzduchu, proudění nebo tlak mezi zónami.',
       alt: 'čisté prostory pro montáž a průmyslové provozy'
     }
   ];
@@ -42,7 +42,7 @@ const Industries = () => {
             Kde <span className="text-primary">působíme</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Čisté prostory a laboratorní boxy dodáváme zejména pro <strong>farmacie, nemocnice, laboratoře</strong> a technologický průmysl.
+            Rozsah řešení se odvíjí od procesu, kritických míst a způsobu, jakým bude prostor provozován a následně kontrolován.
           </p>
         </div>
 

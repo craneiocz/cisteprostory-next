@@ -15,27 +15,14 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
           <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-balance tracking-tight">
-            Čisté prostory,<br />vzduchotechnika<br />a validace ISO 14644
+            Řízené prostředí pro výrobu, výzkum a zdravotnictví
           </h1>
 
           <p className="text-lg md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-balance font-light text-white/88">
-            Realizujeme <span className="text-white font-semibold">čisté prostory třídy A–D</span>, <span className="text-white font-semibold">vzduchotechniku s HEPA filtrací H13/H14</span> a <span className="text-white font-semibold">validaci dle ISO 14644 a EU GMP Annex 1</span>. Servis, měření a údržba po celé ČR.
+            Navrhujeme a ověřujeme čisté prostory, filtrační systémy a měřicí postupy podle účelu provozu. Propojujeme technické řešení s dokumentací, uvedením do provozu a následnou kontrolou.
           </p>
 
-          <nav aria-label="Trust signals" className="flex flex-wrap items-center justify-center gap-4 mb-12">
-            <span className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-5 py-3 text-sm font-medium text-white/95 backdrop-blur-sm transition-colors hover:bg-white/15">
-              <span className="h-2 w-2 rounded-full bg-white animate-pulse" aria-hidden="true"></span>
-              <span>Dostupní 24/7</span>
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-5 py-3 text-sm font-medium text-white/95 backdrop-blur-sm transition-colors hover:bg-white/15">
-              <span className="h-2 w-2 rounded-full bg-white" aria-hidden="true"></span>
-              <span>Odpovídáme do 24 hodin</span>
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-5 py-3 text-sm font-medium text-white/95 backdrop-blur-sm transition-colors hover:bg-white/15">
-              <span className="h-2 w-2 rounded-full bg-white" aria-hidden="true"></span>
-              <span>Servis po celé ČR</span>
-            </span>
-          </nav>
+          <p className="mb-12 text-sm uppercase tracking-[0.22em] text-white/70">Návrh · měření · dokumentace · servis</p>
 
           <nav aria-label="Hlavní služby" className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <a href="/mereni-a-validace" className="group" title="Validace a měření čistých prostorů dle ISO 14644">

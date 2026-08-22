@@ -4,6 +4,7 @@ export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.cisteprostory.eu';
+  const contentLastModified = '2026-08-22';
   const routes = [
     '',
     '/ciste-prostory',
@@ -17,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    lastModified: contentLastModified,
     changeFrequency: 'monthly' as const,
     priority: route === '' ? 1 : 0.8,
   }));

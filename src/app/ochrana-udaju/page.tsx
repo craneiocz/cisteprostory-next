@@ -6,7 +6,7 @@ import { createPageMetadata } from '@/lib/seo';
 export const metadata: Metadata = createPageMetadata({
   path: '/ochrana-udaju',
   title: 'Ochrana osobních údajů | cisteprostory.eu',
-  description: 'Informace o zpracování osobních údajů společností BRNO CREATIVE s.r.o. v souladu s GDPR.',
+  description: 'Pracovní informace o zpracování údajů z kontaktního formuláře, cookies a analytiky Google Analytics 4.',
 });
 
 const OchranaUdaju = () => {
@@ -33,7 +33,7 @@ const OchranaUdaju = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">2. Jaké údaje sbíráme</h2>
               <p>
-                Zpracováváme pouze údaje, které nám sami poskytnete prostřednictvím kontaktního formuláře nebo e-mailu:
+                Zpracováváme údaje, které nám sami poskytnete prostřednictvím kontaktního formuláře nebo e-mailu:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Jméno a příjmení</li>
@@ -46,28 +46,28 @@ const OchranaUdaju = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">3. Proč údaje sbíráme</h2>
               <p>
-                Vaše osobní údaje zpracováváme výhradně za účelem vyřízení vašeho dotazu nebo poptávky 
-                týkající se čistých prostor, laboratorních boxů, validací nebo vzduchotechniky. 
-                Údaje využíváme k odpovědi na váš dotaz, přípravě cenové nabídky a případnému plnění smlouvy.
+                Údaje používáme k vyřízení dotazu nebo poptávky týkající se čistých prostor, laboratorních boxů,
+                validací, vzduchotechniky nebo servisu. Slouží k odpovědi, přípravě nabídky a případnému
+                navazujícímu smluvnímu jednání.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">4. Předáváme údaje třetím stranám?</h2>
               <p>
-                Vaše osobní údaje neprodáváme. Údaje z kontaktního formuláře mohou být zpracovávány
-                prostřednictvím technických nástrojů nezbytných pro provoz webu, zejména hostingem a
-                e-mailovým serverem. Pokud udělíte souhlas s analytickými cookies, údaje o používání
-                webu zpracovává také Google Analytics podle popisu níže.
+                Vaše osobní údaje neprodáváme. Kontaktní formulář odesílá jméno, e-mail, volitelný telefon
+                a zprávu na API provozované na adrese <code>api.cisteprostory.eu/email.php</code>.
+                Přístup k údajům mohou mít technické služby nutné pro provoz API, e-mailu a hostingu.
+                Google Analytics používáme pouze po udělení analytického souhlasu.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">5. Cookies a měření návštěvnosti</h2>
               <p>
-                Web používá nezbytné technologie potřebné pro jeho fungování a zapamatování volby cookies.
-                Analytické cookies Google Analytics 4 používáme pouze na základě vašeho předchozího souhlasu.
-                Pomáhají nám vyhodnocovat návštěvnost a používání jednotlivých částí webu.
+                Web používá nezbytné technologie pro fungování stránky a zapamatování volby cookies.
+                Google Analytics 4 se načítá pouze po předchozím souhlasu s kategorií analytiky.
+                Bez tohoto souhlasu analytické měření nepoužíváme.
               </p>
               <p>
                 Google Analytics může zpracovávat údaje o návštěvě, používaném zařízení, prohlížeči,
@@ -84,8 +84,9 @@ const OchranaUdaju = () => {
             <section>
               <h2 className="text-2xl font-semibold text-foreground mb-4">6. Doba uchovávání údajů</h2>
               <p>
-                Osobní údaje uchováváme po dobu nezbytně nutnou k naplnění účelu jejich zpracování, 
-                maximálně však po dobu 3 let od posledního kontaktu, pokud zákon nestanoví jinak.
+                Osobní údaje uchováváme po dobu nezbytně nutnou k vyřízení účelu, nejdéle podle aktuálního
+                interního retenčního pravidla a zákonných povinností. Konkrétní lhůtu a pravidla mazání je
+                potřeba ověřit podle skutečného nastavení API, e-mailu a evidence poptávek.
               </p>
             </section>
 
@@ -109,7 +110,8 @@ const OchranaUdaju = () => {
 
 
             <p className="text-sm text-muted-foreground mt-12">
-              Tyto zásady ochrany osobních údajů jsou platné od 1. 1. 2025.
+              Tento text je redakčně sladěný s aktuálním chováním webu. Před zveřejněním je potřeba právně ověřit
+              právní tituly, zpracovatele, retenční lhůty a případné přenosy údajů mimo EHP.
             </p>
           </div>
         </div>

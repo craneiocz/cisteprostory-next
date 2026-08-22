@@ -9,9 +9,9 @@ import { ShieldCheck, CheckCircle, Wind, ClipboardCheck } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
   path: '/integrita-hepa-filtru',
-  title: 'Test integrity HEPA filtrů dle EN 1822 | cisteprostory.eu',
+  title: 'Test integrity HEPA a ULPA filtrů | cisteprostory.eu',
   description:
-    'Test těsnosti HEPA a ULPA filtrů aerosolovým skenováním dle EN 1822 a ISO 14644-3 pro čisté prostory, laminární boxy a izolátory po celé ČR.',
+    'Ověření těsnosti HEPA a ULPA filtrace aerosolovým skenováním, včetně média, rámu, těsnění a uložení podle sjednané metodiky.',
 });
 
 export default function IntegritaHepaFiltru() {
@@ -19,96 +19,59 @@ export default function IntegritaHepaFiltru() {
     <div className="min-h-screen bg-background">
       <PageSchema
         path="/integrita-hepa-filtru"
-        title="Test integrity HEPA filtrů dle EN 1822"
-        description="Aerosolové skenování těsnosti HEPA a ULPA filtrů pro čisté prostory, laminární boxy a izolátory."
+        title="Test integrity HEPA a ULPA filtrů"
+        description="Ověření těsnosti filtračního média, rámu, těsnění a uložení filtru aerosolovým skenováním."
         serviceName="Test integrity HEPA filtrů"
-        serviceDescription="Ověření těsnosti filtračního média, rámu a uložení HEPA filtrů podle EN 1822 a ISO 14644-3."
+        serviceDescription="Kontrola filtrace jako součást validace čistého prostoru, boxu nebo izolátoru."
       />
       <Header />
+      <section className="bg-gradient-hero py-16 text-white lg:py-24"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h1 className="mb-6 text-4xl font-bold md:text-5xl">Test integrity HEPA a ULPA filtrů</h1><p className="max-w-3xl text-xl leading-relaxed text-white/90">Ověření, že filtrace, její těsnění a uložení neumožňují obtok kontaminovaného vzduchu.</p></div></section>
+      <main className="py-16 lg:py-24"><div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"><div className="prose prose-lg max-w-none">
+        <h2>Co test integrity ověřuje</h2>
+        <p>
+          Test integrity HEPA nebo ULPA filtru patří mezi důležité validační zkoušky čistých prostorů,
+          laminárních boxů, izolátorů a bariérových pracovišť. Cílem je ověřit nejen filtrační médium,
+          ale také rám, těsnění a místo uložení. Netěsnost může vzniknout v médiu, kolem rámu nebo v místě,
+          kde filtr nedoléhá k těsnicí ploše.
+        </p>
+        <p>
+          Výsledek proto nelze správně interpretovat bez identifikace filtru, jeho umístění, provozního stavu
+          zařízení a použité metodiky. Test se provádí aerosolovým skenováním a naměřené hodnoty se porovnávají
+          s limity sjednanými pro dané zařízení, třídu čistoty a normativní rámec.
+        </p>
 
-      <section className="bg-gradient-hero text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Test integrity HEPA filtrů</h1>
-          <p className="text-xl text-white/90 max-w-3xl">
-            Aerosolové skenování těsnosti HEPA a ULPA filtrů dle EN 1822 a ISO 14644-3 — ověříme,
-            že filtr ani jeho uložení nepropouští kontaminovaný vzduch.
-          </p>
+        <h2>Jak zkouška probíhá</h2>
+        <ul>
+          <li className="flex items-start gap-3"><CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" />Příprava zařízení, filtru, přístupu a testovacího aerosolu před filtrem.</li>
+          <li className="flex items-start gap-3"><CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" />Ověření stabilního provozního stavu a podmínek, za kterých se skenování provádí.</li>
+          <li className="flex items-start gap-3"><CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" />Skenování celé plochy filtru, rámu, těsnění a kritických spojů fotometrickou sondou.</li>
+          <li className="flex items-start gap-3"><CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" />Záznam maximální penetrace, místa případné netěsnosti a vyhodnocení shody.</li>
+          <li className="flex items-start gap-3"><CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" />Protokol s identifikací zařízení, filtru, metodiky, hodnot a doporučeného dalšího kroku.</li>
+        </ul>
+
+        <h2>Obtok filtru a jeho nejčastější příčiny</h2>
+        <p>
+          Obtok neboli bypass znamená, že vzduch prochází kolem filtrační vložky místo skrz filtrační médium.
+          Příčinou může být poškozené těsnění, nesprávné uložení, deformovaný rám, nedostatečné dotažení,
+          netěsný spoj nebo zásah do zařízení. Skenování proto musí zahrnout také okraje a místa napojení,
+          nikoli pouze střed filtrační plochy.
+        </p>
+
+        <h2>Kdy test provést</h2>
+        <div className="my-10 grid grid-cols-1 gap-6 md:grid-cols-2 not-prose">
+          <div className="rounded-lg bg-accent/30 p-6"><ShieldCheck className="mb-3 h-10 w-10 text-primary" aria-hidden="true" /><h3 className="mb-2 text-lg font-semibold">Po instalaci nebo výměně</h3><p className="text-muted-foreground">Ověření, že nový filtr a jeho montáž odpovídají požadovanému provoznímu stavu.</p></div>
+          <div className="rounded-lg bg-accent/30 p-6"><ClipboardCheck className="mb-3 h-10 w-10 text-primary" aria-hidden="true" /><h3 className="mb-2 text-lg font-semibold">Při periodické kontrole</h3><p className="text-muted-foreground">Kontrola podle interního harmonogramu, rizikovosti zařízení nebo návaznosti na revalidaci.</p></div>
         </div>
-      </section>
+        <p>Test může být vhodný také po opravě vzduchotechniky, změně regulace, zásahu do skříně filtru nebo při podezření na zhoršení čistoty prostoru.</p>
 
-      <section className="py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Test integrity (těsnosti) HEPA filtru patří mezi klíčové validační zkoušky čistých
-              prostorů, laminárních boxů, izolátorů a bariérových pracovišť. Cílem je prokázat, že
-              filtrační médium ani rám a těsnění filtru nepropouští částice — a to i v místě
-              spojení filtru s rámem, kde nejčastěji dochází k tzv. obtoku (bypass).
-            </p>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6">Jak test probíhá</h2>
-            <ul className="space-y-3 text-lg text-muted-foreground mb-12">
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Generování testovacího aerosolu (polydisperzní olejová mlha) před filtrem</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Skenování celé plochy filtru i těsnění fotometrickou sondou za filtrem</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Vyhodnocení procentuální penetrace dle limitů normy EN 1822 / ISO 14644-3</span>
-              </li>
-              <li className="flex items-start">
-                <CheckCircle className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" />
-                <span>Protokol s naměřenými hodnotami a vyhodnocením shody</span>
-              </li>
-            </ul>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6">Kdy test provést</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <div className="bg-accent/30 p-6 rounded-lg">
-                <ShieldCheck className="h-10 w-10 text-primary mb-3" />
-                <h3 className="text-lg font-semibold mb-2">Po instalaci nebo výměně filtru</h3>
-                <p className="text-muted-foreground">
-                  Ověření, že nový filtr a jeho montáž splňují požadovanou třídu čistoty.
-                </p>
-              </div>
-              <div className="bg-accent/30 p-6 rounded-lg">
-                <ClipboardCheck className="h-10 w-10 text-primary mb-3" />
-                <h3 className="text-lg font-semibold mb-2">Periodická revalidace</h3>
-                <p className="text-muted-foreground">
-                  Pravidelné ověřování dle interního harmonogramu, GMP Annex 1 nebo ISO 14644-2.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-primary/5 border border-primary/20 rounded-lg p-8 mb-8">
-              <div className="flex items-start gap-4">
-                <Wind className="h-8 w-8 text-primary flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Součást komplexní validace</h3>
-                  <p className="text-muted-foreground">
-                    Test integrity HEPA filtrů obvykle kombinujeme s dalšími měřeními — počtem
-                    částic, rychlostí proudění vzduchu a tlakovými rozdíly. Podívejte se na{' '}
-                    <Link href="/mereni-a-validace" className="text-primary underline">
-                      kompletní nabídku validací a měření
-                    </Link>{' '}
-                    nebo na{' '}
-                    <Link href="/vzduchotechnika" className="text-primary underline">
-                      dodávku a servis vzduchotechniky a HEPA filtrace
-                    </Link>
-                    .
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <ServiceCrossLink />
+        <h2>Jak navazuje na další měření</h2>
+        <p>
+          Integrita filtrace je pouze jedna část celkové kontroly. V závislosti na provozu se kombinuje s měřením
+          počtu částic, rychlosti proudění, tlakových rozdílů, teploty a vlhkosti. <Link href="/mereni-a-validace" className="text-primary underline">Kompletní měření a validace</Link> pomohou určit rozsah podle zadání.
+          Technické souvislosti filtrace, regulace a servisního přístupu popisuje <Link href="/vzduchotechnika" className="text-primary underline">vzduchotechnika čistých prostor</Link>.
+        </p>
+        <div className="rounded-lg border border-primary/20 bg-primary/5 p-8"><div className="flex items-start gap-4"><Wind className="mt-1 h-8 w-8 flex-shrink-0 text-primary" aria-hidden="true" /><p className="m-0 text-muted-foreground">Pro správné vyhodnocení je potřeba znát typ filtru, zařízení, provozní stav, metodiku a požadované limity. Nabídka se proto připravuje podle konkrétního místa měření.</p></div></div>
+      </div><ServiceCrossLink /></div></main>
       <Footer />
     </div>
   );

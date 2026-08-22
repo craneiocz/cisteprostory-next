@@ -30,7 +30,7 @@ const Standards = () => {
             Normy a <span className="text-primary">standardy</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Veškeré realizace čistých prostorů a validace provádíme dle platných mezinárodních norem.
+            Normy poskytují technický rámec pro klasifikaci, filtraci a měření. Konkrétní rozsah se vždy odvíjí od procesu a zadání provozu.
           </p>
         </div>
 

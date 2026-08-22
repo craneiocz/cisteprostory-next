@@ -9,18 +9,18 @@ import GoogleAnalyticsPageView from "@/components/GoogleAnalyticsPageView";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.cisteprostory.eu"),
-  title: "Čisté prostory a validace čistých prostor | cisteprostory.eu",
+  title: "Čisté prostory pro ověřitelný provoz | cisteprostory.eu",
   description:
-    "Realizace čistých prostorů, validace čistých prostor, vzduchotechniky, HEPA filtrů H13/H14 a měření dle ISO 14644 a EU GMP Annex 1.",
+    "Návrh čistých prostor, vzduchotechniky, filtrace, měření a servis podle účelu provozu a požadované kontroly.",
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",
     shortcut: "/favicon.ico",
   },
   openGraph: {
-    title: "Čisté prostory a validace čistých prostor | cisteprostory.eu",
+    title: "Čisté prostory pro ověřitelný provoz | cisteprostory.eu",
     description:
-      "Realizace čistých prostorů, validace čistých prostor, vzduchotechniky, HEPA filtrů H13/H14 a měření dle ISO 14644 a EU GMP Annex 1.",
+      "Návrh čistých prostor, vzduchotechniky, filtrace, měření a servis podle účelu provozu a požadované kontroly.",
     type: "website",
     url: "https://www.cisteprostory.eu",
     siteName: "Čisté prostory",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Čisté prostory a validace čistých prostor",
+    title: "Čisté prostory pro ověřitelný provoz",
     description:
-      "Realizace čistých prostorů, validace čistých prostor, vzduchotechniky a HEPA filtrů H13/H14.",
+      "Návrh čistých prostor, filtrace, měření a servis podle účelu provozu.",
   },
   alternates: {
     canonical: "https://www.cisteprostory.eu",
@@ -55,7 +55,7 @@ const jsonLd = {
   logo: "https://www.cisteprostory.eu/icon.png",
   image: "https://www.cisteprostory.eu/opengraph-image.png",
   description:
-    "Realizace čistých prostorů, laboratorní boxy, validace čistých prostor dle ISO 14644 a EU GMP, HEPA filtry, vzduchotechnika a servis po celé ČR.",
+    "Návrh čistých prostorů, laboratorní boxy, měření podle ISO 14644, filtrace, vzduchotechnika a servis podle zadání.",
   email: "info@cisteprostory.eu",
   address: {
     "@type": "PostalAddress",

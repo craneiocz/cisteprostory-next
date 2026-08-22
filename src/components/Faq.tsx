@@ -5,34 +5,34 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-    question: 'Jak dlouho trvá validace čistého prostoru dle ISO 14644?',
+    question: 'Co potřebujete vědět před návrhem čistého prostoru?',
     answer:
-      'Doba měření závisí na velikosti a počtu zón, obvykle jde o jeden až tři pracovní dny přímo na místě. Protokol s výsledky a certifikátem obvykle dodáváme do několika pracovních dnů po měření.',
+      'Pro návrh je důležitý účel prostoru, proces, citlivost produktu, počet pracovníků, materiálový tok, požadovaná třída čistoty a provozní režim. Z těchto údajů se odvíjí dispozice, filtrace, tlakové poměry i rozsah měření.',
   },
   {
-    question: 'Jak často je potřeba čisté prostory revalidovat podle ISO 14644?',
+    question: 'Jak se určuje rozsah validace?',
     answer:
-      'Dle EU GMP Annex 1 a ISO 14644-2 se doporučuje periodická validace jednou ročně u tříd čistoty ISO 5–8, u kritičtějších tříd (ISO 5 a přísnější, např. GMP třída A/B) je interval kratší. Konkrétní frekvenci přizpůsobíme typu provozu a interním předpisům klienta.',
+      'Rozsah vychází z účelu prostoru, klasifikace, vybavení a interního plánu kontrol. Může zahrnovat částice, tlakové rozdíly, proudění, teplotu, vlhkost, integritu HEPA filtrů a dokumentované vyhodnocení.',
   },
   {
-    question: 'Co je součástí testu integrity HEPA filtrů H13/H14?',
+    question: 'Co ověřuje test integrity HEPA filtru?',
     answer:
-      'Testujeme těsnost filtru i jeho uložení pomocí aerosolového skenování dle EN 1822/ISO 14644-3, abychom vyloučili obtok (bypass) kontaminovaného vzduchu kolem filtrační vložky.',
+      'Aerosolovým skenováním ověřuje těsnost filtračního média, rámu, těsnění a uložení. Součástí je vyhodnocení naměřených hodnot proti použité metodice a limitům.',
   },
   {
-    question: 'Provádíte i servis a výměnu HEPA filtrů, nebo jen měření?',
+    question: 'Navazuje měření na servis nebo výměnu filtru?',
     answer:
-      'Zajišťujeme obojí — dodávku a montáž vzduchotechniky a HEPA/ULPA filtrace, pravidelný servis a údržbu i následnou validaci a měření podle příslušných norem.',
+      'Ano. Po zásahu do filtrace nebo vzduchotechniky dává smysl ověřit stav systému měřením. Konkrétní kombinace servisu, testu integrity a dalších zkoušek se určuje podle zařízení a provozního rizika.',
   },
   {
-    question: 'V jakých oborech nejčastěji pracujete?',
+    question: 'Jaký výstup z měření obdržíte?',
     answer:
-      'Nejčastěji ve farmacii, zdravotnictví a nemocnicích, výzkumných laboratořích, elektronice a optice a v automotive/aerospace výrobě, kde je vyžadována kontrolovaná čistota prostředí.',
+      'Výstupem je protokol podle sjednaného rozsahu: identifikace měřeného prostoru, podmínky měření, použité body a přístroje, hodnoty, limity, vyhodnocení a případné doporučení k dalšímu postupu.',
   },
   {
-    question: 'Jak vás mohu kontaktovat a jak rychle odpovídáte?',
+    question: 'Jak připravit poptávku?',
     answer:
-      'Jsme dostupní online 24/7 přes e-mail nebo kontaktní formulář na webu. Na poptávky standardně odpovídáme do 24 hodin.',
+      'Uveďte účel prostoru nebo zařízení, místo realizace, požadovaný rozsah, dostupnou dokumentaci a termín, který potřebujete řešit. Pokud část údajů chybí, pomůže jejich doplnění při úvodní konzultaci.',
   },
 ];
 

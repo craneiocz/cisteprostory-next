@@ -4,218 +4,91 @@ import Footer from '@/components/Footer';
 import PageSchema from '@/components/PageSchema';
 import ServiceCrossLink from '@/components/ServiceCrossLink';
 import { createPageMetadata } from '@/lib/seo';
-import { Wrench, Users, Calendar, Award, ShieldCheck } from 'lucide-react';
+import { Wrench, ShieldCheck, ClipboardCheck, Filter } from 'lucide-react';
 
 export const metadata: Metadata = createPageMetadata({
   path: '/servis',
   title: 'Servis čistých prostor a HEPA filtrů | cisteprostory.eu',
   description:
-    'Servis a údržba čistých prostor, vzduchotechniky a HEPA filtrů včetně výměn, zaregulování, dokumentace a pohotovostního servisu po celé ČR.',
+    'Údržba čistých prostor, vzduchotechniky, HEPA filtrů, laminárních boxů a izolátorů včetně výměn, servisních záznamů a návazných kontrol.',
 });
 
-const Servis = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <PageSchema
-        path="/servis"
-        title="Servis čistých prostor a HEPA filtrů"
-        description="Pravidelný i pohotovostní servis čistých prostor, vzduchotechniky, laminárních boxů, izolátorů a HEPA filtrace."
-        serviceName="Servis čistých prostor"
-        serviceDescription="Servis, údržba, výměna HEPA filtrů a kontrola vzduchotechniky pro čisté prostory po celé ČR."
-      />
-      <Header />
-      
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-primary-dark to-primary text-white py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Servis vzduchotechniky a HEPA filtrů</h1>
-          <p className="text-xl text-white/90 max-w-3xl">
-            Profesionální servis a údržba vzduchotechnických systémů, čistých prostorů a filtrací H13/H14
-          </p>
-        </div>
-      </section>
+const Servis = () => (
+  <div className="min-h-screen bg-background">
+    <PageSchema
+      path="/servis"
+      title="Servis čistých prostor a HEPA filtrů"
+      description="Servisní péče o vzduchotechniku, HEPA filtry, boxy a izolátory podle provozního plánu a návazných kontrol."
+      serviceName="Servis čistých prostor"
+      serviceDescription="Údržba, výměny a kontrola zařízení s návazností na měření a dokumentaci."
+    />
+    <Header />
+    <section className="bg-gradient-hero py-16 text-white lg:py-24"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h1 className="mb-6 text-4xl font-bold md:text-5xl">Servis čistých prostor a HEPA filtrů</h1><p className="max-w-3xl text-xl leading-relaxed text-white/90">Údržba podle skutečného provozu, stavu zařízení a požadavků na navazující kontrolu.</p></div></section>
+    <main className="py-16 lg:py-24"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div className="prose prose-lg max-w-none">
+      <h2>Proč servis čistého prostoru nelze oddělit od měření</h2>
+      <p>
+        Servisní plán má chránit provoz před nečekanými odchylkami a vytvořit dohledatelnou historii zásahů.
+        U čistých prostorů se proto nesleduje pouze to, zda zařízení běží. Důležité je také, zda filtrace,
+        tlakové rozdíly, proudění, teplota a vlhkost stále odpovídají účelu prostoru.
+      </p>
+      <p>
+        Rozsah údržby vychází z typu zařízení, zatížení, přístupu k filtrům, provozních hodin, interního plánu
+        a výsledků předchozích kontrol. Po zásahu může následovat měření nebo test integrity, pokud mohl zásah
+        ovlivnit čistotu, filtraci nebo tlakové poměry.
+      </p>
 
-      {/* Main Content */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Spolupracujeme výhradně se specialisty, kteří mají s instalací daného typu systému rozsáhlé zkušenosti 
-              a jsou pro montáž patřičně proškoleni a vybaveni. Vše probíhá dle dohodnutého harmonogramu prací 
-              s maximálním ohledem na termín dokončení díla a majetek investora.
-            </p>
+      <h2>Co může servis zahrnovat</h2>
+      <div className="my-10 grid grid-cols-1 gap-8 md:grid-cols-2 not-prose">
+        <div className="rounded-lg bg-accent/30 p-8"><Wrench className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h3 className="mb-3 text-xl font-semibold">Vzduchotechnika a regulace</h3><p className="text-muted-foreground">Kontrola zařízení, průtoků, regulace, tlakových poměrů a provozních stavů podle dokumentace a servisního plánu.</p></div>
+        <div className="rounded-lg bg-accent/30 p-8"><Filter className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h3 className="mb-3 text-xl font-semibold">Výměny HEPA a ULPA filtrů</h3><p className="text-muted-foreground">Ověření typu, rozměru, těsnění a uložení filtru, bezpečná výměna a předání údajů pro navazující test integrity.</p></div>
+        <div className="rounded-lg bg-accent/30 p-8"><ShieldCheck className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h3 className="mb-3 text-xl font-semibold">Boxy a izolátory</h3><p className="text-muted-foreground">Údržba laminárních boxů, laboratorních boxů, izolátorů a dalších zařízení s řízenou filtrací a prouděním.</p></div>
+        <div className="rounded-lg bg-accent/30 p-8"><ClipboardCheck className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h3 className="mb-3 text-xl font-semibold">Záznamy a doporučení</h3><p className="text-muted-foreground">Dokumentace zásahu, identifikace použitých dílů, popis zjištění a doporučení pro další servis nebo měření.</p></div>
+      </div>
 
-            <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              Po montáži zajistíme odborné zaregulování celého systému a zaškolení obsluhy s vysvětlením 
-              servisních požadavků zařízení.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
-              <div className="bg-accent/30 p-8 rounded-lg">
-                <Users className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Zkušení specialisté</h3>
-                <p className="text-muted-foreground">
-                  Náš tým tvoří vysoce kvalifikovaní specialisté s rozsáhlými zkušenostmi 
-                  v oblasti vzduchotechniky a čistých prostorů. Každý člen týmu je řádně 
-                  vyškolen a certifikován pro práci s nejmodernějšími technologiemi.
-                </p>
-              </div>
-
-              <div className="bg-accent/30 p-8 rounded-lg">
-                <Calendar className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Plánovaná údržba</h3>
-                <p className="text-muted-foreground">
-                  Vše probíhá dle dohodnutého harmonogramu prací s maximálním ohledem 
-                  na stanovený termín dokončení díla. Respektujeme provozní požadavky 
-                  vašeho zařízení a minimalizujeme prostoje.
-                </p>
-              </div>
-
-              <div className="bg-accent/30 p-8 rounded-lg">
-                <Wrench className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Kompletní servis</h3>
-                <p className="text-muted-foreground">
-                  Po montáži zajistíme odborné zaregulování celého systému, provedeme 
-                  všechny potřebné testy a měření. Systém předáváme plně funkční 
-                  a optimalizovaný pro váš provoz.
-                </p>
-              </div>
-
-              <div className="bg-accent/30 p-8 rounded-lg">
-                <Award className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Zaškolení obsluhy</h3>
-                <p className="text-muted-foreground">
-                  Poskytujeme komplexní zaškolení obsluhy s vysvětlením servisních 
-                  požadavků zařízení. Vaši zaměstnanci budou schopni systém správně 
-                  obsluhovat a provádět základní údržbu.
-                </p>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6">Naše servisní služby zahrnují</h2>
-            <ul className="space-y-3 text-lg text-muted-foreground">
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Pravidelnou údržbu vzduchotechnických systémů a měření výkonu VZT</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Výměnu a servis HEPA a ULPA filtrů podle normy EN 1822</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Kontrolu a zaregulování vzduchotechnických jednotek včetně teploty a vlhkosti</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Opravy a úpravy stávajících systémů</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Preventivní prohlídky a diagnostiku</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Pohotovostní servis</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Dodávku náhradních dílů</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Zaškolení personálu</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-3">•</span>
-                <span>Dezinfekce vzduchotechniky</span>
-              </li>
-            </ul>
-
-            <h2 className="text-3xl font-bold mt-16 mb-6">Servis speciálních zařízení</h2>
-            <div className="bg-accent/30 p-8 rounded-lg mb-8">
-              <div className="flex items-start mb-4">
-                <ShieldCheck className="h-8 w-8 text-primary mr-4 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-3">Laminární boxy, izolátory a bariérové boxy</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Specializujeme se na komplexní servis laminárních boxů a izolátorů, včetně podtlakových izolátorů 
-                    a bariérových boxů pro práci s cytostatiky. Zajišťujeme bezpečné a spolehlivé fungování těchto 
-                    kritických zařízení pro ochranu personálu i produktů.
-                  </p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">→</span>
-                      <span>Servis a výměna HEPA filtrů v laminárních boxech a izolátorech</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">→</span>
-                      <span>Mechanický servis izolátorů pro ředění cytostatik a podtlakových izolátorů</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">→</span>
-                      <span>Aktualizace software a řídicích systémů zařízení</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">→</span>
-                      <span>Validace a kvalifikace po servisu (IQ, OQ, PQ)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">→</span>
-                      <span>Testy integrity filtrů a těsnosti komory</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-accent/30 p-8 rounded-lg">
-              <div className="flex items-start">
-                <Wrench className="h-8 w-8 text-primary mr-4 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-3">Digestoře a laboratorní přístroje</h3>
-                  <p className="text-muted-foreground mb-4">
-                    Provádíme odborný servis digestoří a dalších velkých laboratorních přístrojů. Zajišťujeme 
-                    jejich bezpečný a efektivní provoz v souladu s příslušnými normami a předpisy.
-                  </p>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">→</span>
-                      <span>Pravidelný servis digestoří a kontrola jejich funkčnosti</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">→</span>
-                      <span>Výměna filtrů a čištění systémů</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">→</span>
-                      <span>Měření výkonu odsávání a účinnosti zachycení par</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-primary mr-2">→</span>
-                      <span>Renovace starších zařízení nebo poradenství při jejich likvidaci</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-primary/10 p-8 rounded-lg mt-12">
-              <h3 className="text-2xl font-bold mb-4">Maximální ochrana vašeho majetku</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Při všech pracích dbáme na maximální ochranu majetku investora. Naši technici 
-                používají ochranné pomůcky a postupy, které minimalizují riziko poškození 
-                okolního vybavení a zajišťují bezpečnost provozu.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <ServiceCrossLink />
-      <Footer />
-    </div>
-  );
-};
+      <h2>Plánovaná údržba versus zásah po odchylce</h2>
+      <p>
+        Plánovaná údržba se připravuje podle zařízení a očekávaného zatížení. Zahrnuje pravidelné kontroly,
+        čištění, výměny spotřebních prvků a ověření provozních parametrů. Zásah po odchylce má jiný cíl:
+        nejprve je potřeba popsat problém, určit pravděpodobnou příčinu a zvolit kontrolu, která ověří účinek opravy.
+      </p>
+      <h2>Co připravit pro servisní návrh</h2>
+      <ul>
+        <li>typ zařízení, filtru nebo boxu a dostupnou technickou dokumentaci;</li>
+        <li>historii výměn, oprav, měření a známých provozních odchylek;</li>
+        <li>požadovaný rozsah odstávky a přístup k zařízení;</li>
+        <li>požadavky na dokumentaci, likvidaci filtrů a návazné měření;</li>
+        <li>informaci o třídě čistoty, provozním režimu a kritických parametrech.</li>
+      </ul>
+      <h2>Kontrola po výměně filtru nebo opravě</h2>
+      <p>
+        Po výměně HEPA filtru se podle zařízení a interního plánu ověřuje těsnost média, rámu a uložení.
+        Po zásahu do vzduchotechniky může být potřeba zkontrolovat také průtoky, tlakové rozdíly, částice,
+        teplotu nebo vlhkost. <a href="/mereni-a-validace" className="text-primary underline">Měření a validace</a> pomohou zvolit rozsah podle toho, co bylo změněno.
+      </p>
+      <h2>Dokumentace servisního zásahu</h2>
+      <p>
+        Servisní záznam by měl umožnit dohledat, které zařízení bylo kontrolováno, co bylo provedeno, jaké díly
+        byly použity a zda je potřeba další krok. Taková dokumentace podporuje plánování údržby i přípravu na audit;
+        sama o sobě ale nenahrazuje validační protokol nebo měření, pokud je vyžaduje provozní zadání.
+      </p>
+      <h2>Jak servisní zásah probíhá</h2>
+      <ol>
+        <li><strong>Popis zařízení:</strong> identifikace prostoru, boxu, izolátoru, filtračního stupně nebo regulační části.</li>
+        <li><strong>Posouzení stavu:</strong> kontrola dostupné dokumentace, provozních potíží a posledních výsledků měření.</li>
+        <li><strong>Provedení práce:</strong> servis, výměna dílů, nastavení regulace nebo odstranění zjištěné závady.</li>
+        <li><strong>Kontrola po zásahu:</strong> ověření správné funkce a určení, zda je potřeba navazující měření.</li>
+        <li><strong>Předání záznamu:</strong> popis provedených úkonů, použitých dílů, zjištění a doporučení.</li>
+      </ol>
+      <h2>Servisní dokumentace pro provoz a audit</h2>
+      <p>
+        Servisní záznam má být dohledatelný podle zařízení a data zásahu. Praktický záznam obsahuje identifikaci
+        komponent, popis práce, stav před a po zásahu, použité náhradní díly a informaci o doporučené kontrole.
+        Pokud zásah ovlivňuje filtrační systém, proudění nebo tlakové poměry, dokumentace by měla navazovat na
+        měřicí protokol a interní systém řízení změn.
+      </p>
+    </div><ServiceCrossLink /></div></main>
+    <Footer />
+  </div>
+);
 
 export default Servis;
