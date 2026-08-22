@@ -79,34 +79,10 @@ export default function RootLayout({
         <CookieConsentProvider />
         <GoogleAnalyticsPageView />
         <script
-          type="text/plain"
-          data-category="analytics"
-          data-service="google-analytics"
-        >{`window.dataLayer = window.dataLayer || [];
-window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
-window.gtag('js', new Date());
-window.gtag('consent', 'default', {
-  analytics_storage: 'denied',
-  ad_storage: 'denied',
-  ad_user_data: 'denied',
-  ad_personalization: 'denied'
-});
-window.gtag('consent', 'update', {
-  analytics_storage: 'granted',
-  ad_storage: 'denied',
-  ad_user_data: 'denied',
-  ad_personalization: 'denied'
-});
-window.gtag('config', 'G-R4PM30709Q', { send_page_view: false });
-var ga4Script = document.createElement('script');
-ga4Script.async = true;
-ga4Script.src = 'https://www.googletagmanager.com/gtag/js?id=G-R4PM30709Q';
-ga4Script.onload = function(){ window.dispatchEvent(new Event('cisteprostory-ga4-ready')); };
-document.head.appendChild(ga4Script);`}</script>
-        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <div id="cookie-consent-root" />
         <a
           href="#main-content"
           className="sr-only fixed left-4 top-4 z-[100] rounded-md bg-primary px-4 py-3 font-semibold text-primary-foreground shadow-lg focus:not-sr-only focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"

@@ -24,7 +24,7 @@ const Hero = () => {
 
           <p className="mb-12 text-sm uppercase tracking-[0.22em] text-white/70">Návrh · měření · dokumentace · servis</p>
 
-          <nav aria-label="Hlavní služby" className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <nav aria-label="Hlavní služby" className="mx-auto grid max-w-4xl grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
             <a href="/mereni-a-validace" className="group" title="Validace a měření čistých prostorů dle ISO 14644">
               <div className="flex flex-col items-center">
                 <div className="mb-3 rounded-2xl border border-white/15 bg-white/10 p-4 transition-colors duration-300 group-hover:bg-white/15">

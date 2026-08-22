@@ -8,8 +8,54 @@ const measurementId = 'G-R4PM30709Q';
 
 declare global {
   interface Window {
+    dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
+    __cisteprostoryGaLoaded?: boolean;
   }
+}
+
+function loadGoogleAnalytics(onReady: () => void) {
+  if (window.__cisteprostoryGaLoaded) {
+    onReady();
+    return;
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function (...args: unknown[]) {
+    window.dataLayer?.push(args);
+  };
+  window.gtag('js', new Date());
+  window.gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+  });
+  window.gtag('consent', 'update', {
+    analytics_storage: 'granted',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+  });
+  window.gtag('config', measurementId, { send_page_view: false });
+
+  const existingScript = document.querySelector<HTMLScriptElement>(
+    `script[src*="googletagmanager.com/gtag/js?id=${measurementId}"]`,
+  );
+  if (existingScript) {
+    window.__cisteprostoryGaLoaded = true;
+    onReady();
+    return;
+  }
+
+  const script = document.createElement('script');
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+  script.onload = () => {
+    window.__cisteprostoryGaLoaded = true;
+    onReady();
+  };
+  document.head.appendChild(script);
 }
 
 export default function GoogleAnalyticsPageView() {
@@ -37,22 +83,21 @@ export default function GoogleAnalyticsPageView() {
       sendPageView();
     };
     const handleConsentChange = () => {
-      isGaReady.current = CookieConsent.acceptedCategory('analytics');
+      if (CookieConsent.acceptedCategory('analytics')) {
+        loadGoogleAnalytics(handleGaReady);
+      }
     };
 
-    window.addEventListener('cisteprostory-ga4-ready', handleGaReady);
     window.addEventListener('cc:onChange', handleConsentChange);
     window.addEventListener('cc:onConsent', handleConsentChange);
     const readinessTimer = window.setTimeout(() => {
-      if (CookieConsent.acceptedCategory('analytics') && typeof window.gtag === 'function') {
-        isGaReady.current = true;
-        sendPageView();
+      if (CookieConsent.acceptedCategory('analytics')) {
+        loadGoogleAnalytics(handleGaReady);
       }
     }, 0);
 
     return () => {
       window.clearTimeout(readinessTimer);
-      window.removeEventListener('cisteprostory-ga4-ready', handleGaReady);
       window.removeEventListener('cc:onChange', handleConsentChange);
       window.removeEventListener('cc:onConsent', handleConsentChange);
     };

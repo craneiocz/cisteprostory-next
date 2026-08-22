@@ -3,15 +3,26 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageSchema from '@/components/PageSchema';
 import ServiceCrossLink from '@/components/ServiceCrossLink';
+import ServiceHero from '@/components/ServiceHero';
+import { ClipboardCheck, Filter, ShieldCheck, Wrench, CheckCircle2 } from 'lucide-react';
 import { createPageMetadata } from '@/lib/seo';
-import { Wrench, ShieldCheck, ClipboardCheck, Filter } from 'lucide-react';
 
-export const metadata: Metadata = createPageMetadata({
-  path: '/servis',
-  title: 'Servis čistých prostor a HEPA filtrů | cisteprostory.eu',
-  description:
-    'Údržba čistých prostor, vzduchotechniky, HEPA filtrů, laminárních boxů a izolátorů včetně výměn, servisních záznamů a návazných kontrol.',
-});
+export const metadata: Metadata = createPageMetadata({ path: '/servis', title: 'Servis čistých prostor a HEPA filtrů | cisteprostory.eu', description: 'Údržba čistých prostor, vzduchotechniky, HEPA filtrů, laminárních boxů a izolátorů včetně výměn, servisních záznamů a návazných kontrol.' });
+
+const serviceAreas = [
+  ['01', Wrench, 'Vzduchotechnika a regulace', 'Kontrola zařízení, průtoků, regulace, tlakových poměrů a provozních stavů podle dokumentace a servisního plánu.'],
+  ['02', Filter, 'Výměny HEPA a ULPA filtrů', 'Ověření typu, rozměru, těsnění a uložení filtru, bezpečná výměna a předání údajů pro navazující test integrity.'],
+  ['03', ShieldCheck, 'Boxy a izolátory', 'Údržba laminárních boxů, laboratorních boxů, izolátorů a dalších zařízení s řízenou filtrací a prouděním.'],
+  ['04', ClipboardCheck, 'Záznamy a doporučení', 'Dokumentace zásahu, identifikace použitých dílů, popis zjištění a doporučení pro další servis nebo měření.'],
+] as const;
+
+const serviceSteps = [
+  ['01', 'Popis zařízení', 'Identifikace prostoru, boxu, izolátoru, filtračního stupně nebo regulační části.'],
+  ['02', 'Posouzení stavu', 'Kontrola dostupné dokumentace, provozních potíží a posledních výsledků měření.'],
+  ['03', 'Provedení práce', 'Servis, výměna dílů, nastavení regulace nebo odstranění zjištěné závady.'],
+  ['04', 'Kontrola po zásahu', 'Ověření správné funkce a určení, zda je potřeba navazující měření.'],
+  ['05', 'Předání záznamu', 'Popis provedených úkonů, použitých dílů, zjištění a doporučení.'],
+] as const;
 
 const Servis = () => (
   <div className="min-h-screen bg-background">
@@ -23,70 +34,16 @@ const Servis = () => (
       serviceDescription="Údržba, výměny a kontrola zařízení s návazností na měření a dokumentaci."
     />
     <Header />
-    <section className="bg-gradient-hero py-16 text-white lg:py-24"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><h1 className="mb-6 text-4xl font-bold md:text-5xl">Servis čistých prostor a HEPA filtrů</h1><p className="max-w-3xl text-xl leading-relaxed text-white/90">Údržba podle skutečného provozu, stavu zařízení a požadavků na navazující kontrolu.</p></div></section>
-    <main className="py-16 lg:py-24"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div className="prose prose-lg max-w-none">
-      <h2>Proč servis čistého prostoru nelze oddělit od měření</h2>
-      <p>
-        Servisní plán má chránit provoz před nečekanými odchylkami a vytvořit dohledatelnou historii zásahů.
-        U čistých prostorů se proto nesleduje pouze to, zda zařízení běží. Důležité je také, zda filtrace,
-        tlakové rozdíly, proudění, teplota a vlhkost stále odpovídají účelu prostoru.
-      </p>
-      <p>
-        Rozsah údržby vychází z typu zařízení, zatížení, přístupu k filtrům, provozních hodin, interního plánu
-        a výsledků předchozích kontrol. Po zásahu může následovat měření nebo test integrity, pokud mohl zásah
-        ovlivnit čistotu, filtraci nebo tlakové poměry.
-      </p>
-
-      <h2>Co může servis zahrnovat</h2>
-      <div className="my-10 grid grid-cols-1 gap-8 md:grid-cols-2 not-prose">
-        <div className="rounded-lg bg-accent/30 p-8"><Wrench className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h3 className="mb-3 text-xl font-semibold">Vzduchotechnika a regulace</h3><p className="text-muted-foreground">Kontrola zařízení, průtoků, regulace, tlakových poměrů a provozních stavů podle dokumentace a servisního plánu.</p></div>
-        <div className="rounded-lg bg-accent/30 p-8"><Filter className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h3 className="mb-3 text-xl font-semibold">Výměny HEPA a ULPA filtrů</h3><p className="text-muted-foreground">Ověření typu, rozměru, těsnění a uložení filtru, bezpečná výměna a předání údajů pro navazující test integrity.</p></div>
-        <div className="rounded-lg bg-accent/30 p-8"><ShieldCheck className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h3 className="mb-3 text-xl font-semibold">Boxy a izolátory</h3><p className="text-muted-foreground">Údržba laminárních boxů, laboratorních boxů, izolátorů a dalších zařízení s řízenou filtrací a prouděním.</p></div>
-        <div className="rounded-lg bg-accent/30 p-8"><ClipboardCheck className="mb-4 h-12 w-12 text-primary" aria-hidden="true" /><h3 className="mb-3 text-xl font-semibold">Záznamy a doporučení</h3><p className="text-muted-foreground">Dokumentace zásahu, identifikace použitých dílů, popis zjištění a doporučení pro další servis nebo měření.</p></div>
-      </div>
-
-      <h2>Plánovaná údržba versus zásah po odchylce</h2>
-      <p>
-        Plánovaná údržba se připravuje podle zařízení a očekávaného zatížení. Zahrnuje pravidelné kontroly,
-        čištění, výměny spotřebních prvků a ověření provozních parametrů. Zásah po odchylce má jiný cíl:
-        nejprve je potřeba popsat problém, určit pravděpodobnou příčinu a zvolit kontrolu, která ověří účinek opravy.
-      </p>
-      <h2>Co připravit pro servisní návrh</h2>
-      <ul>
-        <li>typ zařízení, filtru nebo boxu a dostupnou technickou dokumentaci;</li>
-        <li>historii výměn, oprav, měření a známých provozních odchylek;</li>
-        <li>požadovaný rozsah odstávky a přístup k zařízení;</li>
-        <li>požadavky na dokumentaci, likvidaci filtrů a návazné měření;</li>
-        <li>informaci o třídě čistoty, provozním režimu a kritických parametrech.</li>
-      </ul>
-      <h2>Kontrola po výměně filtru nebo opravě</h2>
-      <p>
-        Po výměně HEPA filtru se podle zařízení a interního plánu ověřuje těsnost média, rámu a uložení.
-        Po zásahu do vzduchotechniky může být potřeba zkontrolovat také průtoky, tlakové rozdíly, částice,
-        teplotu nebo vlhkost. <a href="/mereni-a-validace" className="text-primary underline">Měření a validace</a> pomohou zvolit rozsah podle toho, co bylo změněno.
-      </p>
-      <h2>Dokumentace servisního zásahu</h2>
-      <p>
-        Servisní záznam by měl umožnit dohledat, které zařízení bylo kontrolováno, co bylo provedeno, jaké díly
-        byly použity a zda je potřeba další krok. Taková dokumentace podporuje plánování údržby i přípravu na audit;
-        sama o sobě ale nenahrazuje validační protokol nebo měření, pokud je vyžaduje provozní zadání.
-      </p>
-      <h2>Jak servisní zásah probíhá</h2>
-      <ol>
-        <li><strong>Popis zařízení:</strong> identifikace prostoru, boxu, izolátoru, filtračního stupně nebo regulační části.</li>
-        <li><strong>Posouzení stavu:</strong> kontrola dostupné dokumentace, provozních potíží a posledních výsledků měření.</li>
-        <li><strong>Provedení práce:</strong> servis, výměna dílů, nastavení regulace nebo odstranění zjištěné závady.</li>
-        <li><strong>Kontrola po zásahu:</strong> ověření správné funkce a určení, zda je potřeba navazující měření.</li>
-        <li><strong>Předání záznamu:</strong> popis provedených úkonů, použitých dílů, zjištění a doporučení.</li>
-      </ol>
-      <h2>Servisní dokumentace pro provoz a audit</h2>
-      <p>
-        Servisní záznam má být dohledatelný podle zařízení a data zásahu. Praktický záznam obsahuje identifikaci
-        komponent, popis práce, stav před a po zásahu, použité náhradní díly a informaci o doporučené kontrole.
-        Pokud zásah ovlivňuje filtrační systém, proudění nebo tlakové poměry, dokumentace by měla navazovat na
-        měřicí protokol a interní systém řízení změn.
-      </p>
-    </div><ServiceCrossLink /></div></main>
+    <ServiceHero eyebrow="02 / Servis" title="Servis čistých prostor a HEPA filtrů" description="Údržba podle skutečného provozu, stavu zařízení a požadavků na navazující kontrolu." links={[{ href: '/integrita-hepa-filtru', label: 'Test integrity filtrů' }, { href: '/mereni-a-validace', label: 'Měření po zásahu' }]} />
+    <main>
+      <section className="border-b border-border py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">03 / Údržba</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Proč servis čistého prostoru nelze oddělit od měření</h2></div><div className="max-w-3xl text-lg leading-relaxed text-muted-foreground"><p>Servisní plán má chránit provoz před nečekanými odchylkami a vytvořit dohledatelnou historii zásahů. U čistých prostorů se proto nesleduje pouze to, zda zařízení běží. Důležité je také, zda filtrace, tlakové rozdíly, proudění, teplota a vlhkost stále odpovídají účelu prostoru.</p><p className="mt-6">Rozsah údržby vychází z typu zařízení, zatížení, přístupu k filtrům, provozních hodin, interního plánu a výsledků předchozích kontrol.</p></div></div></section>
+      <section className="bg-accent/20 py-20 lg:py-28"><div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"><div className="mb-12 max-w-2xl"><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">04 / Rozsah</p><h2 className="mt-5 text-3xl font-bold tracking-tight md:text-5xl">Co může servis zahrnovat</h2></div><div className="grid border-y border-border md:grid-cols-2">{serviceAreas.map(([number, Icon, title, text]) => <article key={number} className="border-b border-border p-7 md:even:border-l lg:p-10"><div className="flex items-start justify-between"><Icon className="h-8 w-8 text-primary" aria-hidden="true" /><span className="font-mono text-xs text-primary">{number}</span></div><h3 className="mt-8 text-2xl font-semibold">{title}</h3><p className="mt-4 max-w-md leading-relaxed text-muted-foreground">{text}</p></article>)}</div></div></section>
+      <section className="bg-foreground py-20 text-background lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary-light">05 / Postup</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Od posouzení k dohledatelnému zásahu</h2></div><ol className="border-t border-background/20">{serviceSteps.map(([number, title, text]) => <li key={number} className="grid gap-4 border-b border-background/20 py-6 sm:grid-cols-[4rem_12rem_1fr] sm:items-baseline"><span className="font-mono text-sm text-primary-light">{number}</span><strong className="text-lg">{title}</strong><span className="leading-relaxed text-background/70">{text}</span></li>)}</ol></div></section>
+      <section className="py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">06 / Plán</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Plánovaná údržba versus zásah po odchylce</h2></div><div className="max-w-3xl text-lg leading-relaxed text-muted-foreground"><p>Plánovaná údržba se připravuje podle zařízení a očekávaného zatížení. Zahrnuje pravidelné kontroly, čištění, výměny spotřebních prvků a ověření provozních parametrů.</p><p className="mt-6">Zásah po odchylce má jiný cíl: nejprve je potřeba popsat problém, určit pravděpodobnou příčinu a zvolit kontrolu, která ověří účinek opravy.</p></div></div></section>
+      <section className="bg-accent/20 py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">07 / Zadání</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Co připravit pro servisní návrh</h2></div><ul className="grid gap-4 sm:grid-cols-2">{['Typ zařízení, filtru nebo boxu a dostupnou technickou dokumentaci.', 'Historii výměn, oprav, měření a známých provozních odchylek.', 'Požadovaný rozsah odstávky a přístup k zařízení.', 'Požadavky na dokumentaci, likvidaci filtrů a návazné měření.', 'Informaci o třídě čistoty, provozním režimu a kritických parametrech.'].map((item) => <li key={item} className="flex gap-3 border-t border-border pt-4 leading-relaxed text-muted-foreground"><CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />{item}</li>)}</ul></div></section>
+      <section className="border-b border-border py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">08 / Dokumentace</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Kontrola po zásahu a servisní záznam</h2></div><div className="max-w-3xl text-lg leading-relaxed text-muted-foreground"><p>Po výměně HEPA filtru se podle zařízení a interního plánu ověřuje těsnost média, rámu a uložení. Po zásahu do vzduchotechniky může být potřeba zkontrolovat také průtoky, tlakové rozdíly, částice, teplotu nebo vlhkost.</p><p className="mt-6">Servisní záznam umožní dohledat, které zařízení bylo kontrolováno, co bylo provedeno, jaké díly byly použity a zda je potřeba další krok. Taková dokumentace podporuje plánování údržby i přípravu na audit.</p></div></div></section>
+    </main>
+    <ServiceCrossLink />
     <Footer />
   </div>
 );

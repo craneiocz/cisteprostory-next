@@ -5,13 +5,14 @@ import { useEffect } from 'react';
 
 const config: CookieConsent.CookieConsentConfig = {
   mode: 'opt-in',
-  revision: 1,
+  revision: 2,
   autoShow: true,
   autoClearCookies: true,
-  manageScriptTags: true,
+  root: '#cookie-consent-root',
+  manageScriptTags: false,
   guiOptions: {
     consentModal: {
-      layout: 'box inline',
+      layout: 'box wide',
       position: 'bottom center',
       equalWeightButtons: true,
     },
@@ -40,32 +41,47 @@ const config: CookieConsent.CookieConsentConfig = {
       cs: {
         consentModal: {
           label: 'Souhlas s cookies',
-          title: 'Vaše soukromí',
+          title: 'Nastavení cookies na tomto webu',
           description:
-            'Používáme nezbytné technologie pro fungování webu. Analytické cookies Google Analytics zapneme až po vašem souhlasu. Volbu můžete kdykoliv změnit v patičce webu.',
-          acceptAllBtn: 'Povolit analytiku',
-          acceptNecessaryBtn: 'Odmítnout analytiku',
-          showPreferencesBtn: 'Nastavit cookies',
+            'Nezbytné cookies používáme pro fungování webu a uložení vašeho nastavení. Volitelné cookies pro měření návštěvnosti zapneme pouze po vašem souhlasu. Volbu můžete kdykoliv změnit v patičce webu.',
+          acceptAllBtn: 'Povolit volitelné cookies',
+          acceptNecessaryBtn: 'Používat jen nezbytné cookies',
+          showPreferencesBtn: 'Upravit nastavení',
           footer: '<a href="/ochrana-udaju">Ochrana osobních údajů</a>',
         },
         preferencesModal: {
           title: 'Nastavení cookies',
-          acceptAllBtn: 'Povolit analytiku',
-          acceptNecessaryBtn: 'Odmítnout analytiku',
+          acceptAllBtn: 'Povolit volitelné cookies',
+          acceptNecessaryBtn: 'Používat jen nezbytné cookies',
           savePreferencesBtn: 'Uložit nastavení',
           closeIconLabel: 'Zavřít nastavení cookies',
           sections: [
             {
               title: 'Nezbytné cookies',
-              description: 'Potřebné pro základní fungování webu a zapamatování volby cookies.',
+              description: 'Potřebné pro základní fungování webu a zapamatování vaší volby.',
               linkedCategory: 'necessary',
+              cookieTable: {
+                caption: 'Nezbytné cookies používané tímto webem',
+                headers: {
+                  name: 'Název',
+                  provider: 'Poskytovatel',
+                  purpose: 'Účel',
+                },
+                body: [
+                  {
+                    name: 'cc_cookie',
+                    provider: 'cisteprostory.eu',
+                    purpose: 'Uložení vašeho nastavení cookies.',
+                  },
+                ],
+              },
             },
             {
-              title: 'Analytické cookies',
-              description: 'Google Analytics 4 pomáhá měřit návštěvnost a používání jednotlivých částí webu.',
+              title: 'Volitelné cookies',
+              description: 'Používáme je pro měření návštěvnosti a používání jednotlivých částí webu. Aktivují se pouze po vašem souhlasu.',
               linkedCategory: 'analytics',
               cookieTable: {
-                caption: 'Analytické cookies Google Analytics 4',
+                caption: 'Volitelné cookies pro měření návštěvnosti',
                 headers: {
                   name: 'Název',
                   provider: 'Poskytovatel',
@@ -74,7 +90,7 @@ const config: CookieConsent.CookieConsentConfig = {
                 body: [
                   {
                     name: '_ga, _ga_*',
-                    provider: 'Google Analytics 4',
+                    provider: 'Google',
                     purpose: 'Měření návštěvnosti a používání webu po udělení souhlasu.',
                   },
                 ],

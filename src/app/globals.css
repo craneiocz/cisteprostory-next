@@ -109,6 +109,62 @@ All colors MUST be HSL.
   }
 }
 
+#cookie-consent-root #cc-main {
+  --cc-bg: hsl(var(--background));
+  --cc-primary-color: hsl(var(--foreground));
+  --cc-secondary-color: hsl(var(--muted-foreground));
+  --cc-btn-primary-bg: hsl(var(--primary));
+  --cc-btn-primary-color: hsl(var(--primary-foreground));
+  --cc-btn-primary-border-color: hsl(var(--primary));
+  --cc-btn-primary-hover-bg: hsl(var(--primary-dark));
+  --cc-btn-primary-hover-border-color: hsl(var(--primary-dark));
+  --cc-btn-secondary-bg: hsl(var(--accent));
+  --cc-btn-secondary-color: hsl(var(--accent-foreground));
+  --cc-btn-secondary-border-color: hsl(var(--border));
+  --cc-btn-secondary-hover-bg: hsl(var(--primary) / 0.1);
+  --cc-btn-secondary-hover-border-color: hsl(var(--primary) / 0.35);
+  --cc-separator-border-color: hsl(var(--border));
+  --cc-footer-bg: hsl(var(--accent) / 0.6);
+  --cc-footer-color: hsl(var(--muted-foreground));
+  --cc-footer-border-color: hsl(var(--border));
+  --cc-modal-border-radius: 1rem;
+  --cc-btn-border-radius: 0.5rem;
+  --cc-modal-margin: 1.25rem;
+  font-family: inherit;
+}
+
+#cookie-consent-root #cc-main .cm {
+  border: 1px solid hsl(var(--primary) / 0.2);
+  box-shadow: 0 24px 70px hsl(222.2 47.4% 11.2% / 0.18);
+}
+
+#cookie-consent-root #cc-main .cm__title,
+#cookie-consent-root #cc-main .pm__title {
+  letter-spacing: -0.02em;
+}
+
+#cookie-consent-root #cc-main .cm__desc,
+#cookie-consent-root #cc-main .pm__section-desc {
+  line-height: 1.6;
+}
+
+#cookie-consent-root #cc-main .cm__btn,
+#cookie-consent-root #cc-main .pm__btn {
+  min-height: 44px;
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease;
+}
+
+#cookie-consent-root #cc-main .cm__btn:hover,
+#cookie-consent-root #cc-main .pm__btn:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  #cookie-consent-root #cc-main {
+    --cc-modal-margin: 0.5rem;
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
