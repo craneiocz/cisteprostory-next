@@ -37,7 +37,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Od zadání k <span className="text-primary">ověřitelnému provozu</span>
+            Čisté prostory a technické služby podle provozu
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Jednotlivé části dodávky propojujeme tak, aby návrh, technické zařízení, měření a servis pracovaly se stejným zadáním. Podrobnosti k <a href="/mereni-a-validace" className="text-primary hover:underline">měření a validaci</a> i <a href="/servis" className="text-primary hover:underline">servisu</a> najdete na samostatných stránkách.

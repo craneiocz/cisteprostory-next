@@ -5,19 +5,19 @@ const Standards = () => {
     {
       icon: FileCheck,
       code: 'ISO 14644-1 / ISO 14644-2',
-      title: 'Klasifikace a monitoring čistých prostorů',
+      title: 'Klasifikace čistých prostor podle ISO 14644',
       description: 'Třídy čistoty vzduchu ISO 1–ISO 9. Definuje měření počtu částic, intervaly testování a monitoring pro udržení shody.',
     },
     {
       icon: Shield,
       code: 'EU GMP Annex 1',
-      title: 'Výroba sterilních léčiv',
+      title: 'EU GMP Annex 1 pro sterilní výrobu',
       description: 'Požadavky na čisté prostory třídy A–D, limity částic a mikroorganismů, kontaminační kontrolní strategie.',
     },
     {
       icon: Award,
       code: 'EN 1822 / ISO 29463',
-      title: 'HEPA a ULPA filtry',
+      title: 'HEPA a ULPA filtrace podle EN 1822',
       description: 'Klasifikace filtrů H13 (99,95 %), H14 (99,995 %) a U15 (99,9995 %). Metody testování integrity filtrů.',
     }
   ];
@@ -27,7 +27,7 @@ const Standards = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Normy a <span className="text-primary">standardy</span>
+            Normy pro čisté prostory a <span className="text-primary">HEPA filtraci</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Normy poskytují technický rámec pro klasifikaci, filtraci a měření. Konkrétní rozsah se vždy odvíjí od procesu a zadání provozu.

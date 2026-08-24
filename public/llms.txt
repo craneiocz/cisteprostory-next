@@ -19,7 +19,7 @@ Web: https://www.cisteprostory.eu
 - [Měření počtu částic](https://www.cisteprostory.eu/pocet-castic-iso-14644): klasifikace čistoty vzduchu podle ISO 14644-1.
 - [Servis čistých prostor](https://www.cisteprostory.eu/servis): údržba filtrů, zařízení, boxů a dokumentace s návazností na kontrolní měření.
 
-## Odborná témata
+## Technické okruhy
 
 - ISO 14644 a třídy čistoty ISO 1 až ISO 9.
 - EU GMP Annex 1 a požadavky na řízené prostředí ve farmaceutických provozech.

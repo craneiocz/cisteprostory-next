@@ -39,29 +39,12 @@ const faqs = [
 const Faq = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.answer,
-      },
-    })),
-  };
-
   return (
     <section className="py-16 lg:py-24 bg-muted/10" id="faq">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Často <span className="text-primary">kladené otázky o čistých prostorech a validaci ISO 14644</span>
+            Časté otázky k čistým prostorům, měření a filtraci
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Odpovědi na nejčastější otázky ohledně realizace čistých prostorů, validace ISO 14644 a EU GMP Annex 1, vzduchotechniky a HEPA filtrů H13/H14.

@@ -5,6 +5,7 @@ import HomepageGallery from '@/components/HomepageGallery';
 import Industries from '@/components/Industries';
 import Standards from '@/components/Standards';
 import Faq from '@/components/Faq';
+import ExpertArticles from '@/components/ExpertArticles';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -17,6 +18,7 @@ export default function Home() {
       <HomepageGallery />
       <Industries />
       <Standards />
+      <ExpertArticles />
       <Faq />
       <Contact />
       <Footer />

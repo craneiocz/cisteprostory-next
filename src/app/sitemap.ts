@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { articles } from '@/lib/articles';
 
 export const dynamic = 'force-static';
 
@@ -16,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ochrana-udaju',
   ];
 
-  return routes.map((route) => ({
+  return [...routes, '/clanky', ...articles.map((article) => article.path)].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: contentLastModified,
     changeFrequency: 'monthly' as const,

@@ -74,6 +74,11 @@ const Footer = () => {
               <li><span className="text-slate-400">EN 1822 / ISO 29463</span></li>
               <li><span className="text-slate-400">ČSN EN 1822</span></li>
             </ul>
+
+            <h3 className="mb-4 mt-6 text-lg font-semibold text-slate-100">Technické informace</h3>
+            <Link href="/clanky" className="text-slate-300 transition-colors duration-200 hover:text-primary">
+              Přehled témat k čistým prostorům
+            </Link>
           </div>
 
           <div>

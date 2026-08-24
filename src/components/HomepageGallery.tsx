@@ -9,7 +9,7 @@ export default function HomepageGallery() {
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">Prostředí v detailu</p>
             <h2 id="homepage-galerie" className="mt-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-              Čistota, kterou je možné ověřit
+              Čisté prostory v reálném provozu
             </h2>
           </div>
           <Link

@@ -7,6 +7,7 @@ type PageMetadataOptions = {
   title: string;
   description: string;
   image?: string;
+  type?: 'website' | 'article';
 };
 
 export function createPageMetadata({
@@ -14,6 +15,7 @@ export function createPageMetadata({
   title,
   description,
   image = '/opengraph-image.png',
+  type = 'website',
 }: PageMetadataOptions): Metadata {
   const url = `${SITE_URL}${path}`;
 
@@ -26,7 +28,7 @@ export function createPageMetadata({
     openGraph: {
       title,
       description,
-      type: 'website',
+      type,
       url,
       siteName: 'Čisté prostory',
       locale: 'cs_CZ',

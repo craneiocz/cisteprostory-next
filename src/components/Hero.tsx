@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
           <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-balance tracking-tight">
-            Řízené prostředí pro výrobu, výzkum a zdravotnictví
+            Čisté prostory – návrh, realizace a validace
           </h1>
 
           <p className="text-lg md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-balance font-light text-white/88">

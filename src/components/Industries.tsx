@@ -39,7 +39,7 @@ const Industries = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-            Kde <span className="text-primary">působíme</span>
+            Čisté prostory pro farmacii, laboratoře a výrobu
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Rozsah řešení se odvíjí od procesu, kritických míst a způsobu, jakým bude prostor provozován a následně kontrolován.
