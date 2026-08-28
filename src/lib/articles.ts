@@ -12,10 +12,13 @@ export type ArticleSummary = {
   description: string;
   intro: string;
   readingTime: string;
+  publishedAt: string;
+  updatedAt: string;
   sections: ArticleSection[];
 };
 
-export const articleAuthor = 'Redakce Čisté prostory';
+export const articleAuthor = 'BRNO CREATIVE s.r.o.';
+export const articleAuthorPath = '/o-nas';
 
 export const articles: ArticleSummary[] = [
   {
@@ -27,6 +30,8 @@ export const articles: ArticleSummary[] = [
     description: 'Praktický postup pro volbu třídy čistoty ISO 1 až ISO 9 podle procesu, produktu, provozního stavu a požadovaného měření.',
     intro: 'Třída čistoty není univerzální známka kvality místnosti. Je to výsledek posouzení konkrétního procesu, částicového rizika a provozního režimu.',
     readingTime: '6 min čtení',
+    publishedAt: '2026-08-22',
+    updatedAt: '2026-08-28',
     sections: [
       { id: 'proces', title: 'Začněte procesem, ne číslem ISO' },
       { id: 'zadani', title: 'Co ověřit před návrhem' },
@@ -44,6 +49,8 @@ export const articles: ArticleSummary[] = [
     description: 'Jak se liší měření čistého prostoru v klidovém stavu a za provozu, jak připravit měřicí plán a co má obsahovat protokol.',
     intro: 'Stejný prostor může mít odlišné výsledky bez osob, zařízení a procesu a při běžné práci. Proto musí být provozní stav součástí měřicího plánu.',
     readingTime: '7 min čtení',
+    publishedAt: '2026-08-22',
+    updatedAt: '2026-08-28',
     sections: [
       { id: 'provozni-stav', title: 'Proč na provozním stavu záleží' },
       { id: 'merici-plan', title: 'Co má obsahovat měřicí plán' },
@@ -61,6 +68,8 @@ export const articles: ArticleSummary[] = [
     description: 'Vysvětlení rozdílu mezi testem integrity HEPA filtru a měřením počtu částic v čistém prostoru včetně návaznosti na servis.',
     intro: 'Test integrity filtru a měření částic odpovídají na dvě různé otázky. Pro spolehlivé ověření čistého prostoru je potřeba rozumět jejich návaznosti.',
     readingTime: '6 min čtení',
+    publishedAt: '2026-08-22',
+    updatedAt: '2026-08-28',
     sections: [
       { id: 'dve-kontroly', title: 'Dvě kontroly, dva odlišné cíle' },
       { id: 'integrita', title: 'Jak probíhá test integrity' },

@@ -15,6 +15,7 @@ const Header = () => {
     { name: 'Vzduchotechnika', href: '/vzduchotechnika' },
     { name: 'Měření a validace', href: '/mereni-a-validace' },
     { name: 'Servis', href: '/servis' },
+    { name: 'O nás', href: '/o-nas' },
   ];
 
   return (
@@ -32,7 +33,7 @@ const Header = () => {
             />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-3 lg:gap5">
+          <nav className="hidden md:flex items-center gap-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}

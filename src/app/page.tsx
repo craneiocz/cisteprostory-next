@@ -8,6 +8,7 @@ import Faq from '@/components/Faq';
 import ExpertArticles from '@/components/ExpertArticles';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import TrustSignals from '@/components/TrustSignals';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <HomepageGallery />
       <Industries />
       <Standards />
+      <TrustSignals />
       <ExpertArticles />
       <Faq />
       <Contact />

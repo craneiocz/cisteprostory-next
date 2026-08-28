@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageSchema from '@/components/PageSchema';
-import { articles, articleAuthor } from '@/lib/articles';
+import { articles, articleAuthor, articleAuthorPath } from '@/lib/articles';
 import { ArrowUpRight, BookOpen } from 'lucide-react';
-import { createPageMetadata } from '@/lib/seo';
+import { createCanonicalUrl, createPageMetadata } from '@/lib/seo';
 
 const path = '/clanky';
 
@@ -22,15 +22,16 @@ export default function ArticlesPage() {
     '@type': 'CollectionPage',
     name: 'Praktické informace k čistým prostorům',
     description: 'Praktické informace k čistým prostorům, měření a filtraci.',
-    url: 'https://www.cisteprostory.eu/clanky',
+    url: createCanonicalUrl(path),
     author: {
       '@type': 'Organization',
       name: articleAuthor,
+      url: createCanonicalUrl(articleAuthorPath),
     },
     hasPart: articles.map((article) => ({
       '@type': 'Article',
       headline: article.title,
-      url: `https://www.cisteprostory.eu${article.path}`,
+      url: createCanonicalUrl(article.path),
       articleSection: article.topic,
     })),
   };
@@ -57,7 +58,7 @@ export default function ArticlesPage() {
       <main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mb-12 flex items-end justify-between gap-8 border-b border-border pb-8">
           <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">Redakce Čisté prostory</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">BRNO CREATIVE s.r.o.</p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground md:text-4xl">Témata podle skutečných provozních otázek</h2>
           </div>
           <BookOpen className="hidden h-10 w-10 text-primary md:block" aria-hidden="true" />

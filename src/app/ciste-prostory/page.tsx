@@ -9,7 +9,7 @@ import { ArrowRight, CheckCircle2, Filter, Settings, Shield } from 'lucide-react
 
 export const metadata: Metadata = createPageMetadata({
   path: '/ciste-prostory',
-  title: 'Čisté prostory: návrh, realizace a validace | cisteprostory.eu',
+  title: 'Návrh a realizace čistých prostor | cisteprostory.eu',
   description:
     'Návrh a realizace čistých prostorů, laboratorních a laminárních boxů, izolátorů a HEPA filtrace podle procesu, ISO 14644 a EU GMP Annex 1.',
 });
@@ -28,9 +28,11 @@ const solutionTypes = [
 ] as const;
 
 const expertExtensions = [
-  ['01', 'Třída čistoty podle ISO 14644', 'Když se rozhoduje mezi celým prostorem a lokální ochranou, rozhoduje kritická operace, pohyb osob a způsob ověření.', '/ciste-prostory/jak-vybrat-tridu-cistoty-iso-14644'],
-  ['02', 'Klidový stav a běžný provoz', 'Výsledek bez pracovníků nemusí popsat podmínky při skutečné práci. Podívejte se, co má být připravené před měřením.', '/ciste-prostory/mereni-v-klidovem-stavu-a-za-provozu'],
-  ['03', 'HEPA filtr a počet částic', 'Počet částic v prostoru a těsnost filtru jsou dvě různé kontroly. Jejich správná návaznost určuje další servisní krok.', '/ciste-prostory/integrita-hepa-filtru-a-pocet-castic'],
+  ['01', 'Zadání a rozpočet projektu', 'Které vstupy ovlivňují rozsah dodávky, investici a budoucí provozní náklady.', '/ciste-prostory/navrh-a-rozpocet'],
+  ['02', 'Materiály, povrchy a dispozice', 'Jak propojit pohyb osob a materiálu s čistitelností, konstrukcemi a technologickými prostupy.', '/ciste-prostory/materialy-povrchy-a-dispozice'],
+  ['03', 'Třída čistoty podle ISO 14644', 'Když se rozhoduje mezi celým prostorem a lokální ochranou, rozhoduje kritická operace, pohyb osob a způsob ověření.', '/ciste-prostory/jak-vybrat-tridu-cistoty-iso-14644'],
+  ['04', 'Klidový stav a běžný provoz', 'Výsledek bez pracovníků nemusí popsat podmínky při skutečné práci. Podívejte se, co má být připravené před měřením.', '/ciste-prostory/mereni-v-klidovem-stavu-a-za-provozu'],
+  ['05', 'HEPA filtr a počet částic', 'Počet částic v prostoru a těsnost filtru jsou dvě různé kontroly. Jejich správná návaznost určuje další servisní krok.', '/ciste-prostory/integrita-hepa-filtru-a-pocet-castic'],
 ] as const;
 
 const deliverySteps = [
@@ -53,7 +55,7 @@ const CisteProstory = () => (
   <div className="min-h-screen bg-background">
     <PageSchema
       path="/ciste-prostory"
-      title="Čisté prostory: návrh, realizace a validace"
+      title="Návrh a realizace čistých prostor"
       description="Návrh a realizace čistých prostorů, laboratorních boxů a HEPA filtrace s validací dle ISO 14644 a EU GMP Annex 1."
       serviceName="Čisté prostory"
       serviceDescription="Návrh, realizace a validace čistých prostorů pro farmacii, laboratoře, nemocnice a průmysl."
@@ -65,7 +67,7 @@ const CisteProstory = () => (
       <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:px-8 lg:py-28">
         <div>
           <p className="mb-6 text-xs font-semibold uppercase tracking-[0.28em] text-white/65">01 / Čisté prostory</p>
-          <h1 className="max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight md:text-6xl">Čisté prostory podle procesu, ne pouze podle plochy</h1>
+          <h1 className="max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight md:text-6xl">Návrh a realizace čistých prostor podle procesu</h1>
         </div>
         <div className="border-l border-white/25 pl-6 lg:mb-2">
           <p className="text-lg leading-relaxed text-white/85">Navrhujeme řízené prostředí pro farmacii, laboratoře, zdravotnictví a přesnou výrobu. Propojujeme dispozici, povrchy, vzduchotechniku, HEPA nebo ULPA filtraci, uvedení do provozu a následné měření.</p>
@@ -148,7 +150,7 @@ const CisteProstory = () => (
             </div>
             <p className="max-w-3xl text-lg leading-relaxed text-muted-foreground">Některé otázky se nedají zodpovědět jedním parametrem. V navazujících podsekcích popisujeme konkrétní situace z návrhu, měření a servisu tak, aby bylo zřejmé, co si připravit a jaký bude další krok.</p>
           </div>
-          <div className="mt-12 grid border-y border-border md:grid-cols-3">
+          <div className="mt-12 grid border-y border-border md:grid-cols-2 lg:grid-cols-5">
             {expertExtensions.map(([number, title, text, href]) => (
               <Link key={href} href={href} className="group border-b border-border p-7 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0 lg:p-9">
                 <div className="flex items-start justify-between gap-4"><span className="font-mono text-xs text-primary">{number}</span><ArrowRight className="h-5 w-5 text-primary transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" /></div>

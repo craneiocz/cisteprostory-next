@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import PageSchema from '@/components/PageSchema';
 import ServiceCrossLink from '@/components/ServiceCrossLink';
 import ServiceHero from '@/components/ServiceHero';
+import GuideLinks from '@/components/GuideLinks';
 import { Droplets, Shield, Thermometer, Wind, CheckCircle2 } from 'lucide-react';
 import { createPageMetadata } from '@/lib/seo';
 
@@ -47,6 +48,14 @@ const Vzduchotechnika = () => (
       <section className="bg-accent/20 py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">06 / Dodávka</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Návrh, montáž, regulace a servis</h2></div><ol className="border-t border-border">{delivery.map(([number, title, text]) => <li key={number} className="grid gap-4 border-b border-border py-6 sm:grid-cols-[4rem_12rem_1fr] sm:items-baseline"><span className="font-mono text-sm text-primary">{number}</span><strong className="text-lg">{title}</strong><span className="leading-relaxed text-muted-foreground">{text}</span></li>)}</ol></div></section>
       <section className="border-b border-border py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">07 / Provoz</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Provozní náklady a servisní přístup</h2></div><div className="max-w-3xl text-lg leading-relaxed text-muted-foreground"><p>Provozní náklady neovlivňuje pouze výkon ventilátoru. Roli hraje tlaková ztráta filtrů, počet výměn vzduchu, režim provozu, regulace, dostupnost servisních míst a nastavení teploty a vlhkosti.</p><p className="mt-6">Před výměnou HEPA filtru je vhodné ověřit typ, rozměr, těsnění, uložení a požadované parametry. Po zásahu může následovat test integrity a kontrolní měření podle toho, co bylo změněno. Více o servisních činnostech najdete na stránce <Link href="/servis" className="font-semibold text-primary underline underline-offset-4">servis čistých prostor</Link>.</p></div></div></section>
       <section className="py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">08 / Zadání</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Co připravit pro technický návrh</h2></div><ul className="grid gap-4 sm:grid-cols-2">{['Účel prostoru, proces a zdroje částic.', 'Požadovaná třída čistoty a provozní stavy.', 'Teplota, vlhkost, tlakové rozdíly a materiálový tok.', 'Typ filtrace, regulace a přístup pro výměnu.', 'Rozsah měření při uvedení do provozu a při kontrolách.'].map((item) => <li key={item} className="flex gap-3 border-t border-border pt-4 leading-relaxed text-muted-foreground"><CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />{item}</li>)}</ul></div></section>
+      <GuideLinks
+        title="Tlakové vazby a proudění jako jeden systém"
+        description="Průvodce propojuje bilanci vzduchu, otevírání dveří, tlakové ztráty a ověření reálného provozního stavu."
+        links={[
+          { href: '/vzduchotechnika/tlakova-kaskada-a-proudeni', title: 'Tlaková kaskáda a proudění', text: 'Návrh směru proudění, regulace, regenerace a reakcí při provozní změně.' },
+          { href: '/ciste-prostory/materialy-povrchy-a-dispozice', title: 'Dispozice a prostupy', text: 'Návaznost vzduchotěsné obálky na dveře, povrchy a technologické instalace.' },
+        ]}
+      />
     </main>
     <ServiceCrossLink />
     <Footer />

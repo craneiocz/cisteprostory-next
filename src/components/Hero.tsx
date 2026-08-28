@@ -34,12 +34,12 @@ const Hero = () => {
               </div>
             </a>
             
-            <a href="/ciste-prostory" className="group" title="Čisté prostory a laboratorní boxy">
+            <a href="/ciste-prostory" className="group" title="Návrh a realizace čistých prostor">
               <div className="flex flex-col items-center">
                 <div className="mb-3 rounded-2xl border border-white/15 bg-white/10 p-4 transition-colors duration-300 group-hover:bg-white/15">
                   <Shield className="h-8 w-8 text-white" aria-hidden="true" />
                 </div>
-                <span className="text-sm font-medium text-white/90 group-hover:text-white transition-colors">Čisté prostory</span>
+                <span className="text-sm font-medium text-white/90 group-hover:text-white transition-colors">Návrh a realizace</span>
               </div>
             </a>
             

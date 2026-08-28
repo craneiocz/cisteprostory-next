@@ -1,4 +1,4 @@
-import { createPageSchema } from '@/lib/seo';
+import { createPageSchema, type SchemaBreadcrumb } from '@/lib/seo';
 
 type PageSchemaProps = {
   path: string;
@@ -6,6 +6,9 @@ type PageSchemaProps = {
   description: string;
   serviceName?: string;
   serviceDescription?: string;
+  breadcrumbs?: SchemaBreadcrumb[];
+  datePublished?: string;
+  dateModified?: string;
 };
 
 export default function PageSchema({
@@ -14,6 +17,9 @@ export default function PageSchema({
   description,
   serviceName,
   serviceDescription,
+  breadcrumbs,
+  datePublished,
+  dateModified,
 }: PageSchemaProps) {
   const schema = createPageSchema({
     path,
@@ -21,6 +27,9 @@ export default function PageSchema({
     description,
     serviceName,
     serviceDescription,
+    breadcrumbs,
+    datePublished,
+    dateModified,
   });
 
   return (

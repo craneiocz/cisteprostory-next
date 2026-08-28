@@ -18,6 +18,16 @@ Web: https://www.cisteprostory.eu
 - [Test integrity HEPA filtrů](https://www.cisteprostory.eu/integrita-hepa-filtru): kontrola média, rámu, těsnění a uložení filtru.
 - [Měření počtu částic](https://www.cisteprostory.eu/pocet-castic-iso-14644): klasifikace čistoty vzduchu podle ISO 14644-1.
 - [Servis čistých prostor](https://www.cisteprostory.eu/servis): údržba filtrů, zařízení, boxů a dokumentace s návazností na kontrolní měření.
+- [O společnosti](https://www.cisteprostory.eu/o-nas): provozovatel webu a pravidla pro odborný obsah.
+
+## Rozhodovací průvodci
+
+- [Zadání a rozpočet](https://www.cisteprostory.eu/ciste-prostory/navrh-a-rozpocet): vstupy, hranice dodávky a provozní náklady.
+- [Materiály a dispozice](https://www.cisteprostory.eu/ciste-prostory/materialy-povrchy-a-dispozice): povrchy, dveře, prostupy a pohyb osob a materiálu.
+- [IQ, OQ a PQ](https://www.cisteprostory.eu/mereni-a-validace/iq-oq-pq): návaznost kvalifikačních fází a dokumentace.
+- [Revalidace a intervaly](https://www.cisteprostory.eu/mereni-a-validace/revalidace-a-intervaly): plán kontrol a změny vyžadující nové ověření.
+- [Tlaková kaskáda a proudění](https://www.cisteprostory.eu/vzduchotechnika/tlakova-kaskada-a-proudeni): bilance vzduchu, tlakové vazby a regenerace.
+- [Výměna HEPA filtru](https://www.cisteprostory.eu/servis/vymena-hepa-filtru): odstávka, montáž, test integrity a servisní záznam.
 
 ## Technické okruhy
 

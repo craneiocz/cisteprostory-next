@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import PageSchema from '@/components/PageSchema';
 import ServiceCrossLink from '@/components/ServiceCrossLink';
 import ServiceHero from '@/components/ServiceHero';
+import GuideLinks from '@/components/GuideLinks';
 import { ClipboardCheck, Filter, ShieldCheck, Wrench, CheckCircle2 } from 'lucide-react';
 import { createPageMetadata } from '@/lib/seo';
 
@@ -42,6 +43,14 @@ const Servis = () => (
       <section className="py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">06 / Plán</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Plánovaná údržba versus zásah po odchylce</h2></div><div className="max-w-3xl text-lg leading-relaxed text-muted-foreground"><p>Plánovaná údržba se připravuje podle zařízení a očekávaného zatížení. Zahrnuje pravidelné kontroly, čištění, výměny spotřebních prvků a ověření provozních parametrů.</p><p className="mt-6">Zásah po odchylce má jiný cíl: nejprve je potřeba popsat problém, určit pravděpodobnou příčinu a zvolit kontrolu, která ověří účinek opravy.</p></div></div></section>
       <section className="bg-accent/20 py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">07 / Zadání</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Co připravit pro servisní návrh</h2></div><ul className="grid gap-4 sm:grid-cols-2">{['Typ zařízení, filtru nebo boxu a dostupnou technickou dokumentaci.', 'Historii výměn, oprav, měření a známých provozních odchylek.', 'Požadovaný rozsah odstávky a přístup k zařízení.', 'Požadavky na dokumentaci, likvidaci filtrů a návazné měření.', 'Informaci o třídě čistoty, provozním režimu a kritických parametrech.'].map((item) => <li key={item} className="flex gap-3 border-t border-border pt-4 leading-relaxed text-muted-foreground"><CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />{item}</li>)}</ul></div></section>
       <section className="border-b border-border py-20 lg:py-28"><div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-8"><div><p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">08 / Dokumentace</p><h2 className="mt-5 max-w-md text-3xl font-bold tracking-tight md:text-5xl">Kontrola po zásahu a servisní záznam</h2></div><div className="max-w-3xl text-lg leading-relaxed text-muted-foreground"><p>Po výměně HEPA filtru se podle zařízení a interního plánu ověřuje těsnost média, rámu a uložení. Po zásahu do vzduchotechniky může být potřeba zkontrolovat také průtoky, tlakové rozdíly, částice, teplotu nebo vlhkost.</p><p className="mt-6">Servisní záznam umožní dohledat, které zařízení bylo kontrolováno, co bylo provedeno, jaké díly byly použity a zda je potřeba další krok. Taková dokumentace podporuje plánování údržby i přípravu na audit.</p></div></div></section>
+      <GuideLinks
+        title="Výměna filtru nekončí montáží"
+        description="Příprava odstávky, kontrola uložení a navazující ověření rozhodují o tom, zda je filtrační sestava po zásahu prokazatelně funkční."
+        links={[
+          { href: '/servis/vymena-hepa-filtru', title: 'Výměna HEPA filtru', text: 'Postup od identifikace důvodu přes montáž až po servisní záznam a kontrolu.' },
+          { href: '/mereni-a-validace/revalidace-a-intervaly', title: 'Revalidace po změně', text: 'Jak stanovit rozsah dalších zkoušek po zásahu do zařízení nebo procesu.' },
+        ]}
+      />
     </main>
     <ServiceCrossLink />
     <Footer />

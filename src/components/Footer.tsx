@@ -79,6 +79,11 @@ const Footer = () => {
             <Link href="/clanky" className="text-slate-300 transition-colors duration-200 hover:text-primary">
               Přehled témat k čistým prostorům
             </Link>
+            <div className="mt-3">
+              <Link href="/o-nas" className="text-slate-300 transition-colors duration-200 hover:text-primary">
+                O společnosti
+              </Link>
+            </div>
           </div>
 
           <div>
@@ -89,7 +94,12 @@ const Footer = () => {
               <li className="text-slate-300">IČO: 07367066</li>
               <li className="text-slate-300">DIČ: CZ07367066</li>
               <li>
-                <a href="mailto:info@cisteprostory.eu" className="text-primary-light transition-colors duration-200 hover:text-primary">
+                <a
+                  href="mailto:info@cisteprostory.eu"
+                  data-analytics-event="email_click"
+                  data-analytics-label="footer"
+                  className="text-primary-light transition-colors duration-200 hover:text-primary"
+                >
                   info@cisteprostory.eu
                 </a>
               </li>
@@ -99,7 +109,7 @@ const Footer = () => {
 
         <div className="mt-12 flex flex-col items-center justify-between border-t border-white/10 pt-8 md:flex-row">
           <p className="text-sm text-slate-500">
-            © 2025 Čisté Prostory – vzduchotechnika, validace a servis. Všechna práva vyhrazena.
+            © 2026 Čisté Prostory – vzduchotechnika, validace a servis. Všechna práva vyhrazena.
           </p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="/ochrana-udaju" className="text-sm text-slate-500 transition-colors duration-200 hover:text-primary">

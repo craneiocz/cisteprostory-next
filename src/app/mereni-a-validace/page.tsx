@@ -6,6 +6,7 @@ import ValidationVisual from '@/components/ValidationVisual';
 import PageSchema from '@/components/PageSchema';
 import ServiceCrossLink from '@/components/ServiceCrossLink';
 import ServiceHero from '@/components/ServiceHero';
+import GuideLinks from '@/components/GuideLinks';
 import { Award, ClipboardCheck, Gauge, CheckCircle2 } from 'lucide-react';
 import { createPageMetadata } from '@/lib/seo';
 
@@ -67,6 +68,14 @@ const MereniValidace = () => (
           <p className="mt-5 max-w-3xl leading-relaxed text-muted-foreground">Praktický průchod přípravou měření, volbou provozních podmínek a návazností na protokol najdete v <Link href="/ciste-prostory/mereni-v-klidovem-stavu-a-za-provozu" className="font-semibold text-primary underline underline-offset-4">průvodci měřením v klidovém stavu a za provozu</Link>.</p>
         </div>
       </section>
+      <GuideLinks
+        title="Kvalifikace a další kontroly v souvislostech"
+        description="Samostatné průvodce rozdělují kvalifikační fáze a rozhodování o opakovaných kontrolách podle změn a provozního rizika."
+        links={[
+          { href: '/mereni-a-validace/iq-oq-pq', title: 'IQ, OQ a PQ', text: 'Rozdíly mezi instalací, provozní funkcí a výkonem při skutečném použití.' },
+          { href: '/mereni-a-validace/revalidace-a-intervaly', title: 'Revalidace a intervaly', text: 'Kdy kontrolu zopakovat a jak určit rozsah po změně procesu nebo zařízení.' },
+        ]}
+      />
     </main>
     <ServiceCrossLink />
     <Footer />

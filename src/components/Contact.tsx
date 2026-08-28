@@ -19,7 +19,7 @@ const Contact = () => {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       phone: formData.get('phone') as string,
-      message: formData.get('message') as string,
+      message: `[Služba: ${formData.get('service') as string}] ${formData.get('message') as string}`,
     };
 
     try {
@@ -36,6 +36,9 @@ const Contact = () => {
         description: "Děkujeme za váš zájem. V brzké době vás budeme kontaktovat.",
       });
       (e.target as HTMLFormElement).reset();
+      window.dispatchEvent(new CustomEvent('cisteprostory:analytics', {
+        detail: { name: 'form_submit_success', label: formData.get('service') as string },
+      }));
     } catch (error: unknown) {
       console.error('Error sending contact form:', error);
       toast({
@@ -72,6 +75,8 @@ const Contact = () => {
               <CardContent>
                 <a
                   href="mailto:info@cisteprostory.eu"
+                  data-analytics-event="email_click"
+                  data-analytics-label="contact-card"
                   className="text-lg font-medium text-foreground transition-colors hover:text-primary"
                 >
                   info@cisteprostory.eu
@@ -101,7 +106,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="p-8">
                 <p className="text-sm text-muted-foreground mb-4">* = povinný údaj</p>
-                <form className="space-y-6" onSubmit={handleSubmit}>
+                <form className="space-y-6" onSubmit={handleSubmit} data-analytics-form="contact">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Jméno a příjmení *</label>
                     <input type="text" id="name" name="name" required disabled={isSubmitting} className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="Jan Novák" />
@@ -115,9 +120,24 @@ const Contact = () => {
                     <input type="tel" id="phone" name="phone" disabled={isSubmitting} className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="+420 123 456 789" />
                   </div>
                   <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">Co potřebujete řešit? *</label>
+                    <select id="service" name="service" required disabled={isSubmitting} defaultValue="" className="w-full rounded-md border border-input bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50">
+                      <option value="" disabled>Vyberte službu</option>
+                      <option value="Návrh a realizace čistého prostoru">Návrh a realizace čistého prostoru</option>
+                      <option value="Měření a validace">Měření a validace</option>
+                      <option value="Vzduchotechnika a filtrace">Vzduchotechnika a filtrace</option>
+                      <option value="Servis a výměna filtru">Servis a výměna filtru</option>
+                      <option value="Jiný technický dotaz">Jiný technický dotaz</option>
+                    </select>
+                  </div>
+                  <div>
                     <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">Zpráva *</label>
                     <textarea id="message" name="message" required disabled={isSubmitting} rows={4} className="w-full resize-none rounded-md border border-input bg-background px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary disabled:opacity-50" placeholder="Napište nám váš dotaz..." />
                   </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    Technické výkresy nebo další přílohy pošlete na{' '}
+                    <a href="mailto:info@cisteprostory.eu" data-analytics-event="email_click" data-analytics-label="attachment" className="font-semibold text-primary underline underline-offset-4">info@cisteprostory.eu</a>.
+                  </p>
                   <p className="text-xs text-muted-foreground leading-relaxed">
                     Odesláním formuláře beru na vědomí, že společnost BRNO CREATIVE s.r.o. zpracovává mé osobní údaje za účelem vyřízení dotazu/poptávky v souladu s GDPR. Více informací naleznete v{' '}
                     <a href="/ochrana-udaju" className="text-primary underline hover:text-primary/80">Ochrana osobních údajů</a>.

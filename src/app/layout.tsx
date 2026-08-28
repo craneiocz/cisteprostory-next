@@ -6,6 +6,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import CookieConsentProvider from "@/components/CookieConsentProvider";
 import GoogleAnalyticsPageView from "@/components/GoogleAnalyticsPageView";
+import AnalyticsEvents from "@/components/AnalyticsEvents";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.cisteprostory.eu"),
@@ -22,13 +23,16 @@ export const metadata: Metadata = {
     description:
       "Návrh čistých prostor, vzduchotechniky, filtrace, měření a servis podle účelu provozu a požadované kontroly.",
     type: "website",
-    url: "https://www.cisteprostory.eu",
+    url: "https://www.cisteprostory.eu/",
     siteName: "Čisté prostory",
     locale: "cs_CZ",
     images: [
       {
         url: "https://www.cisteprostory.eu/opengraph-image.png",
         alt: "Čisté prostory a validace čistých prostor",
+        width: 1200,
+        height: 630,
+        type: "image/png",
       },
     ],
   },
@@ -37,21 +41,27 @@ export const metadata: Metadata = {
     title: "Čisté prostory pro ověřitelný provoz",
     description:
       "Návrh čistých prostor, filtrace, měření a servis podle účelu provozu.",
+    images: [
+      {
+        url: "https://www.cisteprostory.eu/opengraph-image.png",
+        alt: "Čisté prostory a validace čistých prostor",
+      },
+    ],
   },
   alternates: {
-    canonical: "https://www.cisteprostory.eu",
+    canonical: "https://www.cisteprostory.eu/",
   },
 };
 
 export const dynamic = "error";
 
-const jsonLd = {
+const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": "https://www.cisteprostory.eu/#organization",
   name: "Čisté Prostory (BRNO CREATIVE s.r.o.)",
   alternateName: "cisteprostory.eu",
-  url: "https://www.cisteprostory.eu",
+  url: "https://www.cisteprostory.eu/",
   logo: "https://www.cisteprostory.eu/icon.png",
   image: "https://www.cisteprostory.eu/opengraph-image.png",
   description:
@@ -68,6 +78,17 @@ const jsonLd = {
   vatID: "CZ07367066",
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.cisteprostory.eu/#website",
+  name: "Čisté prostory",
+  alternateName: "cisteprostory.eu",
+  url: "https://www.cisteprostory.eu/",
+  inLanguage: "cs-CZ",
+  publisher: { "@id": "https://www.cisteprostory.eu/#organization" },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -78,9 +99,14 @@ export default function RootLayout({
       <body>
         <CookieConsentProvider />
         <GoogleAnalyticsPageView />
+        <AnalyticsEvents />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         <div id="cookie-consent-root" />
         <a

@@ -3,8 +3,9 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import PageSchema from '@/components/PageSchema';
-import { articleAuthor, type ArticleSection, type ArticleSummary } from '@/lib/articles';
+import { articleAuthor, articleAuthorPath, type ArticleSection, type ArticleSummary } from '@/lib/articles';
 import { ArrowRight, BookOpen, CheckCircle2 } from 'lucide-react';
+import { createCanonicalUrl } from '@/lib/seo';
 
 type ArticleLayoutProps = {
   article: ArticleSummary;
@@ -74,22 +75,31 @@ export default function ArticleLayout({
     headline: article.title,
     description: article.description,
     articleSection: article.topic,
-    mainEntityOfPage: `https://www.cisteprostory.eu${article.path}`,
+    mainEntityOfPage: createCanonicalUrl(article.path),
+    datePublished: article.publishedAt,
+    dateModified: article.updatedAt,
     author: {
       '@type': 'Organization',
       name: articleAuthor,
-      url: 'https://www.cisteprostory.eu/clanky',
+      url: createCanonicalUrl(articleAuthorPath),
     },
     publisher: {
       '@type': 'Organization',
       name: 'Čisté prostory',
-      url: 'https://www.cisteprostory.eu',
+      url: 'https://www.cisteprostory.eu/',
+      '@id': 'https://www.cisteprostory.eu/#organization',
     },
   };
 
   return (
     <div className="min-h-screen bg-background">
-      <PageSchema path={article.path} title={article.title} description={article.description} />
+      <PageSchema
+        path={article.path}
+        title={article.title}
+        description={article.description}
+        datePublished={article.publishedAt}
+        dateModified={article.updatedAt}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Header />
       <section className="relative overflow-hidden bg-gradient-hero text-white">
@@ -108,7 +118,7 @@ export default function ArticleLayout({
             <h1 className="max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight md:text-6xl">{article.title}</h1>
             <p className="mt-8 max-w-3xl text-xl leading-relaxed text-white/85">{article.intro}</p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-white/20 pt-5 text-sm text-white/70">
-              <span>{articleAuthor}</span>
+              <Link href={articleAuthorPath} className="hover:text-white">{articleAuthor}</Link>
               <span>{article.readingTime}</span>
               <span>Praktický průvodce</span>
             </div>
