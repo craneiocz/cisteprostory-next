@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/', lastModified: '2026-08-28', priority: 1 },
     { path: '/ciste-prostory', lastModified: '2026-08-28', priority: 0.9 },
     { path: '/vzduchotechnika', lastModified: '2026-08-28', priority: 0.8 },
-    { path: '/mereni-a-validace', lastModified: '2026-08-28', priority: 0.8 },
+    { path: '/mereni-a-validace', lastModified: '2026-08-30', priority: 0.8 },
     { path: '/integrita-hepa-filtru', lastModified: '2026-08-22', priority: 0.8 },
     { path: '/pocet-castic-iso-14644', lastModified: '2026-08-22', priority: 0.8 },
     { path: '/servis', lastModified: '2026-08-28', priority: 0.8 },

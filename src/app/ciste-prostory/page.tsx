@@ -72,7 +72,7 @@ const CisteProstory = () => (
         <div className="border-l border-white/25 pl-6 lg:mb-2">
           <p className="text-lg leading-relaxed text-white/85">Navrhujeme řízené prostředí pro farmacii, laboratoře, zdravotnictví a přesnou výrobu. Propojujeme dispozici, povrchy, vzduchotechniku, HEPA nebo ULPA filtraci, uvedení do provozu a následné měření.</p>
           <div className="mt-8 flex flex-wrap gap-5 text-sm font-semibold">
-            <Link href="/mereni-a-validace" className="inline-flex items-center gap-2 text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">Měření a validace <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
+            <Link href="/mereni-a-validace" className="inline-flex items-center gap-2 text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">Měření a validace čistých prostor <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
             <Link href="/vzduchotechnika" className="inline-flex items-center gap-2 text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">Vzduchotechnika <ArrowRight className="h-4 w-4" aria-hidden="true" /></Link>
           </div>
         </div>

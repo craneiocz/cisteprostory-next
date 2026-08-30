@@ -8,27 +8,31 @@ const Services = () => {
       description: 'Začínáme účelem prostoru, procesem a požadovanou třídou čistoty. Podle zadání navážeme dispozici, povrchy, filtraci, tlakové poměry a dokumentaci skutečného provedení.',
       features: ['Třídy čistoty ISO 5–ISO 8', 'Laboratorní a laminární boxy', 'Izolátory a bariérové systémy', 'Návrh a uvedení do provozu'],
       href: '/ciste-prostory',
+      linkLabel: 'Návrh a realizace čistých prostor',
     },
     {
       icon: Gauge,
       title: 'Validace a měření čistých prostorů',
       description: 'Měříme parametry důležité pro klasifikaci a provoz: částice, tlakové rozdíly, proudění, teplotu, vlhkost a integritu HEPA filtrů. Výstupem je protokol s limity, hodnotami a odchylkami.',
       features: ['Počet částic', 'Integrita HEPA filtrů', 'IQ, OQ a PQ', 'Měřicí plán a protokol'],
-      href: '/mereni-a-validace'
+      href: '/mereni-a-validace',
+      linkLabel: 'Validace čistých prostor',
     },
     {
       icon: Wind,
       title: 'Vzduchotechnika a HEPA filtrace',
       description: 'Řešíme přívod a odvod vzduchu, regulaci, tlakové kaskády, dostupnost filtrů a návaznost na měření. HEPA a ULPA filtrace se volí podle procesu a požadovaného rizikového profilu.',
       features: ['HEPA H13/H14 a ULPA', 'Tlakové kaskády', 'Regulace teploty a vlhkosti', 'Servisní přístup'],
-      href: '/vzduchotechnika'
+      href: '/vzduchotechnika',
+      linkLabel: 'Vzduchotechnika a HEPA filtrace',
     },
     {
       icon: Settings,
       title: 'Servis HEPA filtrů a vzduchotechniky',
       description: 'Údržba navazuje na skutečný provoz a plán kontrol. Provádíme výměny filtrů, kontrolu zařízení, servis boxů a přípravu podkladů pro další měření nebo audit.',
       features: ['Výměna HEPA a ULPA filtrů', 'Servis boxů a izolátorů', 'Servisní záznamy', 'Návazná kontrolní měření'],
-      href: '/servis'
+      href: '/servis',
+      linkLabel: 'Servis filtrace a vzduchotechniky',
     }
   ];
 
@@ -84,7 +88,7 @@ const Services = () => {
                   ))}
                 </ul>
                 <a href={service.href} className="mt-6 inline-flex font-semibold text-primary underline underline-offset-4 hover:text-primary-dark">
-                  Více o službě
+                  {service.linkLabel}
                 </a>
               </div>
             </article>

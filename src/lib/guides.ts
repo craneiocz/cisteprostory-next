@@ -289,7 +289,7 @@ export const guides = {
       },
     ],
     relatedLinks: [
-      { href: '/mereni-a-validace', label: 'Měření a validace' },
+      { href: '/mereni-a-validace', label: 'Validace čistých prostor' },
       { href: '/mereni-a-validace/iq-oq-pq', label: 'IQ, OQ a PQ' },
       { href: '/servis/vymena-hepa-filtru', label: 'Výměna HEPA filtru' },
     ],
@@ -363,7 +363,7 @@ export const guides = {
     relatedLinks: [
       { href: '/vzduchotechnika', label: 'Vzduchotechnika a HEPA filtrace' },
       { href: '/ciste-prostory/materialy-povrchy-a-dispozice', label: 'Dispozice a prostupy' },
-      { href: '/mereni-a-validace', label: 'Měření a validace' },
+      { href: '/mereni-a-validace', label: 'Validace čistých prostor' },
     ],
     sources: [
       { href: 'https://www.iso.org/standard/60598.html', label: 'ISO 14644-3:2019' },
