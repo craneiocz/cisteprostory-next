@@ -56,8 +56,8 @@ const OchranaUdaju = () => {
               <h2 className="text-2xl font-semibold text-foreground mb-4">4. Předáváme údaje třetím stranám?</h2>
               <p>
                 Vaše osobní údaje neprodáváme. Kontaktní formulář odesílá jméno, e-mail, volitelný telefon
-                a zprávu na API provozované na adrese <code>api.cisteprostory.eu/email.php</code>.
-                Přístup k údajům mohou mít technické služby nutné pro provoz API, e-mailu a hostingu.
+                a zprávu externí službě pro doručení e-mailu. Přístup k údajům mohou mít technické služby
+                nutné pro provoz formuláře, e-mailu a hostingu.
                 Google Analytics používáme pouze po udělení analytického souhlasu.
               </p>
             </section>

@@ -19,8 +19,8 @@ Otevři http://localhost:3000
 
 ## Kontaktní formulář
 
-Formulář posílá POST na `https://api.cisteprostory.eu/email.php` s payloadem `{ name, email, phone, message }`.
-Backend je mimo tento repozitář (externí PHP endpoint), žádná další konfigurace na frontendu není potřeba.
+Formulář předává jméno, e-mail, telefon a zprávu externí službě pro doručení e-mailu.
+Odesílání formuláře je řešeno mimo tento repozitář.
 
 ## Automatický deploy (GitHub Actions)
 

@@ -10,7 +10,7 @@ import AnalyticsEvents from "@/components/AnalyticsEvents";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.cisteprostory.eu"),
-  title: "Čisté prostory: návrh, realizace a validace | cisteprostory.eu",
+  title: "Čisté prostory: návrh a realizace | cisteprostory.eu",
   description:
     "Návrh, realizace, měření a validace čistých prostor pro laboratoře, zdravotnictví, farmacii a výrobu.",
   icons: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
   openGraph: {
-    title: "Čisté prostory: návrh, realizace a validace | cisteprostory.eu",
+    title: "Čisté prostory: návrh a realizace | cisteprostory.eu",
     description:
       "Návrh, realizace, měření a validace čistých prostor pro laboratoře, zdravotnictví, farmacii a výrobu.",
     type: "website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Čisté prostory: návrh, realizace a validace",
+    title: "Čisté prostory: návrh a realizace",
     description:
       "Návrh, realizace, měření a validace čistých prostor pro laboratoře, zdravotnictví, farmacii a výrobu.",
     images: [

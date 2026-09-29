@@ -29,7 +29,7 @@ const Contact = () => {
         body: JSON.stringify(payload),
       });
 
-      if (!response.ok) throw new Error('Nepodařilo se odeslat email přes API');
+      if (!response.ok) throw new Error('Nepodařilo se odeslat zprávu');
 
       toast({
         title: "Zpráva odeslána",
@@ -37,7 +37,7 @@ const Contact = () => {
       });
       (e.target as HTMLFormElement).reset();
       window.dispatchEvent(new CustomEvent('cisteprostory:analytics', {
-        detail: { name: 'form_submit_success', label: formData.get('service') as string },
+        detail: { name: 'form_submit_success', label: 'contact-form' },
       }));
     } catch (error: unknown) {
       console.error('Error sending contact form:', error);

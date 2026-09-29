@@ -39,6 +39,35 @@ const Services = () => {
   return (
     <section id="sluzby" className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-20 grid gap-10 border-b border-border pb-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.26em] text-primary">
+              Základ návrhu
+            </p>
+            <h2 className="mt-5 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
+              Co jsou čisté prostory a jak se určují požadavky
+            </h2>
+          </div>
+          <div className="max-w-3xl space-y-6 text-lg leading-relaxed text-muted-foreground">
+            <p>
+              Čistý prostor je řízené prostředí, ve kterém se omezuje koncentrace částic ve vzduchu.
+              Podle účelu provozu se sledují také tlakové rozdíly, proudění, teplota, vlhkost a další
+              podmínky důležité pro produkt, proces nebo obsluhu.
+            </p>
+            <p>
+              Samotná třída čistoty podle ISO 14644 neurčuje celé technické řešení. Návrh musí vycházet
+              z konkrétního procesu, pohybu osob a materiálu, provozního stavu a požadavků platných pro
+              dané odvětví.
+            </p>
+            <p>
+              Proto společně posuzujeme dispozici, povrchy, filtraci, tlakové vazby i způsob následného
+              ověření. Pokračujte na <a href="/ciste-prostory" className="font-semibold text-primary underline underline-offset-4">návrh čistých prostor</a>,
+              zjistěte <a href="/ciste-prostory/jak-vybrat-tridu-cistoty-iso-14644" className="font-semibold text-primary underline underline-offset-4">jak vybrat třídu čistoty</a> nebo
+              co zahrnuje <a href="/mereni-a-validace" className="font-semibold text-primary underline underline-offset-4">validace čistých prostor</a>.
+            </p>
+          </div>
+        </div>
+
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             Čisté prostory a technické služby podle provozu

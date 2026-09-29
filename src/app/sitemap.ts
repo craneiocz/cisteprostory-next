@@ -7,7 +7,7 @@ export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
-    { path: '/', lastModified: '2026-09-26', priority: 1 },
+    { path: '/', lastModified: '2026-09-29', priority: 1 },
     { path: '/ciste-prostory', lastModified: '2026-09-28', priority: 0.9 },
     { path: '/vzduchotechnika', lastModified: '2026-09-26', priority: 0.8 },
     { path: '/mereni-a-validace', lastModified: '2026-09-26', priority: 0.8 },
