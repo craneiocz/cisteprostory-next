@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Keep the photograph visible while giving the headline a calm, readable field. */
+.hero-scene-shade {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--primary-foreground) / 0.96) 0%,
+    hsl(var(--primary-foreground) / 0.88) 42%,
+    hsl(var(--primary-foreground) / 0.14) 78%
+  );
+}
+
+@media (max-width: 767px) {
+  .hero-scene-shade {
+    background: hsl(var(--primary-foreground) / 0.88);
+  }
+}
+
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
@@ -17,26 +33,26 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 183 56% 44%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 183 56% 54%;
-    --primary-dark: 183 56% 34%;
+    --primary: 192.5 41.73913% 54.90196%; /* Logo: #5ca8bc */
+    --primary-foreground: 192.5 44% 15%;
+    --primary-light: 192.5 42% 70%;
+    --primary-dark: 192.5 44% 30%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted-foreground: 215.4 16.3% 40%;
 
-    --accent: 183 20% 96%;
-    --accent-foreground: 183 56% 25%;
+    --accent: 192.5 40% 93%;
+    --accent-foreground: 192.5 44% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 183 56% 44%;
+    --ring: 192.5 41.73913% 54.90196%;
 
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), #31a9af);
     --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--accent)));
@@ -73,10 +89,10 @@ All colors MUST be HSL.
     --popover: 222.2 47.4% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 183 56% 54%;
+    --primary: 192.5 41.73913% 54.90196%;
     --primary-foreground: 222.2 47.4% 11.2%;
-    --primary-light: 183 56% 64%;
-    --primary-dark: 183 56% 40%;
+    --primary-light: 192.5 42% 70%;
+    --primary-dark: 192.5 44% 30%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -92,7 +108,7 @@ All colors MUST be HSL.
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 183 56% 54%;
+    --ring: 192.5 41.73913% 54.90196%;
 
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), #31a9af);
     --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--accent)));
@@ -176,13 +192,21 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    background-image:
-      radial-gradient(circle at top, hsl(var(--primary) / 0.05), transparent 28%),
-      linear-gradient(180deg, hsl(0 0% 100%), hsl(var(--background)));
+  }
+
+  :where(a, button):focus-visible {
+    outline: 2px solid hsl(var(--primary-dark));
+    outline-offset: 4px;
   }
 
   ::selection {
     background: hsl(var(--primary) / 0.14);
     color: hsl(var(--foreground));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

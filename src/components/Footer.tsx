@@ -108,23 +108,23 @@ const Footer = () => {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between border-t border-white/10 pt-8 md:flex-row">
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-400">
             © 2026 Čisté Prostory – vzduchotechnika, validace a servis. Všechna práva vyhrazena.
           </p>
-          <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="/ochrana-udaju" className="text-sm text-slate-500 transition-colors duration-200 hover:text-primary">
+          <div className="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 md:mt-0">
+            <a href="/ochrana-udaju" className="text-sm text-slate-400 transition-colors duration-200 hover:text-primary-light">
               Ochrana osobních údajů
             </a>
             <span className="text-slate-700">|</span>
             <button
               type="button"
               data-cc="show-preferencesModal"
-              className="text-sm text-slate-500 transition-colors duration-200 hover:text-primary"
+              className="text-sm text-slate-400 transition-colors duration-200 hover:text-primary-light"
             >
               Nastavení cookies
             </button>
             <span className="text-slate-700">|</span>
-            <Link href="/#kontakt" className="text-sm text-slate-500 transition-colors duration-200 hover:text-primary">
+            <Link href="/#kontakt" className="text-sm text-slate-400 transition-colors duration-200 hover:text-primary-light">
               Kontaktujte nás
             </Link>
           </div>

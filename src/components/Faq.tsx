@@ -42,8 +42,8 @@ const Faq = () => {
   return (
     <section className="py-16 lg:py-24 bg-muted/10" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="mb-12">
+          <h2 className="mb-6 text-3xl font-medium tracking-tight text-foreground md:text-4xl">
             Časté otázky k čistým prostorům, měření a filtraci
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -51,33 +51,34 @@ const Faq = () => {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="border-t border-border">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div
                 key={faq.question}
-                className="overflow-hidden rounded-xl border border-border/70 bg-card transition-shadow duration-200 hover:shadow-card"
+                className="border-b border-border"
               >
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-primary/4"
+                  className="flex w-full items-center justify-between gap-4 py-6 text-left transition-colors duration-150 hover:text-primary-dark"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
+                  id={`faq-question-${index}`}
                 >
-                  <span className="font-semibold text-foreground">{faq.question}</span>
+                  <span className="font-medium text-foreground">{faq.question}</span>
                   <ChevronDown
-                    className={`h-5 w-5 flex-shrink-0 text-primary transition-transform duration-200 ${
+                    strokeWidth={1.5}
+                    className={`h-[18px] w-[18px] flex-shrink-0 text-muted-foreground transition-transform duration-200 ${
                       isOpen ? 'rotate-180' : ''
                     }`}
                     aria-hidden="true"
                   />
                 </button>
-                {isOpen && (
-                  <div className="border-t border-border/60 bg-gradient-to-br from-primary/4 to-transparent px-6 pb-5 leading-relaxed text-muted-foreground">
-                    {faq.answer}
-                  </div>
-                )}
+                <div id={`faq-answer-${index}`} role="region" aria-labelledby={`faq-question-${index}`} hidden={!isOpen} className="pb-6 pr-8 leading-relaxed text-muted-foreground">
+                  {faq.answer}
+                </div>
               </div>
             );
           })}

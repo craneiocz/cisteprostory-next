@@ -33,7 +33,7 @@ const Header = () => {
             />
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="hidden items-center gap-6 lg:flex">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -45,43 +45,44 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="hidden md:flex">
-            <Button asChild className="bg-primary text-primary-foreground shadow-elegant hover:bg-primary-dark">
+          <div className="hidden lg:flex">
+            <Button asChild className="bg-primary-dark text-white hover:bg-foreground">
               <Link href="/#kontakt">Kontakt</Link>
             </Button>
           </div>
 
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="sm"
+              className="min-h-11 min-w-11"
               aria-label={isMenuOpen ? 'Zavřít navigaci' : 'Otevřít navigaci'}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X size={18} strokeWidth={1.5} aria-hidden="true" /> : <Menu size={18} strokeWidth={1.5} aria-hidden="true" />}
             </Button>
           </div>
         </div>
 
-        {isMenuOpen && (
-          <div className="md:hidden border-t border-border/70 py-4 bg-background/95">
+          <div id="mobile-navigation" hidden={!isMenuOpen} className="border-t border-border/70 bg-background/95 py-4 lg:hidden">
             <nav className="flex flex-col gap-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-2 font-medium text-muted-foreground transition-colors duration-200 hover:text-foreground"
+                  className="flex min-h-11 items-center px-2 font-medium text-muted-foreground transition-colors duration-150 hover:text-foreground"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <Button asChild className="mx-2 mt-4 bg-primary text-primary-foreground shadow-elegant hover:bg-primary-dark">
-                <Link href="/#kontakt">Kontakt</Link>
+              <Button asChild className="mx-2 mt-4 bg-primary-dark text-white hover:bg-foreground">
+                <Link href="/#kontakt" onClick={() => setIsMenuOpen(false)}>Kontakt</Link>
               </Button>
             </nav>
           </div>
-        )}
       </div>
     </header>
   );

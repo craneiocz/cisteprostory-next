@@ -1,70 +1,70 @@
-import { Shield, Wind, Gauge, Settings } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 
-const Hero = () => {
+const services = [
+  { label: 'Validace a měření', href: '/mereni-a-validace' },
+  { label: 'Návrh a realizace', href: '/ciste-prostory' },
+  { label: 'Vzduchotechnika', href: '/vzduchotechnika' },
+  { label: 'Servis', href: '/servis' },
+];
+
+export default function Hero() {
   return (
-    <section
-      className="relative isolate overflow-hidden border-b border-white/10 bg-gradient-hero py-20 text-white lg:py-28"
-      aria-label="Úvodní sekce - Čisté prostory a laboratorní boxy"
-    >
-      <div className="absolute inset-0 opacity-10" aria-hidden="true">
-        <div className="absolute left-10 top-20 h-32 w-32 rotate-45 border border-white/10" />
-        <div className="absolute bottom-20 right-1/4 h-24 w-24 rotate-12 border border-white/10" />
-      </div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.16),_transparent_36%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.08),_transparent_28%)]" aria-hidden="true" />
+    <section className="isolate overflow-hidden bg-accent pb-4 pt-4 lg:pt-6" aria-labelledby="hero-title">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative isolate overflow-hidden rounded-2xl bg-primary-foreground text-white">
+          <Image
+            src="/images/cleanroom-hero.webp"
+            alt="Interiér čistého prostoru se stropními vyústkami, prosklenými příčkami a laboratorním vybavením"
+            fill
+            priority
+            sizes="(min-width: 1280px) 1216px, 100vw"
+            className="-z-20 object-cover object-[60%_center] lg:object-center"
+          />
+          <div className="hero-scene-shade absolute inset-0 -z-10" aria-hidden="true" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="text-center">
-          <h1 className="text-5xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-balance tracking-tight">
-            Čisté prostory – návrh, realizace a validace
-          </h1>
+          <div className="flex min-h-[560px] items-center px-6 py-10 sm:px-10 sm:py-12 lg:px-12 lg:py-14">
+            <div className="max-w-lg">
+              <p className="flex items-center gap-3 text-sm text-white/85">
+                <span className="h-px w-8 bg-primary-light" aria-hidden="true" />
+                Návrh · realizace · validace
+              </p>
+              <h1 id="hero-title" className="mt-6 text-[40px] font-medium leading-[1.06] tracking-[-0.03em] sm:text-[56px] lg:text-[64px]">
+                <span className="block">Čisté prostory</span>
+                <span className="mt-2 block font-normal">od návrhu<br />po validaci</span>
+              </h1>
+              <p className="mt-6 max-w-md text-base leading-relaxed text-white/85 sm:text-lg">
+                Navrhujeme a realizujeme čisté prostory pro laboratoře, zdravotnictví, farmacii a výrobu. Zajistíme měření, dokumentaci i následný servis.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <Link href="/#kontakt" className="inline-flex min-h-12 items-center justify-center gap-4 rounded-lg bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors duration-150 hover:bg-primary-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+                  Probrat váš projekt
+                  <ArrowUpRight size={18} strokeWidth={1.5} aria-hidden="true" />
+                </Link>
+                <Link href="#sluzby" className="inline-flex min-h-12 items-center gap-2 rounded-lg text-sm font-medium text-white underline decoration-white/40 underline-offset-4 hover:decoration-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+                  Prohlédnout služby
+                  <ArrowDown size={18} strokeWidth={1.5} aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
+          </div>
 
-          <p className="text-lg md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed text-balance font-light text-white/88">
-            Navrhujeme, realizujeme a ověřujeme čisté prostory pro laboratoře, zdravotnictví, farmacii a výrobu. Propojujeme technické řešení s dokumentací, uvedením do provozu a následnou kontrolou.
-          </p>
-
-          <p className="mb-12 text-sm uppercase tracking-[0.22em] text-white/70">Návrh · měření · dokumentace · servis</p>
-
-          <nav aria-label="Hlavní služby" className="mx-auto grid max-w-4xl grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-            <a href="/mereni-a-validace" className="group" title="Validace a měření čistých prostorů dle ISO 14644">
-              <div className="flex flex-col items-center">
-                <div className="mb-3 rounded-2xl border border-white/15 bg-white/10 p-4 transition-colors duration-300 group-hover:bg-white/15">
-                  <Gauge className="h-8 w-8 text-white" aria-hidden="true" />
-                </div>
-                <span className="text-sm font-medium text-white/90 group-hover:text-white transition-colors">Validace a měření</span>
-              </div>
-            </a>
-            
-            <a href="/ciste-prostory" className="group" title="Návrh a realizace čistých prostor">
-              <div className="flex flex-col items-center">
-                <div className="mb-3 rounded-2xl border border-white/15 bg-white/10 p-4 transition-colors duration-300 group-hover:bg-white/15">
-                  <Shield className="h-8 w-8 text-white" aria-hidden="true" />
-                </div>
-                <span className="text-sm font-medium text-white/90 group-hover:text-white transition-colors">Návrh a realizace</span>
-              </div>
-            </a>
-            
-            <a href="/vzduchotechnika" className="group" title="Vzduchotechnika a HEPA filtrace">
-              <div className="flex flex-col items-center">
-                <div className="mb-3 rounded-2xl border border-white/15 bg-white/10 p-4 transition-colors duration-300 group-hover:bg-white/15">
-                  <Wind className="h-8 w-8 text-white" aria-hidden="true" />
-                </div>
-                <span className="text-sm font-medium text-white/90 group-hover:text-white transition-colors">Vzduchotechnika</span>
-              </div>
-            </a>
-            
-            <a href="/servis" className="group" title="Servis a údržba HEPA filtrů a vzduchotechniky">
-              <div className="flex flex-col items-center">
-                <div className="mb-3 rounded-2xl border border-white/15 bg-white/10 p-4 transition-colors duration-300 group-hover:bg-white/15">
-                  <Settings className="h-8 w-8 text-white" aria-hidden="true" />
-                </div>
-                <span className="text-sm font-medium text-white/90 group-hover:text-white transition-colors">Servis</span>
-              </div>
-            </a>
-          </nav>
+          <div className="absolute bottom-6 right-6 hidden items-center gap-3 text-xs text-white lg:flex" aria-hidden="true">
+            <span className="h-px w-8 bg-white/70" />
+            <span className="rounded-md bg-primary-foreground px-3 py-2">Řízené prostředí / čisté prostory</span>
+          </div>
         </div>
+
+        <nav aria-label="Hlavní služby" className="grid grid-cols-2 pt-4 lg:grid-cols-4">
+          {services.map(({ label, href }) => (
+            <Link key={href} href={href} className="flex min-h-16 items-center gap-3 border-b border-primary/25 px-3 py-4 text-sm font-medium text-primary-foreground transition-colors duration-150 hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-primary-dark sm:px-4 lg:border-b-0 lg:border-r lg:last:border-r-0">
+              <span>{label}</span>
+              <ArrowUpRight className="ml-auto h-[18px] w-[18px] shrink-0 text-primary-dark" strokeWidth={1.5} aria-hidden="true" />
+            </Link>
+          ))}
+        </nav>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}

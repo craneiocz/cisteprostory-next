@@ -52,10 +52,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="kontakt" className="py-20 lg:py-32 bg-accent/20">
+    <section id="kontakt" className="bg-accent py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="mb-12 max-w-3xl">
+          <h2 className="mb-6 text-3xl font-medium tracking-tight text-foreground md:text-4xl">
             Kontakt pro návrh čistých prostor a validaci
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -65,10 +65,10 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8">
-            <Card className="border-border/70 bg-card shadow-card">
+            <Card className="rounded-xl border-border bg-card shadow-none">
               <CardHeader>
-                <CardTitle className="flex items-center text-foreground">
-                  <Mail className="h-6 w-6 text-primary mr-3" />
+                <CardTitle className="flex items-center text-lg font-medium tracking-normal text-foreground">
+                  <Mail strokeWidth={1.5} aria-hidden="true" className="mr-3 h-[18px] w-[18px] text-muted-foreground" />
                   Email
                 </CardTitle>
               </CardHeader>
@@ -77,7 +77,7 @@ const Contact = () => {
                   href="mailto:info@cisteprostory.eu"
                   data-analytics-event="email_click"
                   data-analytics-label="contact-card"
-                  className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+                  className="text-lg font-medium text-foreground transition-colors hover:text-primary-dark"
                 >
                   info@cisteprostory.eu
                 </a>
@@ -85,10 +85,10 @@ const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-border/70 bg-card shadow-card">
+            <Card className="rounded-xl border-border bg-card shadow-none">
               <CardHeader>
-                <CardTitle className="flex items-center text-foreground">
-                  <MapPin className="h-6 w-6 text-primary mr-3" />
+                <CardTitle className="flex items-center text-lg font-medium tracking-normal text-foreground">
+                  <MapPin strokeWidth={1.5} aria-hidden="true" className="mr-3 h-[18px] w-[18px] text-muted-foreground" />
                   Adresa
                 </CardTitle>
               </CardHeader>
@@ -100,11 +100,11 @@ const Contact = () => {
           </div>
 
           <div className="flex flex-col justify-center">
-            <Card className="border-border/70 bg-card shadow-card">
+            <Card className="rounded-xl border-border bg-card shadow-none">
               <CardHeader>
-                <h3 className="text-2xl font-bold text-foreground">Kontaktní formulář</h3>
+                <h3 className="text-2xl font-medium text-foreground">Kontaktní formulář</h3>
               </CardHeader>
-              <CardContent className="p-8">
+              <CardContent className="p-6 pt-0 sm:p-8 sm:pt-0">
                 <p className="text-sm text-muted-foreground mb-4">* = povinný údaj</p>
                 <form className="space-y-6" onSubmit={handleSubmit} data-analytics-form="contact">
                   <div>
@@ -125,13 +125,13 @@ const Contact = () => {
                   </div>
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     Technické výkresy nebo další přílohy pošlete na{' '}
-                    <a href="mailto:info@cisteprostory.eu" data-analytics-event="email_click" data-analytics-label="attachment" className="font-semibold text-primary underline underline-offset-4">info@cisteprostory.eu</a>.
+                    <a href="mailto:info@cisteprostory.eu" data-analytics-event="email_click" data-analytics-label="attachment" className="font-medium text-primary-dark underline underline-offset-4">info@cisteprostory.eu</a>.
                   </p>
                   <p className="text-xs text-muted-foreground leading-relaxed">
                     Odesláním formuláře beru na vědomí, že společnost BRNO CREATIVE s.r.o. zpracovává mé osobní údaje za účelem vyřízení dotazu/poptávky v souladu s GDPR. Více informací naleznete v{' '}
-                    <a href="/ochrana-udaju" className="text-primary underline hover:text-primary/80">Ochrana osobních údajů</a>.
+                    <a href="/ochrana-udaju" className="text-primary-dark underline hover:text-foreground">Ochrana osobních údajů</a>.
                   </p>
-                  <Button type="submit" size="lg" disabled={isSubmitting} className="w-full bg-primary text-primary-foreground text-lg py-6 hover:bg-primary-dark">
+                  <Button type="submit" size="lg" disabled={isSubmitting} className="min-h-12 w-full bg-primary-dark text-base font-medium text-white hover:bg-foreground">
                     {isSubmitting ? (<><Loader2 className="mr-2 h-5 w-5 animate-spin" />Odesílám...</>) : ('Odeslat')}
                   </Button>
                 </form>

@@ -35,10 +35,10 @@ const Industries = () => {
   ];
 
   return (
-    <section id="odvetvi" className="py-20 lg:py-32 bg-muted/30">
+    <section id="odvetvi" className="bg-accent py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
+        <div className="mb-12 max-w-3xl">
+          <h2 className="mb-6 text-3xl font-medium tracking-tight text-foreground md:text-4xl">
             Čisté prostory pro farmacii, laboratoře a výrobu
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -46,27 +46,19 @@ const Industries = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid gap-x-12 md:grid-cols-2">
           {industries.map((industry, index) => (
             <article 
               key={index}
-              className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-elegant"
+              className="flex items-start gap-4 border-t border-primary/25 py-8"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" aria-hidden="true" />
-              
-              <div className="relative z-10">
-                <div className="relative inline-block mb-5">
-                  <div className="absolute inset-0 rounded-xl bg-primary/15 blur opacity-25 transition-opacity duration-300 group-hover:opacity-45" aria-hidden="true" />
-                  <div className="relative flex h-14 w-14 items-center justify-center rounded-xl border border-primary/10 bg-primary/5">
-                    <industry.icon className="h-7 w-7 text-primary" aria-hidden="true" />
-                  </div>
-                </div>
-                
-                <h3 className="mb-3 text-lg font-bold text-foreground transition-colors duration-300 group-hover:text-primary">
+              <industry.icon className="mt-1 h-[18px] w-[18px] shrink-0 text-muted-foreground" strokeWidth={1.5} aria-hidden="true" />
+              <div>
+                <h3 className="mb-3 text-lg font-medium text-foreground">
                   {industry.title}
                 </h3>
                 
-                <p className="text-sm leading-relaxed text-muted-foreground transition-colors group-hover:text-foreground">
+                <p className="max-w-lg text-sm leading-relaxed text-muted-foreground">
                   {industry.description}
                 </p>
               </div>
